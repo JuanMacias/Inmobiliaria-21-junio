@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicios - Mi Sitio</title>
+  <link rel="stylesheet" href="./css/estilos.css" />
+</head>
+<body>
+
+  <div class="barra-superior">
+    <div class="item">Tel: 123-456-789</div>
+    <div class="item">Email: info@misitio.com</div>
+  </div>
+
+  <header class="header">
+    <div class="logo">
+      <img src="./img/Logo.jpg" alt="Logo Mi Sitio" />
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html" class="active">Servicios</a></li>
+        <li><a href="propiedades.html">Propiedades</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+  </header>
+
+  <main>
+    <h1>Servicios</h1>
+    <p>Aquí mostramos los servicios que ofrecemos.</p>
+  </main>
+
+  <script>
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

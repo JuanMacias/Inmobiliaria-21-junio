@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nosotros - Mi Sitio</title>
+    <link rel="stylesheet" href="./css/estilos.css" />
+</head>
+
+<body>
+    <!-- BARRA SUPERIOR -->
+    <div class="barra-superior">
+        <div class="telefono">
+            <img src="./img/whatsapp-873316_1280.png" class="whatsapp-icon" alt="WhatsApp" />
+            <span>+54 9 11 6567-4020</span>
+        </div>
+        <div class="item">mmacias@gmail.com</div>
+    </div>
+
+
+    <header class="header">
+        <div class="logo">
+            <img src="./img/Logo.jpg" alt="Logo Mi Sitio" />
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html" class="active">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="propiedades.html">Propiedades</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+    </header>
+
+
+    <main class="nosotros">
+        <div class="nosotros-contenido">
+            <div class="nosotros-imagen">
+                <img src="./img/inmo.frente.jpeg" alt="Imagen oficina inmobiliaria" />
+            </div>
+            <div class="nosotros-texto">
+                <h1>Nosotros</h1>
+                <p>
+                    Macias Servicios Inmobiliarios comenzó su actividad hace más de 9 años en Coghlan inaugurando su
+                    oficina sobre
+                    Manuen Ugarte 3129, extendiendo su atención en toda CABA, incrementando de esta manera
+                    su cartera de clientes, logrando afianzarse como una de las empresas más reconocidas por su
+                    trayectoria y
+                    honestidad.
+                </p>
+                <p>
+                    Por eso nuestros clientes, la mayoría recomendados por otros, valoran la confiabilidad y
+                    tranquilidad al momento
+                    de comprar, vender o alquilar su propiedad. Somos un equipo capacitado para asesorarlo en
+                    operaciones simultáneas
+                    y con amplia experiencia en tasaciones.
+                </p>
+            </div>
+    </main>
+
+    <section class="contacto-nosotros">
+        <div class="contacto-container">
+            <!-- Columna izquierda -->
+            <div class="contacto-info">
+                <h2>Contactanos</h2>
+                <p>📍 Manuel Ugarte 3129 . CABA</p>
+
+                <img src="./img/whatsapp-873316_1280.png" class="whatsapp-icon" alt="WhatsApp" />
+                <span>+54 9 11 6567-4020</span>
+
+                <p>✉️ <a href="mailto:info@berardipropiedades.com.ar">mmacias@gmail.com</a></p>
+                <div class="mapa-contacto">
+
+                    <iframe
+                        src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4096.537591975107!2d-58.46864321144214!3d-34.55984580094057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb686d3140387%3A0xf2d1e44f2c2e3ba1!2sMac%C3%ADas%20Servicios%20Inmobiliarios!5e0!3m2!1ses!2sar!4v1750188791180!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                              
+                       ></iframe>
+
+                </div>
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="contacto-formulario">
+                <h2>Dejanos tu consulta</h2>
+                <form>
+                    <div class="fila">
+                        <input type="text" placeholder="Nombre" required>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="fila">
+                        <input type="text" placeholder="WhatsApp">
+                        <input type="text" placeholder="Asunto">
+                    </div>
+                    <textarea placeholder="Su Mensaje" rows="4" required></textarea>
+                    <button type="submit">Quiero saber más</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const toggleBtn = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggleBtn.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>

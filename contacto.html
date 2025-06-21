@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Responsive</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="barra-superior">
+    <div class="item"><span class="material-icons">phone</span> (123) 456-7890</div>
+    <div class="item"><span class="material-icons">email</span> contacto@ejemplo.com</div>
+  </div>
+
+  <header class="header">
+    <div class="logo">
+      <img src="./img/Logo.jpg" alt="Logo">
+    </div>
+    <button class="menu-toggle" onclick="document.querySelector('.menu').classList.toggle('active')">☰</button>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="propiedades.html">Propiedades</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contacto</h1>
+    <p>Escribinos o llamanos para cualquier consulta o asesoramiento personalizado.</p>
+  </main>
+
+  <script>
+    // Asegura que el menú se cierre al hacer clic fuera de él (opcional)
+    document.addEventListener('click', function (e) {
+      const menu = document.querySelector('.menu');
+      const toggle = document.querySelector('.menu-toggle');
+      if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
