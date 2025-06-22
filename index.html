@@ -102,7 +102,7 @@
         menu.classList.toggle('active');
       });
     </script>
-<!-- </body>  -->
+</body>  -->
 
     
 
@@ -118,7 +118,6 @@
 
  <body>   
 
-   <!-- BARRA SUPERIOR  -->
   <div class="barra-superior">
     <div class="telefonos">
       <div class="telefono">
@@ -131,7 +130,6 @@
     </div>
   </div>
 
-  <!-- ENCABEZADO  -->
   <header class="header">
     <div class="logo">
       <img src="./img/Logo.jpg" alt="Logo Mi Sitio" />
@@ -148,7 +146,6 @@
     <button class="menu-toggle" aria-label="Abrir menú">☰</button>
   </header>
 
-  <!-- SECCIÓN DESTACADA  -->
   <div class="seccion-fondo">
     <div class="contenido-fondo">
       <h1>Tenemos tu hogar soñado en CABA</h1>
@@ -172,18 +169,28 @@
     </div>
   </div>
 
-  <!-- CONTENIDO PRINCIPAL  -->
   <main>
     <h1>Bienvenido a Mi Sitio</h1>
     <p>Esta es la página de inicio donde mostramos lo principal.</p>
   </main>
 
-  <!-- BARRA INFERIOR  -->
   <div class="barra-inferior">
   </div>
 
+  <script>
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".menu");
+  
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+</script>
+
+<script src="./js/scripts.js"></script>
+</body>
+</html>
+
   
 </body>
-
 </html> 
  

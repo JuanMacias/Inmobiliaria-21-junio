@@ -90,12 +90,7 @@ body {
     height: auto;
 }
 
-/* ==== MENÚ ==== */
-.menu { 
-    display: flex;
-    justify-content: flex-end;
-    flex: 2;
-} 
+
 
 .menu ul {
     list-style: none;
@@ -187,31 +182,68 @@ body {
         gap: 10px;
     }
 
-    .menu-toggle {
-        display: block;
-    }
-} 
+   } 
   .menu { 
   display: flex;
   /* resto del diseño */
 } 
+ .menu {
+  display: flex;
+  justify-content: flex-end;
+  flex: 2;
+}
 
-@media (max-width: 768px) { 
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: bold;
+}
+
+.menu ul li a:hover {
+  color: #d40000;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+@media (max-width: 768px) {
   .menu {
-    display: none;
     flex-direction: column;
     align-items: center;
+    display: none;
+    width: 100%;
+    margin-top: 10px;
   }
 
   .menu.active {
     display: flex;
   }
 
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
   .menu-toggle {
     display: block;
   }
-} 
-
+}
 
 main {   
     background-color: #f8f8f8;
@@ -490,7 +522,6 @@ button:hover {
    gap: 15px; /* con este elemento bajo el texto conctando hogares y oportunidades ext. */
 }
 
-
 .barra-busqueda {
   display: flex;
   justify-content: space-between;
@@ -520,8 +551,6 @@ button:hover {
   background-color: #333; /* Fondo oscuro opcional */
 }
 
-
-
 .barra-busqueda button {
   padding: 10px 20px;
   background-color: #b7b715d3;
@@ -532,4 +561,22 @@ button:hover {
 
 .barra-busqueda button:hover {
   background-color: #e7b40cdd;
+}
+
+@media (max-width: 768px) {
+  .barra-busqueda {
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    width: 90%;
+    padding: 15px;
+  }
+
+  .barra-busqueda select,
+  .barra-busqueda input,
+  .barra-busqueda button {
+    width: 100%;
+    max-width: 300px;
+    margin: 5px 0;
+  }
 }
