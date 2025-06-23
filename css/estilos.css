@@ -399,6 +399,12 @@ button:hover {
 /* ==== MEDIA QUERIES GENERALES ==== */
 @media (max-width: 768px) {
   /* Media query para el logo en móvil (ya estaba) */
+
+  /* ESTILO PARA QUITAR EL OUTLINE DEL ENFOQUE */
+/* Pégalo aquí, al final del archivo, o cerca de los estilos del menú */
+.menu ul li a:focus {
+  outline: none; /* Esto quita la barra azul al hacer clic o al navegar con teclado */
+}
   .logo img {
     width: 150px;
   }
