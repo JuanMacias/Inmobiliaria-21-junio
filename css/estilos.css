@@ -121,7 +121,7 @@ body {
   cursor: pointer;
    position: absolute;  /* 👈 Necesario para moverlo con top/right */
   top: 5px;            /* 👈 Distancia desde arriba (ajustá si querés más alto) */
-  right: 100px;          /* 👈 Distancia desde la derecha (ajustá si querés más a la derecha) */
+  right: 130px;          /* 👈 Distancia desde la derecha (ajustá si querés más a la derecha) */
   z-index: 10;          /* 👈 Para que quede por encima del logo u otros elementos */
 }
 
