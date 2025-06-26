@@ -113,34 +113,25 @@ body {
   color: #d40000;
 }
 
-/* .menu-toggle {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer; */
-   /* position: absolute;  👈 Necesario para moverlo con top/right */
-  /* top: 25px;            👈 Distancia desde arriba (ajustá si querés más alto) */
-  /* right: 130px;          👈 Distancia desde la derecha (ajustá si querés más a la derecha) */
-  /* z-index: 10;          👈 Para que quede por encima del logo u otros elementos */
-/* } */
-
 .contenido-fondo {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  padding: 30px 50px;
+  padding: 50px 80px;           /* 🔼 Más padding = más grande */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  padding-top: 20px;
-  height: 30%;
+  min-height: 500px;            /* 🔼 Más alto */
+  max-width: 1500px;            /* 🔼 Más ancho */
+  margin: 0 auto;               /* 🔼 Centrado */
   z-index: 2;
   text-align: center;
   color: white;
-  gap: 15px;
+  gap: 20px;
 }
+
+
 
 .seccion-fondo h1 {
   font-size: 36px;
@@ -294,18 +285,27 @@ textarea {
 }
 
 .formulario button {
-  padding: 12px;
-  background-color: #003c82;
+  padding: 40px 50px;                /* Más alto y más ancho */
+  background-color: #003c82;         /* Azul oscuro */
   color: white;
   font-weight: bold;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;                /* Bordes más suaves */
   cursor: pointer;
-  font-size: 16px;
-  width: fit-content;
-  align-self: center;
+  font-size: 18px;                   /* Texto más grande */
+  width: 100%;                       /* O auto si no querés que ocupe todo */
+  max-width: 400px;                  /* Limita el tamaño para que no sea enorme */
+  margin: 20px auto 0;               /* Centrado */
+  display: block;
+  text-align: center;
   transition: background-color 0.3s ease;
 }
+
+.formulario button:hover {
+  background-color: #002b60;
+}
+
+
 
 button:hover {
   background-color: #002b60;
@@ -366,7 +366,7 @@ button:hover {
   max-width: 1400px;
   margin: 20px auto 0; /* Margen superior para separarla del texto */
   position: absolute;
-  top: 100%; /* Ajusta este valor (e.g., 40%, 30%) para subirla */
+  top: 50%; /* Ajusta este valor (e.g., 40%, 30%) para subirla */
   z-index: 2;
 }
 
@@ -409,13 +409,7 @@ button:hover {
     width: 150px;
   }
 
-  /* Media query para el header, menu y menu-toggle (consolidado) */
-  /* Muestra el botón hamburguesa en pantallas pequeñas */
-  /* .menu-toggle {
-    display: block;
-  } */
-
-  /* Oculta el menú de navegación por defecto en móviles */
+   /* Oculta el menú de navegación por defecto en móviles */
   .menu {
     flex-direction: column;
     align-items: center;
