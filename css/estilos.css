@@ -67,7 +67,8 @@ body {
 }
 
 .header {
-  position: relative; /* Necesario para que el absolute funcione */
+  position: relative;
+  /* Necesario para que el absolute funcione */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -116,15 +117,19 @@ body {
 .contenido-fondo {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  padding: 50px 80px;           /* 🔼 Más padding = más grande */
+  padding: 50px 80px;
+  /* 🔼 Más padding = más grande */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  min-height: 500px;            /* 🔼 Más alto */
-  max-width: 1500px;            /* 🔼 Más ancho */
-  margin: 0 auto;               /* 🔼 Centrado */
+  min-height: 500px;
+  /* 🔼 Más alto */
+  max-width: 1500px;
+  /* 🔼 Más ancho */
+  margin: 0 auto;
+  /* 🔼 Centrado */
   z-index: 2;
   text-align: center;
   color: white;
@@ -147,13 +152,17 @@ body {
   padding: 50px 5px 5px 5px;
   margin: 5px auto;
   width: 90%;
-  max-width: 1200px; /* Opcional para limitar ancho en pantallas grandes */
+  max-width: 1200px;
+  /* Opcional para limitar ancho en pantallas grandes */
 }
 
 .nosotros-contenido {
-  width: 90%; /* Ocupa el 90% del ancho del contenedor padre */
-  max-width: 1000px; /* Limita el ancho máximo */
-  margin: 0 auto; /* Centra horizontalmente el bloque */
+  width: 90%;
+  /* Ocupa el 90% del ancho del contenedor padre */
+  max-width: 1000px;
+  /* Limita el ancho máximo */
+  margin: 0 auto;
+  /* Centra horizontalmente el bloque */
   display: flex;
   align-items: flex-start;
   gap: 40px;
@@ -285,17 +294,24 @@ textarea {
 }
 
 .formulario button {
-  padding: 40px 50px;                /* Más alto y más ancho */
-  background-color: #003c82;         /* Azul oscuro */
+  padding: 40px 50px;
+  /* Más alto y más ancho */
+  background-color: #003c82;
+  /* Azul oscuro */
   color: white;
   font-weight: bold;
   border: none;
-  border-radius: 8px;                /* Bordes más suaves */
+  border-radius: 8px;
+  /* Bordes más suaves */
   cursor: pointer;
-  font-size: 18px;                   /* Texto más grande */
-  width: 100%;                       /* O auto si no querés que ocupe todo */
-  max-width: 400px;                  /* Limita el tamaño para que no sea enorme */
-  margin: 20px auto 0;               /* Centrado */
+  font-size: 18px;
+  /* Texto más grande */
+  width: 100%;
+  /* O auto si no querés que ocupe todo */
+  max-width: 400px;
+  /* Limita el tamaño para que no sea enorme */
+  margin: 20px auto 0;
+  /* Centrado */
   display: block;
   text-align: center;
   transition: background-color 0.3s ease;
@@ -345,10 +361,12 @@ button:hover {
 
 .seccion-fondo {
   position: relative;
-  background-image: url('../img/apartment-1851201_1280.jpg'); /* Reemplaza con tu ruta */
+  background-image: url('../img/apartment-1851201_1280.jpg');
+  /* Reemplaza con tu ruta */
   background-size: cover;
   background-position: center;
-  height: 500px; /* Aumenté la altura para dar más espacio */
+  height: 500px;
+  /* Aumenté la altura para dar más espacio */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -359,14 +377,19 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 15px; /* Esto cambia el alto de la barra de busqueda gral. */
-  background-color: rgba(227, 185, 17, 0.9); /* cambia el color del fonde de la barra */
+  padding: 20px 15px;
+  /* Esto cambia el alto de la barra de busqueda gral. */
+  background-color: rgba(227, 185, 17, 0.9);
+  /* cambia el color del fonde de la barra */
   border: 2px solid #0b0b0f;
-  width: 100%; /* Con es elemento cambio el ancho de la barra de buqueda gral */
+  width: 100%;
+  /* Con es elemento cambio el ancho de la barra de buqueda gral */
   max-width: 1400px;
-  margin: 20px auto 0; /* Margen superior para separarla del texto */
+  margin: 20px auto 0;
+  /* Margen superior para separarla del texto */
   position: absolute;
-  top: 50%; /* Ajusta este valor (e.g., 40%, 30%) para subirla */
+  top: 50%;
+  /* Ajusta este valor (e.g., 40%, 30%) para subirla */
   z-index: 2;
 }
 
@@ -380,8 +403,10 @@ button:hover {
 .barra-busqueda select,
 .barra-busqueda option,
 .barra-busqueda input {
-  color: white; /* Cambiá si querés otro color */
-  background-color: #333; /* Fondo oscuro opcional */
+  color: white;
+  /* Cambiá si querés otro color */
+  background-color: #333;
+  /* Fondo oscuro opcional */
 }
 
 .barra-busqueda button {
@@ -401,40 +426,49 @@ button:hover {
   /* Media query para el logo en móvil (ya estaba) */
 
   /* ESTILO PARA QUITAR EL OUTLINE DEL ENFOQUE */
-/* Pégalo aquí, al final del archivo, o cerca de los estilos del menú */
-.menu ul li a:focus {
-  outline: none; /* Esto quita la barra azul al hacer clic o al navegar con teclado */
-}
+  /* Pégalo aquí, al final del archivo, o cerca de los estilos del menú */
+  .menu ul li a:focus {
+    outline: none;
+    /* Esto quita la barra azul al hacer clic o al navegar con teclado */
+  }
+
   .logo img {
     width: 150px;
   }
 
-   /* Oculta el menú de navegación por defecto en móviles */
+  /* Oculta el menú de navegación por defecto en móviles */
   .menu {
     flex-direction: column;
     align-items: center;
-    display: none; /* Oculta el menú por defecto */
+    display: none;
+    /* Oculta el menú por defecto */
     width: 100%;
     margin-top: 10px;
-    background-color: white; /* Fondo para el menú cuando está abierto */
-    position: absolute; /* Permite que el menú se superponga */
-    top: 100%; /* Se posiciona debajo del header */
+    background-color: white;
+    /* Fondo para el menú cuando está abierto */
+    position: absolute;
+    /* Permite que el menú se superponga */
+    top: 100%;
+    /* Se posiciona debajo del header */
     left: 0;
     right: 0;
-    z-index: 9; /* Debe estar debajo del botón toggle */
+    z-index: 9;
+    /* Debe estar debajo del botón toggle */
     padding: 20px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
   /* Cuando el menú tiene la clase 'active', se muestra */
   .menu.active {
-    display: flex; /* Muestra el menú cuando está activo */
+    display: flex;
+    /* Muestra el menú cuando está activo */
   }
 
   .menu ul {
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* Espacio entre los ítems del menú */
+    gap: 15px;
+    /* Espacio entre los ítems del menú */
     width: 100%;
   }
 
@@ -512,13 +546,16 @@ button:hover {
     text-align: center;
     padding: 10px 20px;
   }
+
   .telefonos {
     flex-direction: column;
     align-items: center;
   }
+
   .telefono.segundo {
     margin-left: 0;
   }
+
   .correo {
     justify-content: center;
   }
@@ -573,5 +610,56 @@ button:hover {
   .menu-toggle:focus {
     outline: none;
     box-shadow: none;
+  }
+}
+
+.ley-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.ley-texto {
+  flex: 1;
+  text-align: left;
+  max-width: 700px;
+   margin: 90px ; /* ⬅️ Baja el texto 20px desde arriba */
+}
+
+.ley {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #000; 
+}
+
+
+.ley-logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-shrink: 0;
+  margin-right: 250px; /* ✅ Mueve el logo más a la izquierda */
+    margin-top: -210px; /* sube el logo 20px */
+}
+
+.ley-logo img {
+  width: 320px; /* ✅ Ajustá este valor según el tamaño deseado */
+  height: auto;
+}
+
+
+@media (max-width: 768px) {
+  .ley-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ley-logo {
+    justify-content: flex-start;
+    width: 120%;
+    margin-top: 20px;
   }
 }
