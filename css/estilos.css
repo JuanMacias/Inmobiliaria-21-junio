@@ -242,6 +242,7 @@ body {
 .mapa-contacto {
   width: 100%;
   max-width: 500px;
+  margin-top: 20px; /* ⬅️ Esto baja el mapa */
 }
 
 .mapa-contacto iframe {
@@ -294,7 +295,7 @@ textarea {
 }
 
 .formulario button {
-  padding: 40px 50px;
+  padding: 20px 30px;
   /* Más alto y más ancho */
   background-color: #003c82;
   /* Azul oscuro */
@@ -304,9 +305,9 @@ textarea {
   border-radius: 8px;
   /* Bordes más suaves */
   cursor: pointer;
-  font-size: 18px;
+  font-size: 14px;
   /* Texto más grande */
-  width: 100%;
+  width: 200px;
   /* O auto si no querés que ocupe todo */
   max-width: 400px;
   /* Limita el tamaño para que no sea enorme */
@@ -641,7 +642,7 @@ button:hover {
   justify-content: flex-end;
   align-items: flex-start;
   flex-shrink: 0;
-  margin-right: 250px; /* ✅ Mueve el logo más a la izquierda */
+  margin-right: 180px; /* ✅ Mueve el logo más a la izquierda */
     margin-top: -210px; /* sube el logo 20px */
 }
 
@@ -663,3 +664,36 @@ button:hover {
     margin-top: 20px;
   }
 }
+
+.direccion {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el ícono con el texto */
+  gap: 8px;             /* Espacio entre ícono y texto */
+  margin-bottom: 8px;
+}
+/* logo google*/
+.icono-ubicacion {
+  width: 16px;         /* Ajustalo según el tamaño deseado */
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+.linea-con-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;            /* espacio entre líneas e ícono */
+  margin: 80px 0;       /* espacio arriba y abajo */
+}
+
+.linea-con-icono .linea {
+  flex: 1;
+  height: 1px;
+  background-color: #100e0e;  /* Línea blanca. Cambiá a #000 si fondo es claro */
+}
+
+.linea-con-icono .icono-centro {
+  color: #fff;             /* Color del ícono */
+  font-size: 20px;
+}/*fin logo google*/
