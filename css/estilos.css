@@ -216,7 +216,7 @@ body {
 
 .contacto-info h2 {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .contacto-info ul {
@@ -697,3 +697,100 @@ button:hover {
   color: #fff;             /* Color del ícono */
   font-size: 20px;
 }/*fin logo google*/
+
+/* Redes*/
+.redes-y-mail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 🔹 Todo alineado a la izquierda */
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 10px;
+}
+
+.redes-sociales img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.contacto-mail {
+  font-size: 16px;
+  margin: 0;
+}
+
+.contacto-mail a {
+  color: #000;
+  text-decoration: none;
+}
+
+.contacto-mail a:hover {
+  text-decoration: underline;
+}
+
+/* 🔹 Estilo base para escritorio */
+.redes-y-mail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 10px;
+}
+
+.redes-sociales a img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.redes-sociales a img:hover {
+  transform: scale(1.2);
+}
+
+.contacto-mail {
+  font-size: 16px;
+  margin: 0;
+}
+
+.contacto-mail a {
+  color: #000;
+  text-decoration: none;
+}
+
+.contacto-mail a:hover {
+  text-decoration: underline;
+}
+
+/* 🔸 Media query para pantallas chicas (celulares) */
+@media (max-width: 600px) {
+  .redes-sociales {
+    gap: 8px;
+  }
+
+  .redes-sociales a img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contacto-mail {
+    font-size: 14px;
+  }
+
+  .redes-y-mail {
+    gap: 6px;
+    margin-top: 8px;
+  }
+}
+/*fin de redes*/
+
+
