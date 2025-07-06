@@ -714,53 +714,14 @@ button:hover {
 /*fin logo google*/
 
 /* Redes*/
-.redes-y-mail {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  /* 🔹 Todo alineado a la izquierda */
-  gap: 8px;
-  margin-top: 10px;
-}
 
 .redes-sociales {
   display: flex;
-  gap: 10px;
-}
-
-.redes-sociales img {
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-}
-
-.contacto-mail {
-  font-size: 16px;
-  margin: 0;
-}
-
-.contacto-mail a {
-  color: #000;
-  text-decoration: none;
-}
-
-.contacto-mail a:hover {
-  text-decoration: underline;
+  gap: 30px;
+  /* 👉 Aumentá o reducí este valor para más o menos separación */
 }
 
 /* 🔹 Estilo base para escritorio */
-.redes-y-mail {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.redes-sociales {
-  display: flex;
-  gap: 10px;
-}
 
 .redes-sociales a img {
   width: 24px;
@@ -792,6 +753,7 @@ button:hover {
   .redes-sociales {
     gap: 8px;
   }
+}
 
   .redes-sociales a img {
     width: 20px;
@@ -806,14 +768,10 @@ button:hover {
     gap: 6px;
     margin-top: 8px;
   }
-}
 
-.youtube-icon {
-  width: 45px !important;
-  height: 45px !important;
-  margin-top: -10px;
-  /* Alinea mejor con los otros logos */
-
-}
-
-/*fin de redes*/
+   .youtube-icon {
+    width: 40px !important;
+    height: 40px !important;
+    margin-top: -6px;
+  }
+  /*fin de redes*/
