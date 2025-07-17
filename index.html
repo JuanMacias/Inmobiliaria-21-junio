@@ -2,36 +2,19 @@
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Inicio - Mi Sitio</title>
   <link rel="stylesheet" href="./css/estilos.css" />
 </head>
-
 <body>
 
-  <div class="barra-superior">
-    <div class="telefonos">
-      <div class="telefono">
-        <img src="./img/whatsapp-873316_1280.png" class="whatsapp-icon" alt="WhatsApp" />
-        <span>+54 9 11 6567-4020</span>
-      </div>
-    </div>
-    <div class="correo">
-      <span>mamacias.inmobiliaria@gmail.com</span>
-    </div>
-  </div>
-
   <header class="header">
-
     <div class="logo">
       <img src="./img/Logo.jpg" alt="Logo Mi Sitio" />
     </div>
-    <button class="menu-toggle" aria-label="Abrir menú de navegación" aria-controls="main-menu">☰</button>
-
-    <nav class="menu" id="main-menu">
+    <nav class="menu">
       <ul>
         <li><a href="index.html" class="active">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
@@ -42,39 +25,116 @@
     </nav>
   </header>
 
+  <!-- 🟩 Sección principal -->
   <div class="seccion-fondo">
     <div class="contenido-fondo">
       <h1>Tenemos tu hogar soñado en CABA</h1>
       <p>Más de 9 años conectando hogares y oportunidades en la Ciudad de Buenos Aires</p>
 
-      <div class="barra-busqueda">
-        <select name="barrio">
-          <option value="">Barrio</option>
-        </select>
-        <select name="tipo_propiedad">
-          <option value="">Tipo de propiedad</option>
-        </select>
-        <select name="venta_alquiler">
-          <option value="">En venta o alquiler</option>
-        </select>
-        <select name="ambientes">
-          <option value="">Ambientes</option>
-        </select>
-        <button type="button">Buscar propiedades</button>
-      </div>
+      <!-- 🟦 Formulario de búsqueda -->
+      <form id="form-busqueda">
+        <div class="barra-busqueda">
+          <select id="filtro-barrio">
+            <option value="">Barrio</option>
+            <option value="belgrano">Belgrano</option>
+            <option value="palermo">Palermo</option>
+            <option value="nuñez">Nuñez</option>
+            <option value="recoleta">Recoleta</option>
+            <option value="villa_urquiza">Villa Urquiza</option> <!-- ✅ agregado -->
+          </select>
+
+          <select id="filtro-tipo">
+            <option value="">Tipo</option>
+            <option value="departamento">Departamento</option>
+            <option value="casa">Casa</option>
+            <option value="ph">PH</option>
+            <option value="local">Local</option>
+            <option value="terreno">Terreno</option>
+          </select>
+
+          <select id="filtro-operacion">
+            <option value="">Operación</option>
+            <option value="venta">Venta</option>
+            <option value="alquiler">Alquiler</option>
+          </select>
+
+          <select id="filtro-ambientes">
+            <option value="">Ambientes</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option> <!-- Opcional -->
+          </select>
+
+          <button type="submit">Buscar</button>
+        </div>
+      </form>
     </div>
   </div>
 
-  <main>
-    <h1>Bienvenido a Mi Sitio</h1>
-    <p>Esta es la página de inicio donde mostramos lo principal.</p>
-  </main>
+  <!-- 🟥 Resultados -->
+  <div id="contenedor-propiedades" class="propiedades"></div>
 
-  <div class="barra-inferior">
-  </div>
+  <!-- 🔧 Script -->
+  <script>
+    let propiedadesCargadas = [];
 
-  <script src="./js/script.js"></script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const contenedor = document.getElementById("contenedor-propiedades");
+
+      // Cargar propiedades desde JSON
+      fetch("./propiedades.json")
+        .then((res) => res.json())
+        .then((data) => {
+          propiedadesCargadas = data;
+          renderizarPropiedades(propiedadesCargadas);
+        })
+        .catch((error) => {
+          console.error("Error al cargar propiedades:", error);
+        });
+
+      function renderizarPropiedades(lista) {
+        contenedor.innerHTML = "";
+        if (lista.length === 0) {
+          contenedor.innerHTML = "<p>No se encontraron propiedades.</p>";
+          return;
+        }
+        lista.forEach((prop) => {
+          const div = document.createElement("div");
+          div.className = "propiedad";
+          div.innerHTML = `
+            <img src="${prop.imagen}" alt="${prop.titulo}" />
+            <h3>${prop.titulo}</h3>
+            <p>${prop.ambientes} ambientes - ${prop.operacion}</p>
+            <a href="detalle.html?id=${prop.id}" class="btn-ver-detalle">Ver detalle</a>
+          `;
+          contenedor.appendChild(div);
+        });
+      }
+
+      // Filtro de búsqueda
+      const form = document.getElementById("form-busqueda");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Normalizar valores a minúscula
+        const barrio = document.getElementById("filtro-barrio").value.toLowerCase();
+        const tipo = document.getElementById("filtro-tipo").value.toLowerCase();
+        const operacion = document.getElementById("filtro-operacion").value.toLowerCase();
+        const ambientes = document.getElementById("filtro-ambientes").value;
+
+        const filtradas = propiedadesCargadas.filter((p) => {
+          return (!barrio || p.barrio.toLowerCase() === barrio) &&
+                 (!tipo || p.tipo.toLowerCase() === tipo) &&
+                 (!operacion || p.operacion.toLowerCase() === operacion) &&
+                 (!ambientes || String(p.ambientes) === ambientes);
+        });
+
+        renderizarPropiedades(filtradas);
+      });
+    });
+  </script>
 
 </body>
-
-</html> 
+</html>

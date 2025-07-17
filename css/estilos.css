@@ -377,38 +377,33 @@ button:hover {
 
 .barra-busqueda {
   display: flex;
+  flex-wrap: wrap; /* ✅ permite que baje en mobile */
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   padding: 20px 15px;
-  /* Esto cambia el alto de la barra de busqueda gral. */
   background-color: rgba(227, 185, 17, 0.9);
-  /* cambia el color del fonde de la barra */
   border: 2px solid #0b0b0f;
   width: 100%;
-  /* Con es elemento cambio el ancho de la barra de buqueda gral */
   max-width: 1400px;
   margin: 20px auto 0;
-  /* Margen superior para separarla del texto */
-  position: absolute;
+  position: relative;  /* 15/7*/
   top: 50%;
-  /* Ajusta este valor (e.g., 40%, 30%) para subirla */
   z-index: 2;
+  border-radius: 10px;
 }
+
 
 .barra-busqueda select,
 .barra-busqueda input {
-  padding: 5px;
+  padding: 8px 10px;
+  font-size: 15px;
   margin: 0 5px;
+  border-radius: 6px;
   border: 1px solid #ccc;
-}
-
-.barra-busqueda select,
-.barra-busqueda option,
-.barra-busqueda input {
   color: white;
-  /* Cambiá si querés otro color */
   background-color: #333;
-  /* Fondo oscuro opcional */
+  min-width: 160px;
 }
 
 .barra-busqueda button {
@@ -755,6 +750,19 @@ button:hover {
   }
 }
 
+@media (max-width: 600px) {
+  .barra-busqueda {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .barra-busqueda select,
+  .barra-busqueda button {
+    width: 100%;
+  }
+}
+
+
   .redes-sociales a img {
     width: 20px;
     height: 20px;
@@ -775,3 +783,200 @@ button:hover {
     margin-top: -6px;
   }
   /*fin de redes*/
+
+  /* ==== Contenedor de propiedades dinámicas ==== */
+.propiedades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==== Tarjeta individual ==== */
+.propiedad {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.propiedad:hover {
+  transform: scale(1.02);
+}
+
+.propiedad img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.propiedad h3 {
+  font-size: 18px;
+  margin: 15px 15px 5px;
+}
+
+.propiedad p {
+  margin: 0 15px 10px;
+  font-size: 15px;
+  color: #333;
+}
+
+#contenedor-propiedades {
+  padding: 60px 20px;
+  margin-top: 40px;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-contenido {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 600px;
+  width: 90%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.boton-volver-flotante {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.boton-volver-flotante button {
+  background-color: #c62828;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.boton-volver-flotante button:hover {
+  background-color: #a91d1d;
+}
+
+/* ✅ RESPONSIVE: para pantallas chicas (menos de 600px) */
+@media (max-width: 600px) {
+  .boton-volver-flotante {
+    left: 10px;
+    top: auto;
+    bottom: 20px;
+    transform: none;
+  }
+
+  .boton-volver-flotante button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+.propiedad {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.propiedad:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* === CONTENEDOR DE PROPIEDADES === */
+.propiedades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* === TARJETAS DE PROPIEDADES === */
+.propiedad {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.propiedad:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.propiedad img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.propiedad h3 {
+  font-size: 1.2rem;
+  margin: 10px;
+  color: #003c82;
+}
+
+.propiedad p {
+  margin: 0 10px 10px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.propiedad button {
+  background-color: #003c82;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  margin: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: calc(100% - 20px);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.propiedad button:hover {
+  background-color: #002b60;
+}
+

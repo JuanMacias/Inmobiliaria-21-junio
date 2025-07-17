@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detalle de Propiedad</title>
+  <link rel="stylesheet" href="./css/estilos.css" />
+
+  <!-- 🟨 CSS ESPECÍFICO PARA EL DETALLE -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
+
+    .detalle-container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .slider {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .prev,
+    .next {
+      position: absolute;
+      top: 45%;
+      font-size: 2rem;
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+
+    .volver {
+      margin-top: 20px;
+      display: inline-block;
+      background-color: #003c82;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .prev,
+      .next {
+        font-size: 1.5rem;
+        padding: 6px;
+      }
+
+      .detalle-container {
+        padding: 15px;
+      }
+
+      .volver {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 🟩 Contenedor del detalle -->
+  <div class="detalle-container" id="detalle-propiedad">
+    <p>Cargando propiedad...</p>
+  </div>
+
+  <!-- 🟦 SCRIPT que carga y muestra la propiedad -->
+  <script>
+    const params = new URLSearchParams(location.search);
+    const id = params.get("id");
+
+    fetch("./propiedades.json")
+      .then(res => res.json())
+      .then(data => {
+        const prop = data.find(p => p.id === id);
+        if (!prop) {
+          document.getElementById("detalle-propiedad").innerHTML = "<p>Propiedad no encontrada.</p>";
+          return;
+        }
+
+        const imagenesHTML = (prop.imagenes || [prop.imagen]).map((img, i) => `
+          <img src="${img}" class="slide ${i === 0 ? 'active' : ''}" />
+        `).join("");
+
+        document.getElementById("detalle-propiedad").innerHTML = `
+          <h2>${prop.titulo}</h2>
+          <div class="slider">
+            ${imagenesHTML}
+            <span class="prev" onclick="cambiarSlide(-1)">&#10094;</span>
+            <span class="next" onclick="cambiarSlide(1)">&#10095;</span>
+          </div>
+          <p><strong>Dirección:</strong> ${prop.direccion || '-'}</p>
+          <p><strong>Barrio:</strong> ${prop.barrio}</p>
+          <p><strong>Tipo:</strong> ${prop.tipo}</p>
+          <p><strong>Operación:</strong> ${prop.operacion}</p>
+          <p><strong>Ambientes:</strong> ${prop.ambientes}</p>
+          <p><strong>Baños:</strong> ${prop.baños || '-'}</p>
+          <p><strong>Terraza:</strong> ${'terraza' in prop ? (prop.terraza ? 'Sí' : 'No') : '-'}</p>
+          <p><strong>Jardín:</strong> ${'jardin' in prop ? (prop.jardin ? 'Sí' : 'No') : '-'}</p>
+          <p><strong>Metros²:</strong> ${prop.metrosCuadrados || '-'} m²</p>
+          <p><strong>Descripción:</strong> ${prop.descripcion || 'No disponible'}</p>
+          <a class="volver" href="index.html">⬅ Volver al inicio</a>
+
+        `;
+      });
+
+    let slideIndex = 0;
+    function cambiarSlide(n) {
+      const slides = document.querySelectorAll(".slide");
+      if (!slides.length) return;
+      slides[slideIndex].classList.remove("active");
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      slides[slideIndex].classList.add("active");
+    }
+  </script>
+</body>
+
+</html>
+

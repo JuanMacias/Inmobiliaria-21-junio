@@ -1,0 +1,122 @@
+[
+  {
+    "id": "prop1",
+    "titulo": "Departamento en Belgrano",
+    "barrio": "Belgrano",
+    "tipo": "Departamento",
+    "direccion": "Moldes 2000",
+    "operacion": "venta",
+    "ambientes": "3",
+    "baños": "2",
+    "terraza": true,
+    "jardin": false,
+    "metrosCuadrados": 80,
+    "imagen": "./img/casa1.jpg",
+    "imagenes": [
+      "./img/casa1.jpg",
+      "./img/casa3.jpg",
+      "./img/Triunvirato-5300.jpg"
+    ],
+    "descripcion": "Este amplio departamento ubicado en el corazón de Belgrano ofrece una excelente distribución, luz natural y una ubicación privilegiada cerca de todos los medios de transporte."
+  },
+  {
+    "id": "prop2",
+    "titulo": "PH en Recoleta",
+    "barrio": "recoleta",
+    "tipo": "ph",
+    "direccion": "Moldes 2000",
+    "operacion": "venta",
+    "ambientes": "3",
+    "imagen": "./img/propiedad2.jpg"
+  },
+  {
+    "id": "prop3",
+    "titulo": "Casa con Jardín en Palermo",
+    "barrio": "palermo",
+    "tipo": "casa",
+    "direccion": "Moldes 2000",
+    "operacion": "venta",
+    "ambientes": "4",
+    "imagen": "./img/propiedad3.jpg"
+  },
+  {
+    "id": "prop4",
+    "titulo": "Local comercial en Nuñez",
+    "barrio": "nuñez",
+    "tipo": "local",
+    "direccion": "Moldes 2000",
+    "operacion": "alquiler",
+    "ambientes": "1",
+    "imagen": "./img/propiedad4.jpg"
+  },
+  {
+    "id": "prop5",
+    "titulo": "Departamento en Palermo",
+    "barrio": "palermo",
+    "tipo": "departamento",
+    "direccion": "Moldes 2000",
+    "operacion": "alquiler",
+    "ambientes": "2",
+    "imagen": "./img/propiedad5.jpg"
+  },
+  {
+    "id": "prop6",
+    "titulo": "PH moderno en Belgrano",
+    "barrio": "belgrano",
+    "tipo": "ph",
+    "direccion": "Moldes 2000",
+    "operacion": "alquiler",
+    "ambientes": "2",
+    "imagen": "./img/propiedad6.jpg"
+  },
+  {
+    "id": "prop7",
+    "titulo": "Terreno en Recoleta",
+    "barrio": "recoleta",
+    "tipo": "terreno",
+    "direccion": "Moldes 2000",
+    "operacion": "venta",
+    "ambientes": "0",
+    "imagen": "./img/propiedad7.jpg"
+  },
+  {
+    "id": "prop8",
+    "titulo": "Departamento en Nuñez",
+    "barrio": "nuñez",
+    "tipo": "departamento",
+    "direccion": "Moldes 2000",
+    "operacion": "venta",
+    "ambientes": "3",
+    "imagen": "./img/propiedad8.jpg"
+  },
+  {
+    "id": "prop9",
+    "titulo": "Casa en Belgrano",
+    "barrio": "belgrano",
+    "tipo": "casa",
+    "direccion": "Moldes 2000",
+    "operacion": "alquiler",
+    "ambientes": "5",
+    "imagen": "./img/propiedad9.jpg"
+  },
+  {
+    "id": "prop10",
+    "titulo": "Oficina en Palermo",
+    "barrio": "palermo",
+    "tipo": "local",
+    "direccion": "Moldes 2000",
+    "operacion": "venta",
+    "ambientes": "2",
+    "imagen": "./img/propiedad10.jpg"
+  },
+  {
+    "id": "prop11",
+    "titulo": "Departamento moderno en Villa Urquiza",
+    "barrio": "villa_urquiza",
+    "tipo": "departamento",
+    "operacion": "venta",
+    "ambientes": "4",
+    "imagen": "./img/propiedad11.jpg",
+    "direccion": "Av. Triunvirato 5300"
+  }
+]
