@@ -1,147 +1,248 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Detalle de Propiedad</title>
-  <link rel="stylesheet" href="./css/estilos.css" />
-
-  <!-- 🟨 CSS ESPECÍFICO PARA EL DETALLE -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background-color: #f7f7f7;
-    }
-
-    .detalle-container {
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    .slider {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .slide {
-      display: none;
-      width: 100%;
-    }
-
-    .slide.active {
-      display: block;
-    }
-
-    .prev,
-    .next {
-      position: absolute;
-      top: 45%;
-      font-size: 2rem;
-      background: rgba(0, 0, 0, 0.4);
-      color: white;
-      padding: 8px;
-      cursor: pointer;
-    }
-
-    .prev {
-      left: 0;
-    }
-
-    .next {
-      right: 0;
-    }
-
-    .volver {
-      margin-top: 20px;
-      display: inline-block;
-      background-color: #003c82;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 8px;
-    }
-
-    @media (max-width: 768px) {
-      .prev,
-      .next {
-        font-size: 1.5rem;
-        padding: 6px;
-      }
-
-      .detalle-container {
-        padding: 15px;
-      }
-
-      .volver {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalle de Propiedad</title>
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <link rel="stylesheet" href="./css/detalle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
-  <!-- 🟩 Contenedor del detalle -->
-  <div class="detalle-container" id="detalle-propiedad">
-    <p>Cargando propiedad...</p>
-  </div>
+    <header>
+        <img src="./img/Logo.jpg" alt="Logo" style="height: 50px" />
+        <nav>
+            <a href="index.html">Inicio</a> |
+            <a href="nosotros.html">Nosotros</a> |
+            <a href="servicios.html">Servicios</a> |
+            <a href="propiedades.html">Propiedades</a> |
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
 
-  <!-- 🟦 SCRIPT que carga y muestra la propiedad -->
-  <script>
-    const params = new URLSearchParams(location.search);
-    const id = params.get("id");
+    <div class="detalle-wrapper">
+        <main class="detalle-main" id="detalle-propiedad">
+            <p>Cargando propiedad...</p>
+        </main>
 
-    fetch("./propiedades.json")
-      .then(res => res.json())
-      .then(data => {
-        const prop = data.find(p => p.id === id);
-        if (!prop) {
-          document.getElementById("detalle-propiedad").innerHTML = "<p>Propiedad no encontrada.</p>";
-          return;
-        }
+        <aside class="detalle-sidebar">
+            <div class="busqueda-box">
+                <h3>Búsqueda</h3>
+                <form class="form-busqueda">
+                    <select name="barrio">
+                        <option value="">Barrio</option>
+                    </select>
+                    <select name="tipo">
+                        <option value="">Tipo de propiedad</option>
+                    </select>
+                    <select name="operacion">
+                        <option value="">En venta o alquiler</option>
+                        <option value="venta">Venta</option>
+                        <option value="alquiler">Alquiler</option>
+                    </select>
+                    <select name="entorno">
+                        <option value="">Entornos</option>
+                        <option value="comercial">Comercial</option>
+                        <option value="residencial">Residencial</option>
+                    </select>
+                    <button type="submit" class="btn-buscar">Buscar</button>
+                </form>
+            </div>
 
-        const imagenesHTML = (prop.imagenes || [prop.imagen]).map((img, i) => `
-          <img src="${img}" class="slide ${i === 0 ? 'active' : ''}" />
-        `).join("");
+            <div class="ultimas-propiedades"></div>
 
-        document.getElementById("detalle-propiedad").innerHTML = `
-          <h2>${prop.titulo}</h2>
-          <div class="slider">
-            ${imagenesHTML}
-            <span class="prev" onclick="cambiarSlide(-1)">&#10094;</span>
-            <span class="next" onclick="cambiarSlide(1)">&#10095;</span>
-          </div>
-          <p><strong>Dirección:</strong> ${prop.direccion || '-'}</p>
-          <p><strong>Barrio:</strong> ${prop.barrio}</p>
-          <p><strong>Tipo:</strong> ${prop.tipo}</p>
-          <p><strong>Operación:</strong> ${prop.operacion}</p>
-          <p><strong>Ambientes:</strong> ${prop.ambientes}</p>
-          <p><strong>Baños:</strong> ${prop.baños || '-'}</p>
-          <p><strong>Terraza:</strong> ${'terraza' in prop ? (prop.terraza ? 'Sí' : 'No') : '-'}</p>
-          <p><strong>Jardín:</strong> ${'jardin' in prop ? (prop.jardin ? 'Sí' : 'No') : '-'}</p>
-          <p><strong>Metros²:</strong> ${prop.metrosCuadrados || '-'} m²</p>
-          <p><strong>Descripción:</strong> ${prop.descripcion || 'No disponible'}</p>
-          <a class="volver" href="index.html">⬅ Volver al inicio</a>
+            <h3 class="interesado">¿Te interesa esta propiedad?</h3>
+            <form action="https://formsubmit.co/mamacias.inmobiliaria@gmail.com" method="POST">
+                <input type="text" name="nombre" placeholder="Tu nombre" required><br><br>
+                <input type="email" name="email" placeholder="Tu email" required><br><br>
+                <textarea name="mensaje" placeholder="Consulta sobre la propiedad..." rows="5" required></textarea><br><br>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+                <button type="submit">Enviar</button>
+            </form>
 
-        `;
-      });
+            <div class="contacto-botones">
+                <div class="botones-secundarios">
+                    <a href="tel:+5491165674020" class="btn-secundario">
+                        <i class="fas fa-phone-alt"></i> Llamar
+                    </a>
+                    <a href="https://wa.me/5491165674020" target="_blank" class="btn-secundario">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
 
-    let slideIndex = 0;
-    function cambiarSlide(n) {
-      const slides = document.querySelectorAll(".slide");
-      if (!slides.length) return;
-      slides[slideIndex].classList.remove("active");
-      slideIndex = (slideIndex + n + slides.length) % slides.length;
-      slides[slideIndex].classList.add("active");
-    }
-  </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(location.search);
+            const id = params.get("id");
+            const contenedorDetalle = document.getElementById("detalle-propiedad");
+            const contenedorUltimas = document.querySelector(".ultimas-propiedades");
+
+            let propiedadesCargadas = [];
+            let imagenesPropiedad = [];
+            let indiceActual = 0;
+
+            fetch("./propiedades.json")
+                .then(res => res.json())
+                .then(data => {
+                    propiedadesCargadas = data;
+                    const prop = propiedadesCargadas.find(p => p.id === id);
+
+                    if (!prop) {
+                        contenedorDetalle.innerHTML = "<p>Propiedad no encontrada.</p>";
+                        return;
+                    }
+
+                    renderizarDetalle(prop);
+                    renderUltimasPropiedades(propiedadesCargadas);
+                })
+                .catch(error => {
+                    contenedorDetalle.innerHTML = "<p>Error al cargar la propiedad.</p>";
+                    console.error("Error al cargar propiedades:", error);
+                });
+
+            function renderizarDetalle(prop) {
+                imagenesPropiedad = prop.imagenes || [prop.imagen];
+                
+                const miniaturasHtml = imagenesPropiedad.map((img, i) => `
+                    <img src="${img}" class="miniatura ${i === 0 ? 'activa' : ''}" data-index="${i}" alt="Miniatura ${i + 1}" />
+                `).join("");
+
+                const direccionCompleta = `${prop.direccion}, ${prop.barrio}, Capital Federal`;
+                const direccionEncoded = encodeURIComponent(direccionCompleta);
+                
+                contenedorDetalle.innerHTML = `
+                    <h2>${prop.titulo}</h2>
+                    <div class="galeria">
+                        <div class="galeria-principal">
+                            <button class="flecha izquierda" id="btn-prev">❮</button>
+                            <img id="imagen-activa" src="${imagenesPropiedad[0]}" alt="Imagen principal" />
+                            <button class="flecha derecha" id="btn-next">❯</button>
+                        </div>
+                        <div class="galeria-miniaturas">
+                            ${miniaturasHtml}
+                        </div>
+                    </div>
+
+                    <div class="info-bloque">
+                        <h4>Dirección</h4>
+                        <div class="direccion-grid">
+                            <p><strong>Dirección:</strong> ${prop.direccion || '-'}</p>
+                            <p><strong>Ciudad:</strong> Capital Federal</p>
+                            <p><strong>Barrio:</strong> ${prop.barrio || '-'}</p>
+                            <p><strong>País:</strong> Argentina</p>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=${direccionEncoded}" target="_blank" class="btn-mapa">Abrir en Google Maps</a>
+                    </div>
+
+                    <div class="info-bloque">
+                        <h4>Detalles</h4>
+                        <div class="detalle-grid">
+                            <p><strong>Precio:</strong> u$s ${prop.precio || '-'}</p>
+                            <p><strong>Metros cuadrados:</strong> ${prop.metrosCuadrados || '-'} m²</p>
+                            <p><strong>Ambientes:</strong> ${prop.ambientes || '-'}</p>
+                            <p><strong>Baños:</strong> ${prop.baños || '-'}</p>
+                            ${prop.terraza ? '<p><strong>Terraza:</strong> Sí</p>' : ''}
+                            ${prop.jardin ? '<p><strong>Jardín:</strong> Sí</p>' : ''}
+                            </div>
+                    </div>
+
+                    <div class="info-bloque">
+                        <h4>Descripción</h4>
+                        <p>${prop.descripcion || 'No disponible'}</p>
+                    </div>
+
+                    <div class="info-bloque mapa">
+                        <h4>Ubicación</h4>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z${direccionEncoded}!5e0!3m2!1ses!2sar!4v1625078400000" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
+                    <a class="volver" href="index.html">⬅ Volver al inicio</a>
+                `;
+
+                // Lógica de la galería de imágenes
+                const imagenActiva = document.getElementById("imagen-activa");
+                const miniaturas = document.querySelectorAll(".miniatura");
+                const prevBtn = document.getElementById("btn-prev");
+                const nextBtn = document.getElementById("btn-next");
+
+                miniaturas.forEach(miniatura => {
+                    miniatura.addEventListener("click", (e) => {
+                        const index = parseInt(e.target.dataset.index);
+                        cambiarImagen(index);
+                    });
+                });
+
+                prevBtn.addEventListener("click", () => cambiarImagen((indiceActual - 1 + imagenesPropiedad.length) % imagenesPropiedad.length));
+                nextBtn.addEventListener("click", () => cambiarImagen((indiceActual + 1) % imagenesPropiedad.length));
+
+                function cambiarImagen(index) {
+                    imagenActiva.src = imagenesPropiedad[index];
+                    indiceActual = index;
+                    miniaturas.forEach(img => img.classList.remove("activa"));
+                    miniaturas[index].classList.add("activa");
+                }
+            }
+            
+            function renderUltimasPropiedades(propiedades, filtro = {}) {
+                if (!contenedorUltimas) return;
+
+                const filtradas = propiedades
+                    .filter(p => p.id !== id)
+                    .filter(p => {
+                        if (filtro.barrio && p.barrio.toLowerCase() !== filtro.barrio.toLowerCase()) return false;
+                        if (filtro.tipo && p.tipo.toLowerCase() !== filtro.tipo.toLowerCase()) return false;
+                        if (filtro.operacion && p.operacion.toLowerCase() !== filtro.operacion.toLowerCase()) return false;
+                        if (filtro.entorno && p.entorno.toLowerCase() !== filtro.entorno.toLowerCase()) return false;
+                        return true;
+                    });
+
+                const ultimas = filtradas.slice(0, 4);
+
+                contenedorUltimas.innerHTML = `
+                    <h3>Últimas propiedades</h3>
+                    <ul class="lista-ultimas">
+                        ${ultimas.map(p => `
+                            <li>
+                                <a href="detalle.html?id=${p.id}">
+                                    <img src="${p.imagen || (p.imagenes?.[0] || './img/placeholder.jpg')}" alt="${p.titulo}" />
+                                    <div>
+                                        <p>${p.titulo.length > 40 ? p.titulo.slice(0, 40) + '...' : p.titulo}</p>
+                                        <p class="precio">$ ${p.precio}</p>
+                                    </div>
+                                </a>
+                            </li>
+                        `).join("")}
+                    </ul>
+                `;
+            }
+
+            const formBusqueda = document.querySelector(".form-busqueda");
+            if (formBusqueda) {
+                formBusqueda.addEventListener("submit", e => {
+                    e.preventDefault();
+                    const filtro = {
+                        barrio: formBusqueda.barrio.value,
+                        tipo: formBusqueda.tipo.value,
+                        operacion: formBusqueda.operacion.value,
+                        entorno: formBusqueda.entorno.value
+                    };
+                    // Aquí podrías redirigir a una página de resultados con los filtros
+                    window.location.href = `propiedades.html?barrio=${filtro.barrio}&tipo=${filtro.tipo}&operacion=${filtro.operacion}&entorno=${filtro.entorno}`;
+                });
+            }
+        });
+    </script>
+
+    <!-- <div class="galeria-detalle-container">
+    <button class="flecha izquierda" id="btn-prev-detalle">&#10094;</button>
+   
+</div> -->
 </body>
 
 </html>
-
