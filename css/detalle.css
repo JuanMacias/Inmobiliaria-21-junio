@@ -133,29 +133,8 @@ header nav a {
   font-weight: bold;
 }
 
-.volver {
-  display: inline-block;
-  margin-top: 20px;
-  background-color: #003c82;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 8px;
-}
 
-iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-  border-radius: 8px;
-}
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .detalle-wrapper {
-    flex-direction: column;
-    padding: 0 15px;
-  }
 
   header nav {
     margin-top: 10px;
@@ -171,10 +150,17 @@ iframe {
   .detalle-sidebar {
     width: 100%;
   }
-}
+
 
 .galeria {
   margin-bottom: 20px;
+}
+
+.galeria-principal {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .galeria-principal img {
@@ -182,13 +168,46 @@ iframe {
   max-height: 450px;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 10px;
+}
+
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f6d11d;
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.flecha.izquierda {
+  left: 0;
+}
+
+.flecha.derecha {
+  right: 0;
+}
+
+.flecha:hover {
+  background-color: #e5b800;
 }
 
 .galeria-miniaturas {
   display: flex;
   gap: 10px;
   overflow-x: auto;
+  margin-top: 10px;
 }
 
 .galeria-miniaturas img {
@@ -206,39 +225,14 @@ iframe {
   border-color: #003c82;
 }
 
-/* Flechas sobre imagen principal */
-.galeria-principal {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.galeria-principal .flecha {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 2;
-  transition: background 0.2s ease;
-}
-
-.galeria-principal .flecha.izquierda {
-  left: 15px;
-}
-
-.galeria-principal .flecha.derecha {
-  right: 15px;
-}
-
-.galeria-principal .flecha:hover {
-  background: rgba(0, 0, 0, 0.8);
+/* Responsive para flechas */
+@media (max-width: 768px) {
+  .flecha {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    padding: 6px;
+  }
 }
 
 /* Responsive: flechas más chicas en móvil */
@@ -610,4 +604,162 @@ iframe {
         height: 40px;
         font-size: 20px;
     }
+}
+
+.flecha-flotante {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 999;
+    transition: background 0.3s ease;
+}
+
+.flecha-flotante:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.flecha-flotante.izquierda {
+    left: 0;
+}
+
+.flecha-flotante.derecha {
+    right: 0;
+}
+
+.flecha-pagina {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 12px 16px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.flecha-pagina:hover {
+  background-color: #333;
+  color: white;
+}
+
+.flecha-pagina.izquierda {
+  left: 15px;
+}
+
+.flecha-pagina.derecha {
+  right: 15px;
+}
+
+
+/* ===== Formulario flotante contacto ===== */
+.contacto-flotante {
+  position: fixed;
+  top: 80px;
+  left: 20px; /* Cambia 'right' por 'left' */
+  width: 280px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  padding: 20px 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 1100;
+}
+
+.contacto-flotante h4 {
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #222;
+  text-align: center;
+}
+
+.contacto-flotante form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto-flotante input,
+.contacto-flotante textarea {
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  border: 1.8px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.contacto-flotante input:focus,
+.contacto-flotante textarea:focus {
+  outline: none;
+  border-color: #2db34a;
+  box-shadow: 0 0 5px rgba(45,179,74,0.4);
+}
+
+.contacto-flotante button {
+  background-color: #2db34a;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 11px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.contacto-flotante button:hover {
+  background-color: #27a03e;
+}
+
+/* ===== Botón WhatsApp flotante ===== */
+.whatsapp-flotante {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  z-index: 1200;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-flotante:hover {
+  background-color: #1ebe57;
+}
+
+.whatsapp-flotante svg {
+  fill: white;
+  width: 28px;
+  height: 28px;
+}
+
+/* ===== Responsive: ocultar formulario en móvil ===== */
+@media (max-width: 768px) {
+  .contacto-flotante {
+    display: none;
+  }
+}
+.contacto-flotante {
+  position: fixed;
+  top: 80px;
+  left: 20px; /* **ESTA PROPIEDAD ES LA CLAVE** */
+  /* ... resto de tus estilos ... */
 }

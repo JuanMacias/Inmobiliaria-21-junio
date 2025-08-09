@@ -1,15 +1,17 @@
-let propiedadesCargadas = [];
-
 document.addEventListener("DOMContentLoaded", function () {
     const contenedor = document.getElementById("contenedor-propiedades");
+    const form = document.getElementById("form-busqueda");
+    const selectBarrio = document.getElementById("filtro-barrio");
+    const selectTipo = document.getElementById("filtro-tipo");
+    const selectOperacion = document.getElementById("filtro-operacion");
+    const selectAmbientes = document.getElementById("filtro-ambientes");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+    const btnNext = document.getElementById("btn-next");
+    const btnPrev = document.getElementById("btn-prev");
+    const sliderElement = document.getElementById("contenedor-propiedades");
 
-    // En tu script.js, busca esta parte:
-const btnPrev = document.getElementById('btn-prev-detalle');
-const btnNext = document.getElementById('btn-next-detalle');
-
-// Y reemplázala por esta:
-const btnPrev = document.querySelector('.flecha-detalle.izquierda');
-const btnNext = document.querySelector('.flecha-detalle.derecha');
+    let propiedadesCargadas = [];
 
     // Cargar propiedades desde JSON
     fetch("./propiedades.json")
@@ -23,8 +25,15 @@ const btnNext = document.querySelector('.flecha-detalle.derecha');
         });
 
     // Función para renderizar propiedades
-    function renderizarPropiedades(lista) { // <-- Aquí inicia la función
+    function renderizarPropiedades(lista) {
+        if (!contenedor) return;
+
         contenedor.innerHTML = "";
+        if (lista.length === 0) {
+            contenedor.innerHTML = "<p>No se encontraron propiedades.</p>";
+            return;
+        }
+
         lista.forEach((prop) => {
             const div = document.createElement("div");
             div.className = "propiedad";
@@ -32,23 +41,21 @@ const btnNext = document.querySelector('.flecha-detalle.derecha');
                 <img src="${prop.imagen}" alt="${prop.titulo}" />
                 <h3>${prop.titulo}</h3>
                 <p>${prop.ambientes} ambientes - ${prop.operacion}</p>
-                <p>Precio: U$S ${prop["u$s"]}</p>  
                 <a href="detalle.html?id=${prop.id}" class="btn-ver-detalle">Ver detalle</a>
             `;
             contenedor.appendChild(div);
         });
-    } // <-- Aquí cierra la función renderizarPropiedades
+    }
 
     // Filtro de búsqueda
-    const form = document.getElementById("form-busqueda");
     if (form) {
         form.addEventListener("submit", function (e) {
             e.preventDefault();
 
-            const barrio = document.getElementById("filtro-barrio").value.toLowerCase();
-            const tipo = document.getElementById("filtro-tipo").value.toLowerCase();
-            const operacion = document.getElementById("filtro-operacion").value.toLowerCase();
-            const ambientes = document.getElementById("filtro-ambientes").value;
+            const barrio = selectBarrio.value.toLowerCase();
+            const tipo = selectTipo.value.toLowerCase();
+            const operacion = selectOperacion.value.toLowerCase();
+            const ambientes = selectAmbientes.value;
 
             const filtradas = propiedadesCargadas.filter((p) => {
                 return (!barrio || p.barrio.toLowerCase() === barrio) &&
@@ -61,31 +68,21 @@ const btnNext = document.querySelector('.flecha-detalle.derecha');
         });
     }
 
-    // ✅ Menú hamburguesa para mobile
-    const menuToggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".menu");
-
+    // Lógica del menú hamburguesa
     if (menuToggle && menu) {
         menuToggle.addEventListener("click", function () {
             menu.classList.toggle("active");
         });
     }
 
-    // 🔁 Botones para mover el carrusel agregado 25/7
-    const btnNext = document.getElementById("btn-next");
-    const btnPrev = document.getElementById("btn-prev");
-
-   
-    const sliderElement = document.querySelector(".slider"); // O el ID de tu slider real
-
-    if (btnNext && btnPrev && sliderElement) { // Usar sliderElement aquí
+    // Lógica del carrusel (CORREGIDO)
+    if (btnNext && btnPrev && sliderElement) {
         btnNext.addEventListener("click", () => {
-            sliderElement.scrollBy({ left: 320, behavior: "smooth" });
+            sliderElement.scrollBy({ left: sliderElement.offsetWidth, behavior: "smooth" });
         });
 
         btnPrev.addEventListener("click", () => {
-            sliderElement.scrollBy({ left: -320, behavior: "smooth" });
+            sliderElement.scrollBy({ left: -sliderElement.offsetWidth, behavior: "smooth" });
         });
     }
-
-}); // <-- Aquí cierra document.addEventListener("DOMContentLoaded"
+});

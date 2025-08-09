@@ -26,7 +26,6 @@
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
-    <!-- <link rel="stylesheet" href="./css/detalle.css" /> -->
 
   </header>
 
@@ -159,13 +158,28 @@
       });
     }
   });
+
+      // ✅ Flechas para mover el carrusel
+    const slider = document.getElementById("contenedor-propiedades");
+    const btnPrev = document.getElementById("btn-prev");
+    const btnNext = document.getElementById("btn-next");
+
+    if (slider && btnPrev && btnNext) {
+      btnNext.addEventListener("click", () => {
+        slider.scrollBy({ left: 320, behavior: "smooth" });
+      });
+
+      btnPrev.addEventListener("click", () => {
+        slider.scrollBy({ left: -320, behavior: "smooth" });
+      });
+    }
+
 </script>
 
 
 
 
-<script src="./js/script.js"></script>
-
+<script src="./js/index.js"></script>
 
 </body>
 </html>
