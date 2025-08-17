@@ -1,47 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tasaciones - Mi Sitio</title>
-  <link rel="stylesheet" href="./css/estilos.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tasaciones - Mi Sitio</title>
+    <link rel="stylesheet" href="./css/estilos.css" />
 </head>
 <body>
 
-  <div class="barra-superior">
-    <div class="item">Tel: 123-456-789</div>
-    <div class="item">Email: info@misitio.com</div>
-  </div>
-
-  <header class="header">
-    <div class="logo">
-      <img src="./img/Logo.jpg" alt="Logo Mi Sitio" />
+     <!-- BARRA SUPERIOR -->
+    <div class="barra-superior">
+        <div class="telefono">
+            <img src="./img/whatsapp-873316_1280.png" class="whatsapp-icon" alt="WhatsApp" />
+            <span>+54 9 11 6567-4020</span>
+        </div>
+        <div class="item">mamacias.inmobiliaria@gmail.com</div>
     </div>
-    <nav class="menu">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="propiedades.html">Propiedades</a></li>
-        <li><a href="tasaciones.html" class="active">Tasaciones</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
-  </header>
 
-  <main>
-    <h1>Tasaciones</h1>
-    <p>Aquí encontrarás información sobre las tasaciones que realizamos.</p>
-  </main>
 
-  <script>
-    const toggleBtn = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
-    toggleBtn.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-  </script>
+
+    <header class="header">
+        <div class="logo">
+            <img src="./img/Logo.jpg" alt="Logo Mi Sitio" />
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="propiedades.html">Propiedades</a></li>
+                <li><a href="tasaciones.html" class="active">Tasaciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+    </header>
+
+    <main>
+        <section class="tasaciones-form-container">
+            <h2>Formulario de Tasaciones</h2>
+            <form action="#" method="post" class="tasaciones-form">
+                <div class="form-section">
+                    <h3>INTERESADO</h3>
+                    <div class="form-group-row">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+                    </div>
+                    <div class="form-group-row">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <input type="text" id="whatsapp" name="whatsapp" placeholder="WhatsApp">
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>DATOS DEL INMUEBLE</h3>
+                    <div class="form-group-row">
+                        <input type="text" id="calle" name="calle" placeholder="Calle" required>
+                        <input type="text" id="altura" name="altura" placeholder="Altura - Piso y Dpto">
+                        <input type="text" id="localidad" name="localidad" placeholder="Localidad" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="6"></textarea>
+                </div>
+                
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+     <!-- SECCIÓN CONTACTO 100% ANCHO -->
+  <section class="contacto-nosotros full-width">
+    <div class="contacto-container">
+      
+      <!-- Columna izquierda -->
+      <div class="contacto-info">
+        <h2>Contactanos</h2>
+        <div class="direccion">
+          <img src="./img/logo google.png" alt="Ubicación" class="icono-ubicacion" />
+          <span>Manuel Ugarte 3129 . CABA</span>
+        </div>
+
+        <div class="direccion">
+          <img src="./img/whatsapp-873316_1280.png" class="whatsapp-icon" alt="WhatsApp" />
+          <span>+54 9 11 6567-4020</span>
+        </div>
+
+        <div class="redes-y-mail">
+          <div class="redes-sociales">
+            <a href="https://www.instagram.com/inmobiliaria.mmacias" target="_blank">
+              <img src="./img/instagram-.jpg" alt="Instagram" />
+            </a>
+            <a href="https://www.facebook.com/inmobiliaria.mmacias" target="_blank">
+              <img src="./img/facebook-.png" alt="Facebook" />
+            </a>
+            <a href="https://www.youtube.com/@MaciasServiciosInmobiliarios" target="_blank">
+              <img src="./img/youtube.png" alt="YouTube" class="youtube-icon" />
+            </a>
+          </div>
+          <p class="contacto-mail">
+            ✉️ <a href="mailto:mamacias.inmobiliaria@gmail.com">mamacias.inmobiliaria@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="mapa-contacto">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4096.537591975107!2d-58.46864321144214!3d-34.55984580094057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb686d3140387%3A0xf2d1e44f2c2e3ba1!2sMac%C3%ADas%20Servicios%20Inmobiliarios!5e0!3m2!1ses!2sar!4v1750188791180!5m2!1ses!2sar"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <!-- Columna derecha: formulario -->
+      <div class="contacto-formulario">
+        <h2>Dejanos tu consulta</h2>
+        <form class="formulario">
+          <div class="fila">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Email" required>
+          </div>
+          <div class="fila">
+            <input type="text" placeholder="WhatsApp">
+            <input type="text" placeholder="Asunto">
+          </div>
+          <textarea placeholder="Su Mensaje" rows="4" required></textarea>
+          <button type="submit">Quiero saber más</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="linea-con-icono">
+      <span class="linea"></span>
+      <span class="icono-centro">🏢</span>
+      <span class="linea"></span>
+    </div>
+
+    <div class="ley-horizontal">
+      <p class="ley-texto">
+        Ley 5859 Artículo 4<br>
+        Incorporase como inciso 8 del artículo 10 de la Ley 2340 (texto consolidado según Ley N° 5666) el
+        siguiente texto:<br>
+        “Para todos los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a
+        los propietarios será el equivalente al cuatro con quince centésimos por ciento (4,15%) del valor total del
+        respectivo contrato. Se encuentra prohibido cobrar a los inquilinos que sean personas físicas comisiones
+        inmobiliarias y gastos de gestoría de informes”.
+      </p>
+      <div class="ley-logo">
+        <img src="./img/logo cucicba.png" alt="logo cucicba" />
+      </div>
+    </div>
+  </section>
+
+    <script>
+        const toggleBtn = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggleBtn.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
