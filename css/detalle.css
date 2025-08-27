@@ -763,3 +763,122 @@ header nav a {
   left: 20px; /* **ESTA PROPIEDAD ES LA CLAVE** */
   /* ... resto de tus estilos ... */
 }
+
+/* ===== Mapa de la propiedad ===== */
+#mapa-detalle-propiedad {
+    width: 100%;
+    height: 400px;
+}
+
+/* Estilos para el globo del mapa */
+.info-window-custom {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.info-window-img {
+    width: 80px; /* Tamaño de la imagen del globo */
+    height: auto;
+    border-radius: 4px;
+}
+
+.info-window-text h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: #003c82;
+}
+
+.info-window-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* ======================================================= */
+/* Estilos generales para el responsive */
+/* ======================================================= */
+
+.detalle-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.detalle-main {
+    width: 100%;
+    order: 2;
+}
+
+.detalle-sidebar {
+    width: 100%;
+    order: 1;
+    margin-bottom: 20px;
+}
+
+/* ======================================================= */
+/* Estilos para el formulario y botones del sidebar */
+/* ======================================================= */
+
+.detalle-sidebar form input,
+.detalle-sidebar form textarea,
+.detalle-sidebar form button,
+.detalle-sidebar .btn-secundario,
+.form-busqueda select,
+.form-busqueda .btn-buscar {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.contacto-botones {
+    display: flex;
+    flex-direction: column;
+}
+
+.botones-secundarios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.botones-secundarios .btn-secundario {
+    flex-basis: 48%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* ======================================================= */
+/* Estilos para tablets y dispositivos medianos (768px) */
+/* ======================================================= */
+@media (min-width: 768px) {
+    .detalle-wrapper {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .detalle-main {
+        width: 70%;
+        order: 1;
+    }
+
+    .detalle-sidebar {
+        width: 30%;
+        order: 2;
+        margin-bottom: 0;
+    }
+
+    .botones-secundarios .btn-secundario {
+        flex-basis: auto;
+    }
+}
+
+/* ======================================================= */
+/* Estilos para pantallas de escritorio (1024px) */
+/* ======================================================= */
+@media (min-width: 1024px) {
+    .detalle-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

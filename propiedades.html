@@ -1,47 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Propiedades - Mi Sitio</title>
   <link rel="stylesheet" href="./css/estilos.css" />
+  <style>
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+</style>
 </head>
-<body>
 
+<body>
   <div class="barra-superior">
-    <div class="item">Tel: 123-456-789</div>
-    <div class="item">Email: info@misitio.com</div>
+    <div class="telefono">
+      <img src="./img/whatsapp-873316_1280.png" class="whatsapp-icon" alt="WhatsApp" />
+      <span>+54 9 11 6567-4020</span>
+    </div>
+    <div class="item">
+      <a href="mailto:mamacias.inmobiliaria@gmail.com">mamacias.inmobiliaria@gmail.com</a>
+    </div>
   </div>
 
   <header class="header">
     <div class="logo">
       <img src="./img/Logo.jpg" alt="Logo Mi Sitio" />
     </div>
+    <button class="menu-toggle">☰</button>
     <nav class="menu">
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="servicios.html">Servicios</a></li>
         <li><a href="propiedades.html" class="active">Propiedades</a></li>
-        <li><a href="tasaciones.html">Tasaciones</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
-    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
   </header>
 
-  <main>
-    <h1>Propiedades</h1>
-    <p>Listado de propiedades disponibles.</p>
+  <main class="propiedades-main-content">
+    <form id="form-busqueda" class="form-busqueda">
+      <div class="select-container">
+        <select id="filtro-barrio">
+          <option value="">Barrio</option>
+          <option value="belgrano">Belgrano</option>
+          <option value="recoleta">Recoleta</option>
+          <option value="palermo">Palermo</option>
+          <option value="nuñez">Nuñez</option>
+          <option value="villa_urquiza">Villa Urquiza</option>
+        </select>
+      </div>
+      <div class="select-container">
+        <select id="filtro-tipo">
+          <option value="departamento">Departamento</option>
+          <option value="ph">PH</option>
+          <option value="casa">Casa</option>
+          <option value="local">Local</option>
+          <option value="terreno">Terreno</option>
+        </select>
+      </div>
+      <div class="select-container">
+        <select id="filtro-operacion">
+          <option value="">En venta o alquiler</option>
+          <option value="venta">Venta</option>
+          <option value="alquiler">Alquiler</option>
+        </select>
+      </div>
+      <div class="select-container">
+        <select id="filtro-ambientes">
+          <option value="">Ambientes</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5+</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-filtrar">Buscar</button>
+    </form>
+
+    <div class="propiedades-container">
+      <div id="mapa-propiedades-dinamico"></div>
+      <div class="lista-y-streetview">
+        <div id="street-view-container"></div>
+        <div class="propiedades-grid"></div>
+      </div>
+    </div>
   </main>
 
-  <script>
-    const toggleBtn = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
-    toggleBtn.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-  </script>
+  <script src="./js/propiedades.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzs1HbVyIw9GOGYGnyXlhUahofE3tdgo4&callback=initMap">
+    </script>
 
 </body>
+
 </html>
