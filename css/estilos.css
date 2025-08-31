@@ -1054,3 +1054,55 @@ textarea {
         overflow-y: visible;
     }
 }
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* ... otros estilos responsivos ... */
+    
+    .barra-busqueda {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .barra-busqueda select,
+    .barra-busqueda button {
+        width: 100%;
+    }
+}
+
+/* Estilos para que el footer sea responsive */
+@media (max-width: 768px) {
+    .contacto-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contacto-info,
+    .contacto-formulario {
+        width: 100%;
+    }
+
+    .fila {
+        flex-direction: column;
+    }
+
+    .contacto-formulario input,
+    .contacto-formulario textarea {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    /* Hace que el mapa ocupe todo el ancho disponible */
+    .mapa-contacto iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    /* Ajusta la sección de la Ley para móviles */
+    .ley-horizontal {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
