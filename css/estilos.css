@@ -75,6 +75,10 @@ body {
   flex: 1;
 }
 
+.header {
+    position: relative;
+}
+
 .logo img {
   max-height: 100px;
   width: 200px;
@@ -321,37 +325,6 @@ button:hover {
   background-color: #002b60;
 }
 
-/* ==== SECCIÓN DE BÚSQUEDA Y FONDO ==== */
-.search-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #f8f8f8;
-  border: 2px solid #ff0000;
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
-}
-
-.search-bar select,
-.search-bar input {
-  padding: 5px;
-  margin: 0 5px;
-  border: 1px solid #ccc;
-}
-
-.search-bar button {
-  padding: 10px 20px;
-  background-color: #ff0000;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.search-bar button:hover {
-  background-color: #cc0000;
-}
 
 .seccion-fondo {
   position: relative;
@@ -417,7 +390,7 @@ button:hover {
 @media (max-width: 768px) {
   /* Media query para el logo en móvil (ya estaba) */
 
-  /* ESTILO PARA QUITAR EL OUTLINE DEL ENFOQUE */
+
   /* Pégalo aquí, al final del archivo, o cerca de los estilos del menú */
   .menu ul li a:focus {
     outline: none;
@@ -553,35 +526,7 @@ button:hover {
   }
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 25px;
-    right: 130px;
-    z-index: 10;
 
-    outline: none;
-    box-shadow: none;
-  }
-
-  .menu-toggle:focus {
-    outline: none;
-    box-shadow: none;
-  }
-}
-
-.menu-toggle {
-  display: none;
-  background-color: transparent !important;
-  outline: none !important;
-  box-shadow: none !important;
-  border: none;
-}
 
 .ley-container {
   display: flex;
@@ -689,7 +634,7 @@ button:hover {
   /* 👉 Aumentá o reducí este valor para más o menos separación */
 }
 
-/* 🔹 Estilo base para escritorio */
+/*  Estilo base para escritorio */
 
 .redes-sociales a img {
   width: 24px;
@@ -716,25 +661,12 @@ button:hover {
   text-decoration: underline;
 }
 
-/* 🔸 Media query para pantallas chicas (celulares) */
+/*  Media query para pantallas chicas (celulares) */
 @media (max-width: 600px) {
   .redes-sociales {
     gap: 8px;
   }
 }
-
-@media (max-width: 600px) {
-  .barra-busqueda {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .barra-busqueda select,
-  .barra-busqueda button {
-    width: 100%;
-  }
-}
-
 
 .redes-sociales a img {
   width: 20px;
@@ -1554,7 +1486,7 @@ body {
 
 .propiedades-main-content {
     height: calc(100vh - 140px);
-    overflow: hidden;
+    overflow-y: scroll; /* Cambia 'hidden' por 'scroll' */
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -1633,5 +1565,25 @@ body {
 img {
     max-width: 100%;
     height: auto;
+}
+
+@media (max-width: 768px) {
+    /* ... otros estilos para móviles ... */
+
+    .menu-toggle {
+        display: block; /* ✅ Esto lo hace visible en móviles */
+        font-size: 28px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 20px; /* Ajusta la altura del botón */
+        right: 100px; /* Cambia este valor para moverlo a la izquierda */        
+        z-index: 999;
+        outline: none;
+        box-shadow: none;
+    }
+
+    /* ... más estilos para móviles ... */
 }
 

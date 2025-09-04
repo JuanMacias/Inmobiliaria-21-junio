@@ -1,80 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tasaciones - Mi Sitio</title>
-    <link rel="stylesheet" href="./css/estilos.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tasaciones - Mi Sitio</title>
+  <link rel="stylesheet" href="./css/estilos.css" />
 </head>
+
 <body>
 
-     <!-- BARRA SUPERIOR -->
-    <div class="barra-superior">
-        <div class="telefono">
-            <img src="./img/whatsapp-873316_1280.png" class="whatsapp-icon" alt="WhatsApp" />
-            <span>+54 9 11 6567-4020</span>
-        </div>
-        <div class="item">mamacias.inmobiliaria@gmail.com</div>
+  <!-- BARRA SUPERIOR -->
+  <div class="barra-superior">
+    <div class="telefono">
+      <img src="./img/whatsapp-873316_1280.png" class="whatsapp-icon" alt="WhatsApp" />
+      <span>+54 9 11 6567-4020</span>
     </div>
+    <div class="item">mamacias.inmobiliaria@gmail.com</div>
+  </div>
 
 
 
-    <header class="header">
-        <div class="logo">
-            <img src="./img/Logo.jpg" alt="Logo Mi Sitio" />
+  <header class="header">
+    <div class="logo">
+      <img src="./img/Logo.jpg" alt="Logo Mi Sitio" />
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="propiedades.html">Propiedades</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="tasaciones.html" class="active">Tasaciones</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+
+
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+  </header>
+
+  <main>
+    <section class="tasaciones-form-container">
+      <h2>Formulario de Tasaciones</h2>
+      <form action="#" method="post" class="tasaciones-form">
+        <div class="form-section">
+          <h3>INTERESADO</h3>
+          <div class="form-group-row">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+          </div>
+          <div class="form-group-row">
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="text" id="whatsapp" name="whatsapp" placeholder="WhatsApp">
+          </div>
         </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="propiedades.html">Propiedades</a></li>
-                <li><a href="tasaciones.html" class="active">Tasaciones</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
-    </header>
 
-    <main>
-        <section class="tasaciones-form-container">
-            <h2>Formulario de Tasaciones</h2>
-            <form action="#" method="post" class="tasaciones-form">
-                <div class="form-section">
-                    <h3>INTERESADO</h3>
-                    <div class="form-group-row">
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
-                    </div>
-                    <div class="form-group-row">
-                        <input type="email" id="email" name="email" placeholder="Email" required>
-                        <input type="text" id="whatsapp" name="whatsapp" placeholder="WhatsApp">
-                    </div>
-                </div>
-                
-                <div class="form-section">
-                    <h3>DATOS DEL INMUEBLE</h3>
-                    <div class="form-group-row">
-                        <input type="text" id="calle" name="calle" placeholder="Calle" required>
-                        <input type="text" id="altura" name="altura" placeholder="Altura - Piso y Dpto">
-                        <input type="text" id="localidad" name="localidad" placeholder="Localidad" required>
-                    </div>
-                </div>
+        <div class="form-section">
+          <h3>DATOS DEL INMUEBLE</h3>
+          <div class="form-group-row">
+            <input type="text" id="calle" name="calle" placeholder="Calle" required>
+            <input type="text" id="altura" name="altura" placeholder="Altura - Piso y Dpto">
+            <input type="text" id="localidad" name="localidad" placeholder="Localidad" required>
+          </div>
+        </div>
 
-                <div class="form-group">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="6"></textarea>
-                </div>
-                
-                <button type="submit" class="btn-enviar">Enviar</button>
-            </form>
-        </section>
-    </main>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="6"></textarea>
+        </div>
 
-     <!-- SECCIÓN CONTACTO 100% ANCHO -->
+        <button type="submit" class="btn-enviar">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- SECCIÓN CONTACTO 100% ANCHO -->
   <section class="contacto-nosotros full-width">
     <div class="contacto-container">
-      
+
       <!-- Columna izquierda -->
       <div class="contacto-info">
         <h2>Contactanos</h2>
@@ -154,15 +158,8 @@
     </div>
   </section>
 
-    <script>
-        const toggleBtn = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
-        toggleBtn.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script>
-     <script src="./js/menu.js"></script>
-
+  <script src="./js/menu.js"></script>
 
 </body>
+
 </html>

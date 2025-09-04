@@ -16,13 +16,11 @@
         <div class="item">mamacias.inmobiliaria@gmail.com</div>
     </div>
 
-
-
     <header class="header">
         <div class="logo">
             <img src="./img/Logo.jpg" alt="Logo Mi Sitio" />
         </div>
-        <nav class="menu">
+        <nav class="menu" id="main-menu">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
@@ -32,12 +30,11 @@
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menú">☰</button>
     </header>
 
     <section class="soluciones">
-        <h2>Servicios inmobiliarias</h2>
-
+        <h2>Servicios inmobiliarios</h2>
         <div class="servicio">
             <img src="imagenes/venta.jpg" alt="Venta y Alquiler">
             <div class="texto">
@@ -45,7 +42,6 @@
                 <p>Trabajamos para que Ud. se sienta acompañado por nuestro equipo de profesionales y pueda realizar su operación inmobiliaria con la tranquilidad y seguridad que necesita.</p>
             </div>
         </div>
-
         <div class="servicio">
             <img src="imagenes/administracion.jpg" alt="Administración de Propiedades">
             <div class="texto">
@@ -53,7 +49,6 @@
                 <p>Nos ocupamos del día a día de su propiedad, gestionando cobros, pagos, reclamos, reparaciones y asesoramiento integral.</p>
             </div>
         </div>
-
         <div class="servicio">
             <img src="imagenes/tasaciones.jpg" alt="Tasaciones">
             <div class="texto">
@@ -62,7 +57,6 @@
                 <a href="tasaciones.html" class="btn">Quiero tasar mi propiedad</a>
             </div>
         </div>
-
         <div class="servicio">
             <img src="imagenes/juridico.jpg" alt="Asesoramiento Jurídico">
             <div class="texto">
@@ -74,19 +68,16 @@
 
     <section class="contacto-nosotros full-width">
         <div class="contacto-container">
-            
             <div class="contacto-info">
                 <h2>Contactanos</h2>
                 <div class="direccion">
                     <img src="./img/logo google.png" alt="Ubicación" class="icono-ubicacion" />
                     <span>Manuel Ugarte 3129 . CABA</span>
                 </div>
-
                 <div class="direccion">
                     <img src="./img/whatsapp-873316_1280.png" class="whatsapp-icon" alt="WhatsApp" />
                     <span>+54 9 11 6567-4020</span>
                 </div>
-
                 <div class="redes-y-mail">
                     <div class="redes-sociales">
                         <a href="https://www.instagram.com/inmobiliaria.mmacias" target="_blank">
@@ -103,7 +94,6 @@
                         ✉️ <a href="mailto:mamacias.inmobiliaria@gmail.com">mamacias.inmobiliaria@gmail.com</a>
                     </p>
                 </div>
-
                 <div class="mapa-contacto">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4096.537591975107!2d-58.46864321144214!3d-34.55984580094057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb686d3140387%3A0xf2d1e44f2c2e3ba1!2sMac%C3%ADas%20Servicios%20Inmobiliarios!5e0!3m2!1ses!2sar!4v1750188791180!5m2!1ses!2sar"
@@ -111,7 +101,6 @@
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-
             <div class="contacto-formulario">
                 <h2>Dejanos tu consulta</h2>
                 <form class="formulario">
@@ -127,15 +116,12 @@
                     <button type="submit">Quiero saber más</button>
                 </form>
             </div>
-
         </div>
-
         <div class="linea-con-icono">
             <span class="linea"></span>
             <span class="icono-centro">🏢</span>
             <span class="linea"></span>
         </div>
-
         <div class="ley-horizontal">
             <p class="ley-texto">
                 Ley 5859 Artículo 4<br>
@@ -152,14 +138,7 @@
         </div>
     </section>
 
-    <script>
-        const toggleBtn = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
-        toggleBtn.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script>
-     <script src="./js/menu.js"></script>
+    <script src="./js/menu.js"></script>
 
 </body>
 </html>

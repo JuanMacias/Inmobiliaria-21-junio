@@ -16,10 +16,11 @@ function initMap() {
     const ubicacionInicial = {
         lat: -34.5997,
         lng: -58.4208
-    };
+    };    
     mapa = new google.maps.Map(document.getElementById("mapa-propiedades-dinamico"), {
         zoom: 12,
         center: ubicacionInicial,
+        scrollwheel: false, // ¡Agrega esta línea!
     });
 
     cargarPropiedades();

@@ -1,12 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".menu");
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.menu');
 
-    if (menuToggle && menu) {
-        menuToggle.addEventListener("click", () => {
-            menu.classList.toggle("menu-activo");
-        });
-    }
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', function() {
+      // Alterna la clase 'active' en la lista del menú para mostrarlo/ocultarlo
+      navMenu.classList.toggle('active');
+    });
+  }
 });
-
-

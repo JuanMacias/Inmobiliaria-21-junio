@@ -910,37 +910,3 @@ header nav a {
     overflow: hidden;
 }
 
-/* Estilos para el menú en modo móvil */
-.menu {
-    display: none; /* Oculta el menú por defecto en dispositivos pequeños */
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 60px; /* Ajusta esto según la altura de tu header */
-    left: 0;
-    background-color: #f1f1f1; /* Color de fondo del menú desplegable */
-    z-index: 1000;
-}
-
-.menu.active {
-    display: flex; /* Muestra el menú cuando tiene la clase 'active' */
-}
-
-/* Oculta el menú-toggle en escritorio */
-@media (min-width: 768px) {
-    .menu-toggle {
-        display: none;
-    }
-    .menu {
-        display: flex; /* Muestra el menú completo en escritorio */
-        position: static;
-        flex-direction: row;
-        width: auto;
-    }
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
