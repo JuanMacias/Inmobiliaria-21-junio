@@ -1451,143 +1451,98 @@ body {
 /* === PÁGINA DE PROPIEDADES DINÁMICO === */
 /* ===================================== */
 
-/* Contenedor principal para el mapa y la lista de propiedades */
+/* Contenedor principal que usa Grid para el diseño en escritorio */
 .propiedades-container {
-  display: flex;
-  flex: 1;
-  gap: 20px;
-  align-items: flex-start;
+    display: flex; /* Por defecto, usamos flexbox para el diseño en móviles */
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-/* Contenedor del mapa */
+/* El mapa ocupará la parte superior en móviles */
 #mapa-propiedades-dinamico {
-  flex: 7;
-  height: 400px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  top: 0; /* Asegura que el mapa se fije en la parte superior */
+    width: 100%;
+    height: 300px; /* Altura más adecuada para móviles */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Contenedor de la lista de propiedades y Street View */
-.lista-y-streetview {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  min-width: 600px;
-  height: 600px; /* <--- Altura fija */
-  overflow-y: scroll; /* <--- Scroll vertical */
+/* Contenedor de la lista de propiedades */
+.lista-propiedades {
+    width: 100%;
+}
+
+/* La cuadrícula de propiedades (a una columna en móviles) */
+.propiedades-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    gap: 20px;
+}
+
+/* Estilos para las tarjetas de propiedad */
+.propiedad-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.propiedad-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.propiedad-card .info {
+    padding: 15px;
+}
+
+.propiedad-card h3 {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+/* --- Media Queries para Escritorio --- */
+@media (min-width: 900px) {
+    .propiedades-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* 2/3 para el mapa, 1/3 para la lista */
+        align-items: start;
+        height: 80vh; /* Altura del contenedor para el scroll */
+        padding: 40px 20px;
+    }
+
+    #mapa-propiedades-dinamico {
+        position: sticky; /* Se mantiene fijo mientras la lista se desplaza */
+        top: 20px; /* Distancia desde la parte superior */
+        height: 100%; /* Ocupa toda la altura del contenedor */
+    }
+
+    .lista-propiedades {
+        height: 100%; /* Ocupa toda la altura del contenedor */
+        overflow-y: scroll; /* Agrega scroll vertical a la lista */
+        -ms-overflow-style: none; /* Oculta la barra de scroll en IE y Edge */
+        scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
+    }
+
+    /* Oculta la barra de scroll en WebKit (Chrome, Safari) */
+    .lista-propiedades::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* La cuadrícula de propiedades (a dos columnas en escritorio) */
+    .propiedades-grid {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en escritorio */
+    }
 }
 
 /* Este código achica la imagen dentro del globo del Mapa */
 #mapa-propiedades-dinamico .gm-style-iw-t img, 
 #mapa-propiedades-dinamico .gm-style-iw-t div:first-child img {
-    max-width: 100px !important; /* Ajusta el ancho deseado */
-    max-height: 200px !important; /* Ajusta la altura deseada */
-    width: auto !important;
-    height: auto !important;
-}
-
-.propiedades-main-content {
-    height: calc(100vh - 140px);
-    overflow-y: scroll; /* Cambia 'hidden' por 'scroll' */
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 0;
-}
-
-/*
-* CÓDIGO PARA MOSTRAR TODO EL TEXTO DEL GLOBO
-*/
-/* Anula el ancho máximo de la ventana de información */
-.gm-style-iw.gm-style-iw-c {
-    max-width: 400px !important; /* Puedes ajustar este valor si necesitas más espacio */
-     max-height: 600px !important; /* Añade esta línea para dar más altura */
-    width: auto !important;
-    height: auto !important;
-}
-
-/* Evita que el contenido interior tenga overflow */
-.gm-style .gm-style-iw-d {
-    overflow: visible !important;
-}
-
-/* Ajusta el contenido dentro del globo */
-.gm-style .gm-style-iw-d > div {
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-}
-
-/* Asegura que el texto y la imagen no se corten */
-#mapa-propiedades-dinamico .gm-style-iw-t img, 
-#mapa-propiedades-dinamico .gm-style-iw-t div:first-child img {
     max-width: 100px !important;
-    max-height: 150px !important;
+    max-height: 200px !important;
     width: auto !important;
     height: auto !important;
 }
-
-/* Estilos por defecto (para móvil primero) */
-.detalle-wrapper {
-    display: flex;
-    flex-direction: column; /* Apila los elementos en móvil */
-    gap: 20px;
-}
-
-/* Media query para tabletas y escritorios */
-@media (min-width: 768px) {
-    .detalle-wrapper {
-        flex-direction: row; /* Muestra los elementos en fila en escritorio */
-        justify-content: space-between;
-    }
-    .detalle-main {
-        width: 65%; /* O el porcentaje que prefieras */
-    }
-    .detalle-sidebar {
-        width: 30%; /* Para que la barra lateral ocupe menos espacio */
-    }
-}
-
-.contacto-container {
-    display: flex;
-    flex-direction: column; /* Por defecto, apila las columnas */
-}
-
-@media (min-width: 768px) {
-    .contacto-container {
-        flex-direction: row; /* Muestra en fila en escritorios */
-        justify-content: space-around;
-        align-items: flex-start;
-    }
-    .contacto-info,
-    .contacto-formulario {
-        width: 45%; /* Para que ocupen casi la mitad cada uno */
-    }
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-@media (max-width: 768px) {
-    /* ... otros estilos para móviles ... */
-
-    .menu-toggle {
-        display: block; /* ✅ Esto lo hace visible en móviles */
-        font-size: 28px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        position: absolute;
-        top: 20px; /* Ajusta la altura del botón */
-        right: 100px; /* Cambia este valor para moverlo a la izquierda */        
-        z-index: 999;
-        outline: none;
-        box-shadow: none;
-    }
-
-    /* ... más estilos para móviles ... */
-}
-
