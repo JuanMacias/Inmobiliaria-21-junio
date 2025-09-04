@@ -1546,3 +1546,81 @@ body {
     width: auto !important;
     height: auto !important;
 }
+
+/* Estilos para la ventana de información del mapa */
+.gm-style-iw.gm-style-iw-c {
+    max-width: 400px !important;
+    max-height: 600px !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+.gm-style .gm-style-iw-d {
+    overflow: visible !important;
+}
+
+.gm-style .gm-style-iw-d > div {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+#mapa-propiedades-dinamico .gm-style-iw-t img, 
+#mapa-propiedades-dinamico .gm-style-iw-t div:first-child img {
+    max-width: 100px !important;
+    max-height: 150px !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+/* === Estilos adicionales y media queries === */
+
+/* Estilos por defecto (para móvil primero) */
+
+@media (min-width: 768px) {
+    .detalle-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .detalle-main {
+        width: 65%;
+    }
+    .detalle-sidebar {
+        width: 30%;
+    }
+
+    .contacto-container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .contacto-info,
+    .contacto-formulario {
+        width: 45%;
+    }
+    
+    .menu-toggle {
+        display: none; /* Oculta el botón del menú en escritorio */
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    /* ... otros estilos para móviles ... */
+    .menu-toggle {
+        display: block; /* Esto lo hace visible en móviles */
+        font-size: 28px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 100px;
+        z-index: 999;
+        outline: none;
+        box-shadow: none;
+    }
+}
