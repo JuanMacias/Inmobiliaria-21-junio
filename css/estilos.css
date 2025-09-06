@@ -2011,3 +2011,74 @@ header nav a {
     overflow: hidden;
 }
 
+/* ====================================================== */
+/* Media Queries para Dispositivos Móviles      6/9    */
+/* ====================================================== */
+
+@media (max-width: 768px) {
+  /* Oculta la navegación y muestra el botón del menú */
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* Ajusta según la altura de tu header */
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Estilo del menú cuando se activa con JS */
+  .menu.menu-activo {
+    display: block;
+    background-color: #003c82;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li a {
+    color: white;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .menu-toggle {
+    display: block; /* Muestra el botón hamburguesa */
+  }
+
+  /* Ajustes del layout principal de la página de detalle */
+  .detalle-wrapper {
+    flex-direction: column;
+    margin: 10px auto;
+    padding: 0 10px;
+  }
+
+  .detalle-main,
+  .detalle-sidebar {
+    width: 100%;
+    flex: none;
+  }
+
+  /* Ajusta las grillas de detalles y dirección para que se apilen */
+  .direccion-grid,
+  .detalle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ajusta los estilos del mapa y el formulario */
+  .contacto-container {
+    flex-direction: column;
+  }
+
+  .contacto-info,
+  .contacto-formulario {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
