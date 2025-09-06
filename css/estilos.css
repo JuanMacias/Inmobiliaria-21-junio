@@ -2082,3 +2082,86 @@ header nav a {
   }
 }
 
+/* ===== Formulario flotante contacto ===== 06/09 */
+.contacto-flotante {
+    position: fixed;
+    top: 80px;
+    left: 20px; /* Cambia 'right' por 'left' */
+    width: 280px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    padding: 20px 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 1100;
+}
+
+.contacto-flotante h4 {
+    margin: 0 0 12px 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #222;
+    text-align: center;
+}
+
+.contacto-flotante form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-flotante input,
+.contacto-flotante textarea {
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    border: 1.8px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.contacto-flotante input:focus,
+.contacto-flotante textarea:focus {
+    outline: none;
+    border-color: #2db34a;
+    box-shadow: 0 0 5px rgba(45,179,74,0.4);
+}
+
+.contacto-flotante button {
+    background-color: #2db34a;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 11px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.contacto-flotante button:hover {
+    background-color: #27a03e;
+}
+
+/* ===== Botón WhatsApp flotante ===== */
+.whatsapp-flotante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+}
+
+.whatsapp-flotante img {
+    width: 32px;
+    height: 32px;
+}
+
