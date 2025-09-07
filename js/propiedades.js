@@ -177,3 +177,4 @@ function filtrarPropiedades() {
     renderizarPropiedades(propiedadesFiltradas);
     crearMarcadoresEnMapa(propiedadesFiltradas);
 }
+

@@ -584,64 +584,7 @@ img {
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* ==== CARRUSEL ==== */
-.carrusel-propiedades {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 1400px;
-    margin: 40px auto;
-    position: relative;
-}
 
-.slider-container {
-    width: 90%;
-    max-width: 1200px;
-    overflow: hidden;
-}
-
-.slider {
-    display: flex;
-    gap: 20px;
-    padding: 0 10px;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-}
-
-.slider::-webkit-scrollbar {
-    display: none;
-}
-
-.slider .propiedad {
-    flex-shrink: 0;
-    width: calc(104% / 3 - 20px);
-    scroll-snap-align: start;
-}
-
-.carrusel-propiedades .flecha {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #f6d11d;
-    color: black;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-}
 
 .carrusel-propiedades .flecha:hover {
     background-color: #e5b800;
@@ -1326,23 +1269,6 @@ header nav a {
   border-color: #003c82;
 }
 
-/* Responsive para flechas */
-@media (max-width: 768px) {
-  .flecha {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    padding: 6px;
-  }
-}
-
-/* Responsive: flechas más chicas en móvil */
-@media (max-width: 768px) {
-  .galeria-principal .flecha {
-    font-size: 1.5rem;
-    padding: 6px;
-  }
-}
 
 .contacto-botones {
   margin-top: 20px;
@@ -1462,51 +1388,6 @@ header nav a {
   font-size: 0.95em;
 }
 
-.galeria-imagenes {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.galeria-slider {
-  display: flex;
-  overflow: hidden;
-  max-width: 100%;
-}
-
-.galeria-slider img {
-  width: 100%;
-  max-width: 600px;
-  object-fit: cover;
-}
-
-.btn-flecha {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  cursor: pointer;
-  z-index: 2;
-  padding: 5px 10px;
-  border-radius: 50%;
-  transition: background 0.3s ease;
-}
-
-#btn-prev {
-  left: 10px;
-}
-
-#btn-next {
-  right: 10px;
-}
-
-.btn-flecha:hover {
-  background-color: rgba(255, 255, 255, 1);
-}
-
 .visible {
   display: block;
 }
@@ -1516,39 +1397,6 @@ header nav a {
 }
 
 /* =================== Carrusel de la página de inicio =================== */
-.carrusel-propiedades {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 1400px;
-    margin: 40px auto;
-    position: relative;
-}
-
-.slider-container {
-    width: 90%; 
-    max-width: 1200px;
-    overflow: hidden;
-}
-
-.slider {
-    display: flex;
-    gap: 20px;
-    padding: 0 10px;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory; 
-}
-.slider::-webkit-scrollbar { display: none; }
-.slider { scrollbar-width: none; }
-
-.slider .propiedad {
-    flex-shrink: 0;
-    width: calc(33.33% - 13.33px);
-    scroll-snap-align: start; 
-}
 
 /* =================== Galería de la página de detalle =================== */
 .galeria-detalle-container {
@@ -1671,25 +1519,6 @@ header nav a {
 .galeria-detalle-container .flecha.izquierda { left: 0; }
 .galeria-detalle-container .flecha.derecha { right: 0; }
 
-/* =================== Responsive =================== */
-@media (max-width: 1024px) {
-    .slider .propiedad {
-        width: calc(100% / 2 - 20px);
-    }
-}
-@media (max-width: 768px) {
-    .slider .propiedad {
-        width: 100%;
-    }
-    .carrusel-propiedades .flecha {
-        display: none;
-    }
-    .galeria-detalle-container .flecha {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
-}
 
 .flecha-flotante {
     position: fixed;
@@ -1746,67 +1575,6 @@ header nav a {
 }
 
 
-/* ===== Formulario flotante contacto ===== */
-.contacto-flotante {
-  position: fixed;
-  top: 80px;
-  left: 20px; /* Cambia 'right' por 'left' */
-  width: 280px;
-  background-color: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  border-radius: 12px;
-  padding: 20px 18px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  z-index: 1100;
-}
-
-.contacto-flotante h4 {
-  margin: 0 0 12px 0;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: #222;
-  text-align: center;
-}
-
-.contacto-flotante form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contacto-flotante input,
-.contacto-flotante textarea {
-  margin-bottom: 10px;
-  padding: 10px 12px;
-  font-size: 0.9rem;
-  border: 1.8px solid #ddd;
-  border-radius: 8px;
-  transition: border-color 0.3s ease;
-  font-family: inherit;
-  resize: vertical;
-}
-
-.contacto-flotante input:focus,
-.contacto-flotante textarea:focus {
-  outline: none;
-  border-color: #2db34a;
-  box-shadow: 0 0 5px rgba(45,179,74,0.4);
-}
-
-.contacto-flotante button {
-  background-color: #2db34a;
-  border: none;
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 11px 0;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.25s ease;
-}
-
-.contacto-flotante button:hover {
-  background-color: #27a03e;
-}
 
 /* ===== Botón WhatsApp flotante ===== */
 .whatsapp-flotante {
@@ -1928,7 +1696,7 @@ header nav a {
         margin-bottom: 0;
     }
 
-    .botones-secundarios .btn-secundario {
+       .botones-secundarios .btn-secundario {
         flex-basis: auto;
     }
 }
@@ -2164,4 +1932,13 @@ header nav a {
     width: 32px;
     height: 32px;
 }
-
+@media (max-width: 767px) {
+  .detalle-wrapper {
+    display: flex; /* This is the key line */
+    flex-direction: column;
+  }
+  .detalle-main,
+  .detalle-sidebar {
+    width: 100%;
+  }
+}
