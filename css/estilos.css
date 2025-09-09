@@ -171,6 +171,7 @@ img {
     transform: translate(-50%, -50%);
     z-index: 2;
     border-radius: 10px;
+     box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.2); 
 }
 
 .barra-busqueda select,
@@ -529,7 +530,7 @@ img {
 
 .propiedad img {
     width: 100%;
-    height: 200px;
+    height: 200px;  /* Aumenta la altura para que la imagen sea más grande */
     object-fit: cover;
 }
 
@@ -545,9 +546,19 @@ img {
     color: #333;
 }
 
+.propiedad {
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .propiedad button, .btn-ver-detalle {
     display: block;
-    padding: 14px 20px;
+    padding: 25px 55px;
     margin: 12px auto;
     border: none;
     border-radius: 8px;
@@ -586,7 +597,7 @@ img {
 
 
 
-.carrusel-propiedades .flecha:hover {
+ .carrusel-propiedades .flecha:hover {
     background-color: #e5b800;
 }
 
@@ -762,7 +773,6 @@ img {
 .propiedad-card {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
 }
@@ -934,6 +944,7 @@ img {
         position: static;
         width: 90%;
         padding: 15px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ¡Esta es la sombra que necesitas modificar! */
     }
 
     .barra-busqueda select, .barra-busqueda input, .barra-busqueda button {
@@ -992,11 +1003,11 @@ img {
         margin: 0 auto 15px;
         width: 100%;
     }
-
+/* 
     .btn-ver-detalle {
         width: 100%;
         box-sizing: border-box;
-    }
+    } */
 
     .form-group-row {
         flex-direction: column;
@@ -1106,6 +1117,15 @@ header nav a {
   cursor: pointer;
 }
 
+.carrusel-propiedades {
+    position: relative;
+    max-width: 1050px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center; /* This centers the content horizontally */
+    align-items: center;
+}
+
 .slider {
   position: relative;
   overflow: hidden;
@@ -1212,7 +1232,7 @@ header nav a {
 
 .flecha {
   position: absolute;
-  top: 50%;
+  top: 10px;
   transform: translateY(-50%);
   background-color: #f6d11d;
   color: black;
@@ -1418,7 +1438,7 @@ header nav a {
 /* Estilos de las flechas (comunes) */
 .flecha {
     position: absolute;
-    top: 50%;
+    top: 85%;
     transform: translateY(-50%);
     background-color: #f6d11d; 
     color: black;
@@ -1450,7 +1470,7 @@ header nav a {
 
 .slider {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     padding: 0 10px;
     overflow-x: scroll;
     scroll-behavior: smooth;
@@ -1462,7 +1482,7 @@ header nav a {
 
 .slider .propiedad {
     flex-shrink: 0;
-    width: calc(33.33% - 13.33px);
+    width: 309px; /*Cambia a un ancho fijo para que no se apilen*/
     scroll-snap-align: start; 
 }
 
@@ -1484,7 +1504,7 @@ header nav a {
 /* Estilos de las flechas (comunes) */
 .flecha {
     position: absolute;
-    top: 50%;
+     bottom: 10px; /* Por ejemplo, 20px desde la parte inferior del carrusel */
     transform: translateY(-50%);
     background-color: #f6d11d; 
     color: black;
@@ -1937,4 +1957,95 @@ header nav a {
   .detalle-sidebar {
     width: 100%;
   }
+}
+
+/* ==== SECCIÓN DESTACADA ==== */
+.seccion-destacada {
+    position: relative; /* Contenedor para la imagen destacada */
+    height: 70vh; /* Altura que ocupará en la pantalla */
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0; /* Asegura que no haya padding extra */
+}
+
+.propiedad-principal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.imagen-destacada {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin deformarse */
+    filter: brightness(0.6); /* Oscurece la imagen para que el texto resalte */
+}
+
+.info-principal {
+    position: absolute; /* Permite posicionar el texto sobre la imagen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el contenido perfectamente */
+    text-align: center;
+    color: white;
+    z-index: 10;
+}
+
+.info-principal p {
+    font-size: 18px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.info-principal h1 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.info-principal a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #f6d11d;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.info-principal a:hover {
+    background-color: #e5b800;
+}
+
+@media (max-width: 768px) {
+    /* ... otros estilos responsivos ... */
+
+    .carrusel-propiedades .flecha {
+        display: block; /* Muestra los botones que ocultaste antes */
+        position: absolute; /* Para posicionarlos con respecto al carrusel */
+        top: 50%; /* Los coloca a la mitad de la altura */
+        transform: translateY(-50%); /* Centra verticalmente */
+        z-index: 10;
+        background-color: rgba(240, 217, 5, 0.8); /* Fondo semitransparente para que se vean sobre la imagen */
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .carrusel-propiedades .flecha.izquierda {
+        left: 5px; /* Pégalo al borde izquierdo del carrusel */
+    }
+
+    .carrusel-propiedades .flecha.derecha {
+        right: 5px; /* Pégalo al borde derecho del carrusel */
+    }
+
+    /* Oculta las flechas si ya estaban definidas en otro lugar para móvil */
+    /* .carrusel-propiedades .flecha {
+        display: none;
+    } */
 }

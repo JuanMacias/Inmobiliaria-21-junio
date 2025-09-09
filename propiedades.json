@@ -65,7 +65,12 @@
     "direccion": "Moldes 2000",
     "operacion": "alquiler",
     "ambientes": 1,
-    "imagen": "img/propiedad4.jpg",
+    "imagen": "img/casa/casa1.jpg",
+    "imagenes": [
+      "img/casa/casa1.jpg",
+      "img/casa/casa2.jpg",
+      "img/casa/casa3.jpg"
+    ],
     "lat": -34.5447,
     "lng": -58.4682
   },
