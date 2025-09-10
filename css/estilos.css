@@ -773,7 +773,7 @@ img {
 .propiedad-card {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -10px 14px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
 }
 
@@ -1536,19 +1536,6 @@ header nav a {
 .galeria-detalle-container .flecha.derecha { right: 0; }
 
 
-.flecha-flotante {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2.5rem;
-    background: rgba(0, 0, 0, 0.4);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    z-index: 999;
-    transition: background 0.3s ease;
-}
 
 .flecha-flotante:hover {
     background: rgba(0, 0, 0, 0.7);
@@ -1561,35 +1548,6 @@ header nav a {
 .flecha-flotante.derecha {
     right: 0;
 }
-
-.flecha-pagina {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  color: #333;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 12px 16px;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 0 8px rgba(0,0,0,0.3);
-  z-index: 1000;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.flecha-pagina:hover {
-  background-color: #333;
-  color: white;
-}
-
-.flecha-pagina.izquierda {
-  left: 15px;
-}
-
-.flecha-pagina.derecha {
-  right: 15px;
-}
-
 
 
 /* ===== Botón WhatsApp flotante ===== */
@@ -2048,4 +2006,85 @@ header nav a {
     /* .carrusel-propiedades .flecha {
         display: none;
     } */
+}
+
+/* ==== Estilo para el botón flotante (Flecha de Navegación) ==== */
+.flecha-flotante {
+    position: fixed; /* Mantiene la flecha en una posición fija en la pantalla */
+    top: 50%; /* La centra verticalmente */
+    transform: translateY(-50%); /* Ajuste fino para el centrado perfecto */
+    font-size: 2.5rem; /* Tamaño del icono */
+    width: 55px; /* Ancho del botón */
+    height: 55px; /* Altura del botón */
+    background-color: #f6d11d; /* Color amarillo de tu paleta */
+    color: #333; /* Color oscuro para el ícono de la flecha */
+    border: none;
+    border-radius: 50%; /* La convierte en un círculo */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* Sombra para un efecto de "flotante" */
+    cursor: pointer;
+    z-index: 1000; /* Asegura que esté siempre encima de otros elementos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Posición para las flechas izquierda y derecha */
+.flecha-flotante.izquierda {
+    left: 20px;
+}
+
+.flecha-flotante.derecha {
+    right: 20px;
+}
+
+/* Efecto al pasar el cursor (hover) */
+.flecha-flotante:hover {
+    background-color: #e5b800; /* Un amarillo más oscuro en hover */
+    transform: translateY(-50%) scale(1.1); /* Se agranda ligeramente */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35); /* La sombra se intensifica */
+}
+
+/* Estilo para el ícono de la flecha */
+.flecha-flotante i {
+    font-size: 1.5rem; /* El ícono es un poco más pequeño para que se vea bien en el círculo */
+}
+
+/* ==== Flechas flotantes de página (globales) ==== */
+.flecha-flotante {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    width: 55px;
+    height: 55px;
+    background-color: #f6d11d; /* Color amarillo de tu paleta */
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flecha-flotante.izquierda {
+    left: 20px;
+}
+
+.flecha-flotante.derecha {
+    right: 20px;
+}
+
+.flecha-flotante:hover {
+    background-color: #e5b800;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.flecha-flotante i {
+    font-size: 1.5rem;
 }
