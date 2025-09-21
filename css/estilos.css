@@ -71,7 +71,6 @@ img {
     color: #e0e0e0;
     text-decoration: underline;
 }
-
 /* ==== HEADER Y NAVEGACIÓN ==== */
 .header {
     position: relative;
@@ -90,7 +89,7 @@ img {
 .menu {
     display: flex;
     justify-content: flex-end;
-    flex: 2;
+    margin-left: auto; /* <-- ¡Este es el cambio clave! */
 }
 
 .menu-toggle {
@@ -111,6 +110,9 @@ img {
     font-weight: bold;
 }
 
+.menu ul li a:hover, .menu ul li a:focus {
+    color: #d40000;
+}
 .menu ul li a:hover, .menu ul li a:focus {
     color: #d40000;
 }
@@ -1596,27 +1598,45 @@ header nav a {
     width: 100%;
     height: 400px;
 }
-
 /* ======================================================= */
 /* Estilos generales para el responsive */
 /* ======================================================= */
 
-.detalle-wrapper {
+/* ======================================================= */
+/* Estilos para el formulario y botones del sidebar */
+/* ======================================================= */
+
+.detalle-sidebar form input,
+.detalle-sidebar form textarea,
+.detalle-sidebar form button,
+.detalle-sidebar .btn-secundario,
+.form-busqueda select,
+.form-busqueda .btn-buscar {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.contacto-botones {
     display: flex;
     flex-direction: column;
-    padding: 20px;
 }
 
-.detalle-main {
-    width: 100%;
-    order: 2;
+.botones-secundarios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.detalle-sidebar {
-    width: 100%;
-    order: 1;
-    margin-bottom: 20px;
+.botones-secundarios .btn-secundario {
+    flex-basis: 48%;
+    margin-bottom: 10px;
+    text-align: center;
 }
+    .botones-secundarios .btn-secundario {
+        flex-basis: auto;
+    }
+
 
 /* ======================================================= */
 /* Estilos para el formulario y botones del sidebar */

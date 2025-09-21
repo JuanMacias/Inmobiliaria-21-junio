@@ -1,15 +1,16 @@
 // Este es el callback global que la API de Google Maps necesita.
 function initMapDetalle() {
-    // Esta función se llamará automáticamente cuando la API de Google Maps se cargue.
-    // Solo necesitamos que la función exista. El resto del código se ejecuta en el DOMContentLoaded.
     console.log("Google Maps API loaded via callback.");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const idPropiedad = params.get("id");
-
+    
+    // Contenedores para las dos vistas principales
     const contenedorDetalle = document.getElementById("detalle-propiedad");
+    const contenedorLista = document.querySelector(".lista-propiedades");
+
     const contenedorUltimas = document.querySelector(".ultimas-propiedades");
     const flechaIzq = document.getElementById("flecha-izq");
     const flechaDer = document.getElementById("flecha-der");
@@ -18,12 +19,23 @@ document.addEventListener("DOMContentLoaded", function () {
     let imagenesPropiedad = [];
     let indiceActualImagen = 0;
 
-    if (!idPropiedad) {
-        contenedorDetalle.innerHTML = "<p>ID de propiedad no encontrado.</p>";
-        return;
+    // Lógica del formulario de búsqueda
+    const searchForm = document.getElementById('search-form');
+    if (searchForm) {
+        searchForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const barrio = searchForm.querySelector('[name="barrio"]').value;
+            const tipo = searchForm.querySelector('[name="tipo"]').value;
+            const operacion = searchForm.querySelector('[name="operacion"]').value;
+            const ambientes = searchForm.querySelector('[name="ambientes"]').value;
+            
+            const url = `detalle.html?barrio=${barrio}&tipo=${tipo}&operacion=${operacion}&ambientes=${ambientes}`;
+            window.location.href = url;
+        });
     }
 
-    // Se ajusta la ruta del fetch. Asumimos que propiedades.json está en la misma carpeta que detalle.html
+    // Lógica para cargar las propiedades desde el JSON
     fetch("propiedades.json")
         .then(res => {
             if (!res.ok) {
@@ -33,27 +45,51 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(data => {
             propiedadesCargadas = data;
-            const prop = propiedadesCargadas.find(p => p.id === idPropiedad);
 
-            if (!prop) {
-                contenedorDetalle.innerHTML = "<p>Propiedad no encontrada.</p>";
-                return;
+            // Decidir qué vista mostrar según la URL
+            if (idPropiedad) {
+                // Mostrar detalles de una sola propiedad
+                const prop = propiedadesCargadas.find(p => p.id === idPropiedad);
+                if (prop) {
+                    contenedorLista.style.display = 'none'; // Esconder la lista
+                    contenedorDetalle.style.display = 'block'; // Mostrar los detalles
+                    renderizarDetalle(prop);
+                    inicializarMapaConDatos(prop); // Llama a la función del mapa
+                } else {
+                    contenedorDetalle.innerHTML = "<p>Propiedad no encontrada.</p>";
+                    contenedorLista.style.display = 'none';
+                }
+                configurarFlechasNavegacion(propiedadesCargadas, idPropiedad);
+            } else {
+                // Mostrar resultados de búsqueda o todas las propiedades
+                contenedorDetalle.style.display = 'none'; // Esconder los detalles
+                contenedorLista.style.display = 'block'; // Mostrar la lista
+
+                let resultados = propiedadesCargadas;
+                const urlBarrio = params.get("barrio");
+                const urlTipo = params.get("tipo");
+                const urlOperacion = params.get("operacion");
+                const urlAmbientes = params.get("ambientes");
+
+                if (urlBarrio || urlTipo || urlOperacion || urlAmbientes) {
+                    resultados = propiedadesCargadas.filter(prop => {
+                        return (!urlBarrio || prop.barrio === urlBarrio) &&
+                               (!urlTipo || prop.tipo === urlTipo) &&
+                               (!urlOperacion || prop.operacion === urlOperacion) &&
+                               (!urlAmbientes || prop.ambientes >= parseInt(urlAmbientes));
+                    });
+                }
+                
+                renderizarResultados(resultados);
             }
-
-            renderizarDetalle(prop);
             renderUltimasPropiedades(propiedadesCargadas, idPropiedad);
-            configurarFlechasNavegacion(propiedadesCargadas, idPropiedad);
-
-            // Llama a la función que inicializa el mapa con los datos de la propiedad.
-            inicializarMapaConDatos(prop);
         })
         .catch(error => {
-            contenedorDetalle.innerHTML = "<p>Error al cargar la propiedad. Por favor, revisa la consola para más detalles.</p>";
             console.error("Error al cargar propiedades:", error);
         });
 
     function renderizarDetalle(prop) {
-        // La ruta de las imágenes debe ser relativa a donde se ejecuta el HTML (img/...)
+        // Tu función existente para mostrar el detalle de una propiedad
         imagenesPropiedad = prop.imagenes || [prop.imagen];
         indiceActualImagen = 0;
         const miniaturasHtml = imagenesPropiedad.map((img, i) => `
@@ -83,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p><strong>Barrio:</strong> ${prop.barrio || '-'}</p>
                     <p><strong>País:</strong> Argentina</p>
                 </div>
-                <a href="https://maps.google.com/?q=${direccionEncoded}" target="_blank" class="btn-mapa">Abrir en Google Maps</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=${direccionEncoded}" target="_blank" class="btn-mapa">Abrir en Google Maps</a>
             </div>
             <div class="info-bloque">
                 <h4>Detalles</h4>
@@ -137,6 +173,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function renderizarResultados(propiedades) {
+        contenedorLista.innerHTML = '';
+        if (propiedades.length === 0) {
+            contenedorLista.innerHTML = '<p>No se encontraron propiedades que coincidan con su búsqueda.</p>';
+            return;
+        }
+
+        propiedades.forEach(prop => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${prop.imagen}" alt="${prop.titulo}">
+                <div class="card-body">
+                    <h3 class="card-title">${prop.titulo}</h3>
+                    <p class="card-text">${prop.barrio}</p>
+                    <p class="card-price">$ ${prop.precio}</p>
+                    <a href="detalle.html?id=${prop.id}" class="card-link">Ver detalles</a>
+                </div>
+            `;
+            contenedorLista.appendChild(card);
+        });
+    }
+
     function renderUltimasPropiedades(propiedades, idActual) {
         if (!contenedorUltimas) return;
         const ultimas = propiedades.filter(p => p.id !== idActual).slice(0, 4);
@@ -185,27 +244,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function inicializarMapaConDatos(prop) {
-        // Espera a que la API de Google Maps se cargue. Esto es más seguro que usar setTimeout.
         const checkApiLoaded = setInterval(() => {
             if (typeof google !== 'undefined' && typeof google.maps !== 'undefined') {
                 clearInterval(checkApiLoaded);
-
+                
                 const coordenadas = { lat: prop.lat, lng: prop.lng };
                 const mapa = new google.maps.Map(document.getElementById("mapa-detalle-propiedad"), {
                     center: coordenadas,
                     zoom: 15,
                 });
-
                 const marker = new google.maps.Marker({
                     position: coordenadas,
                     map: mapa,
                     title: prop.titulo
                 });
-
+                
                 const imagenParaGlobo = prop.imagen || (prop.imagenes && prop.imagenes[0]);
                 const imageUrl = imagenParaGlobo || 'img/placeholder.jpg';
-
-                // CORREGIDO: Se asegura que el contenido del globo tenga las clases correctas.
+                
                 const contenidoGlobo = `
                     <div class="info-window-custom">
                         <img src="${imageUrl}" alt="${prop.titulo}" class="info-window-img">
@@ -217,11 +273,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     </div>
                 `;
-
                 const infoWindow = new google.maps.InfoWindow({
                     content: contenidoGlobo,
                 });
-
+                
                 infoWindow.open({
                     anchor: marker,
                     map: mapa
