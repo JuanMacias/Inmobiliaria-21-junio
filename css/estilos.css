@@ -149,6 +149,8 @@ img {
     text-align: center;
     color: white;
     gap: 20px;
+    box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.2);
+    /* Agrega esta línea para subir la sombra */
 }
 
 .seccion-fondo h1 {
@@ -906,7 +908,9 @@ button:hover {
     .menu.active {
         display: flex;
         background-color: rgb(23, 214, 221);
-        /* Esta es la línea a cambiar */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        /* Agrega esta línea para la trasparenci */
+
     }
 
     .menu ul {
@@ -1561,11 +1565,11 @@ header nav {
 }
 
 .flecha-flotante.izquierda {
-    left: 0;
+    left: 10;
 }
 
 .flecha-flotante.derecha {
-    right: 0;
+    right: 70;
 }
 
 
