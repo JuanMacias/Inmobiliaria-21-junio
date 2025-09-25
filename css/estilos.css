@@ -17,14 +17,16 @@ img {
 }
 
 /* ==== BARRAS SUPERIOR E INFERIOR ==== */
-.barra-superior, .barra-inferior {
+.barra-superior,
+.barra-inferior {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
     font-size: 14px;
     flex-wrap: wrap;
-    color: white; /* Color por defecto para ambas barras */
+    color: white;
+    /* Color por defecto para ambas barras */
 }
 
 .barra-superior {
@@ -39,7 +41,8 @@ img {
     margin: 5px 10px;
 }
 
-.telefonos, .correo {
+.telefonos,
+.correo {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -71,6 +74,7 @@ img {
     color: #e0e0e0;
     text-decoration: underline;
 }
+
 /* ==== HEADER Y NAVEGACIÓN ==== */
 .header {
     position: relative;
@@ -89,7 +93,8 @@ img {
 .menu {
     display: flex;
     justify-content: flex-end;
-    margin-left: auto; /* <-- ¡Este es el cambio clave! */
+    margin-left: auto;
+    /* <-- ¡Este es el cambio clave! */
 }
 
 .menu-toggle {
@@ -110,7 +115,8 @@ img {
     font-weight: bold;
 }
 
-.menu ul li a:hover, .menu ul li a:focus {
+.menu ul li a:hover,
+.menu ul li a:focus {
     color: #efdd10;
 }
 
@@ -165,18 +171,20 @@ img {
     width: 100%;
     max-width: 1400px;
     margin-top: 140px;
-    position: absolute; /* Usamos 'absolute' para que se posicione sobre el fondo */
+    position: absolute;
+    /* Usamos 'absolute' para que se posicione sobre el fondo */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
     border-radius: 10px;
-     box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .barra-busqueda select,
 .barra-busqueda input {
-    flex-grow: 1; /* Permite que los inputs se expandan */
+    flex-grow: 1;
+    /* Permite que los inputs se expandan */
     padding: 8px 10px;
     font-size: 15px;
     margin: 0 5px;
@@ -316,7 +324,8 @@ img {
 .contacto-formulario form {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Esta es la propiedad clave */
+    align-items: flex-end;
+    /* Esta es la propiedad clave */
 }
 
 .fila {
@@ -325,7 +334,8 @@ img {
     margin-bottom: 15px;
 }
 
-.fila input, textarea {
+.fila input,
+textarea {
     flex: 1;
     padding: 10px;
     border: none;
@@ -346,13 +356,14 @@ img {
     font-size: 14px;
     width: 200px;
     max-width: 400px;
-    margin:  auto 0;
+    margin: auto 0;
     display: block;
     text-align: center;
     transition: background-color 0.3s ease;
 }
 
-.formulario button:hover, button:hover {
+.formulario button:hover,
+button:hover {
     background-color: #002b60;
 }
 
@@ -531,7 +542,8 @@ img {
 
 .propiedad img {
     width: 100%;
-    height: 200px;  /* Aumenta la altura para que la imagen sea más grande */
+    height: 200px;
+    /* Aumenta la altura para que la imagen sea más grande */
     object-fit: cover;
 }
 
@@ -557,7 +569,8 @@ img {
     justify-content: space-between;
 }
 
-.propiedad button, .btn-ver-detalle {
+.propiedad button,
+.btn-ver-detalle {
     display: block;
     padding: 25px 55px;
     margin: 12px auto;
@@ -598,7 +611,7 @@ img {
 
 
 
- .carrusel-propiedades .flecha:hover {
+.carrusel-propiedades .flecha:hover {
     background-color: #e5b800;
 }
 
@@ -738,7 +751,8 @@ img {
     transition: background-color 0.3s ease;
     text-transform: uppercase;
     margin-top: 30px;
-    margin: 30px auto 0; /* Propiedad de margen modificada para centrar */
+    margin: 30px auto 0;
+    /* Propiedad de margen modificada para centrar */
 }
 
 .btn-enviar:hover {
@@ -799,7 +813,7 @@ img {
     margin-top: 0;
 }
 
-#mapa-propiedades-dinamico .gm-style-iw-t img, 
+#mapa-propiedades-dinamico .gm-style-iw-t img,
 #mapa-propiedades-dinamico .gm-style-iw-t div:first-child img {
     max-width: 100px !important;
     max-height: 150px !important;
@@ -849,15 +863,18 @@ img {
 
 /* ==== MEDIA QUERIES (TABLET Y ESCRITORIO) ==== */
 @media (max-width: 768px) {
-    .barra-superior, .barra-inferior {
+
+    .barra-superior,
+    .barra-inferior {
         flex-direction: column;
         gap: 10px;
         text-align: center;
-        padding: 10px 20px;        
+        padding: 10px 20px;
     }
 
-    
-    .telefonos, .correo {
+
+    .telefonos,
+    .correo {
         flex-direction: column;
         align-items: center;
     }
@@ -876,7 +893,7 @@ img {
         display: none;
         width: 100%;
         margin-top: 10px;
-        background-color: white;
+        background-color: rgb(255, 255, 255);
         position: absolute;
         top: 100%;
         left: 0;
@@ -888,6 +905,8 @@ img {
 
     .menu.active {
         display: flex;
+        background-color: rgb(23, 214, 221);
+        /* Esta es la línea a cambiar */
     }
 
     .menu ul {
@@ -922,7 +941,10 @@ img {
         box-shadow: none;
     }
 
-    .nosotros-contenido, .contacto-container, .fila, .servicio {
+    .nosotros-contenido,
+    .contacto-container,
+    .fila,
+    .servicio {
         flex-direction: column;
         align-items: center;
     }
@@ -944,10 +966,13 @@ img {
         position: static;
         width: 90%;
         padding: 15px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ¡Esta es la sombra que necesitas modificar! */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        /* ¡Esta es la sombra que necesitas modificar! */
     }
 
-    .barra-busqueda select, .barra-busqueda input, .barra-busqueda button {
+    .barra-busqueda select,
+    .barra-busqueda input,
+    .barra-busqueda button {
         width: 100%;
         max-width: 300px;
         margin: 5px 0;
@@ -1048,68 +1073,68 @@ img {
 /* ===== Estilos Detalle Propiedad ===== */
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-  background-color: #ffffff;
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 header nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #003c82;
-  font-weight: bold;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #003c82;
+    font-weight: bold;
 }
 
 .detalle-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 30px auto;
-  gap: 30px;
-  padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 30px;
+    padding: 0 20px;
 }
 
 .detalle-main {
-  flex: 1 1 700px;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
+    flex: 1 1 700px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .detalle-sidebar {
-  flex: 1 1 300px;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  height: fit-content;
+    flex: 1 1 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    height: fit-content;
 }
 
 .detalle-sidebar form input,
 .detalle-sidebar form textarea,
 .detalle-sidebar form button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .detalle-sidebar form button {
-  background-color: #f1d208;
-  color: #110101;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
+    background-color: #f1d208;
+    color: #110101;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .carrusel-propiedades {
@@ -1117,294 +1142,296 @@ header nav a {
     max-width: 1050px;
     margin: 40px auto;
     display: flex;
-    justify-content: center; /* This centers the content horizontally */
+    justify-content: center;
+    /* This centers the content horizontally */
     align-items: center;
 }
 
 .slider {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .slide {
-  display: none;
-  width: 100%;
-  border-radius: 10px;
+    display: none;
+    width: 100%;
+    border-radius: 10px;
 }
 
 .slide.active {
-  display: block;
+    display: block;
 }
 
 .prev,
 .next {
-  position: absolute;
-  top: 50%;
-  font-size: 2rem;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 50%;
-  transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: translateY(-50%);
 }
 
 .prev {
-  left: 10px;
+    left: 10px;
 }
 
 .next {
-  right: 10px;
+    right: 10px;
 }
 
 .info-bloque {
-  background-color: #f2f6fb;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
+    background-color: #f2f6fb;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 .info-bloque h4 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  color: #003c82;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #003c82;
 }
 
 .direccion-grid,
 .detalle-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px;
 }
 
 .btn-mapa {
-  display: inline-block;
-  background-color: rgb(238, 234, 9);
-  color: rgb(12, 2, 2);
-  padding: 10px 15px;
-  border-radius: 5px;
-  margin-top: 10px;
-  text-decoration: none;
-  font-weight: bold;
+    display: inline-block;
+    background-color: rgb(238, 234, 9);
+    color: rgb(12, 2, 2);
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 
 
-  header nav {
+header nav {
     margin-top: 10px;
     width: 100%;
     text-align: center;
-  }
+}
 
-  .prev, .next {
+.prev,
+.next {
     font-size: 1.5rem;
     padding: 6px;
-  }
+}
 
-  .detalle-sidebar {
+.detalle-sidebar {
     width: 100%;
-  }
+}
 
 
 .galeria {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .galeria-principal {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .galeria-principal img {
-  width: 100%;
-  max-height: 450px;
-  object-fit: cover;
-  border-radius: 8px;
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .flecha {
-  position: absolute;
-  top: 10px;
-  transform: translateY(-50%);
-  background-color: #f6d11d;
-  color: black;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
+    position: absolute;
+    top: 10px;
+    transform: translateY(-50%);
+    background-color: #f6d11d;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
 .flecha.izquierda {
-  left: 0;
+    left: 0;
 }
 
 .flecha.derecha {
-  right: 0;
+    right: 0;
 }
 
 .flecha:hover {
-  background-color: #e5b800;
+    background-color: #e5b800;
 }
 
 .galeria-miniaturas {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin-top: 10px;
 }
 
 .galeria-miniaturas img {
-  height: 80px;
-  border-radius: 6px;
-  cursor: pointer;
-  opacity: 0.7;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
+    height: 80px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.7;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
 }
 
 .galeria-miniaturas img:hover,
 .galeria-miniaturas img.activa {
-  opacity: 1;
-  border-color: #003c82;
+    opacity: 1;
+    border-color: #003c82;
 }
 
 
 .contacto-botones {
-  margin-top: 20px;
-  text-align: center;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .botones-secundarios {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .btn-secundario {
-  border: 2px solid #eecc0a;
-  color: #110202;
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+    border: 2px solid #eecc0a;
+    color: #110202;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .btn-secundario i {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .busqueda-box {
-  margin-top: 30px;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
 .busqueda-box h3 {
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-  color: #333;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #333;
 }
 
 .form-busqueda {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .form-busqueda select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .btn-buscar {
-  padding: 10px;
-  background-color: #ece509;
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+    padding: 10px;
+    background-color: #ece509;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .btn-buscar:hover {
-  background-color: #ead40b;
+    background-color: #ead40b;
 }
 
 .ultimas-propiedades {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .ultimas-propiedades h3 {
-  font-size: 1.2em;
-  margin-bottom: 15px;
-  color: #333;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #333;
 }
 
 .lista-ultimas {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .lista-ultimas li {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
 }
 
 .lista-ultimas li img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 4px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .lista-ultimas li div {
-  flex: 1;
+    flex: 1;
 }
 
 .lista-ultimas li p {
-  margin: 0;
-  font-size: 0.9em;
-  color: #444;
+    margin: 0;
+    font-size: 0.9em;
+    color: #444;
 }
 
 .lista-ultimas li p.precio {
-  font-weight: bold;
-  color: #110402;
-  font-size: 0.95em;
+    font-weight: bold;
+    color: #110402;
+    font-size: 0.95em;
 }
 
 .visible {
-  display: block;
+    display: block;
 }
 
 .oculto {
-  display: none;
+    display: none;
 }
 
 
@@ -1436,7 +1463,7 @@ header nav a {
 
 
 .slider-container {
-    width: 90%; 
+    width: 90%;
     max-width: 1200px;
     overflow: hidden;
 }
@@ -1448,15 +1475,22 @@ header nav a {
     overflow-x: scroll;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory; 
+    scroll-snap-type: x mandatory;
 }
-.slider::-webkit-scrollbar { display: none; }
-.slider { scrollbar-width: none; }
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider {
+    scrollbar-width: none;
+}
 
 .slider .propiedad {
     flex-shrink: 0;
-    width: 309px; /*Cambia a un ancho fijo para que no se apilen*/
-    scroll-snap-align: start; 
+    width: 309px;
+    /*Cambia a un ancho fijo para que no se apilen*/
+    scroll-snap-align: start;
 }
 
 
@@ -1477,10 +1511,11 @@ header nav a {
 /* Estilos de las flechas (comunes) */
 .flecha {
     position: absolute;
-     position: absolute;
-    top: 50%;/* Cambia este valor para mover la flecha más abajo */
+    position: absolute;
+    top: 50%;
+    /* Cambia este valor para mover la flecha más abajo */
     transform: translateY(-50%);
-    background-color: #f6d11d; 
+    background-color: #f6d11d;
     color: black;
     border: none;
     padding: 10px;
@@ -1502,12 +1537,22 @@ header nav a {
 }
 
 /* Posición de las flechas del carrusel de inicio */
-.carrusel-propiedades .flecha.izquierda { left: 20px; }
-.carrusel-propiedades .flecha.derecha { right: 20px; }
+.carrusel-propiedades .flecha.izquierda {
+    left: 20px;
+}
+
+.carrusel-propiedades .flecha.derecha {
+    right: 20px;
+}
 
 /* Posición de las flechas del carrusel de detalle - ajustadas al borde */
-.galeria-detalle-container .flecha.izquierda { left: 0; }
-.galeria-detalle-container .flecha.derecha { right: 0; }
+.galeria-detalle-container .flecha.izquierda {
+    left: 0;
+}
+
+.galeria-detalle-container .flecha.derecha {
+    right: 0;
+}
 
 
 
@@ -1526,43 +1571,45 @@ header nav a {
 
 /* ===== Botón WhatsApp flotante ===== */
 .whatsapp-flotante {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background-color: #25d366;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  z-index: 1200;
-  transition: background-color 0.3s ease;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    z-index: 1200;
+    transition: background-color 0.3s ease;
 }
 
 .whatsapp-flotante:hover {
-  background-color: #1ebe57;
+    background-color: #1ebe57;
 }
 
 .whatsapp-flotante svg {
-  fill: white;
-  width: 28px;
-  height: 28px;
+    fill: white;
+    width: 28px;
+    height: 28px;
 }
 
 /* ===== Responsive: ocultar formulario en móvil =====     22/9 */
 @media (max-width: 768px) {
-  .contacto-flotante {
-    display: none;
-  }
+    .contacto-flotante {
+        display: none;
+    }
 }
+
 .contacto-flotante {
-  position: fixed;
-  top: 80px;
-  left: 20px; /* **ESTA PROPIEDAD ES LA CLAVE** */
-  /* ... resto de tus estilos ... */
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    /* **ESTA PROPIEDAD ES LA CLAVE** */
+    /* ... resto de tus estilos ... */
 }
 
 /* ===== Mapa de la propiedad ===== */
@@ -1572,9 +1619,9 @@ header nav a {
 }
 
 
-    .botones-secundarios .btn-secundario {
-        flex-basis: auto;
-    }
+.botones-secundarios .btn-secundario {
+    flex-basis: auto;
+}
 
 
 /* ======================================================= */
@@ -1629,7 +1676,7 @@ header nav a {
         margin-bottom: 0;
     }
 
-       .botones-secundarios .btn-secundario {
+    .botones-secundarios .btn-secundario {
         flex-basis: auto;
     }
 }
@@ -1648,14 +1695,16 @@ header nav a {
 .info-window-custom {
     display: flex;
     flex-direction: column;
-    width: 250px; /* Aumentamos el ancho para dar más espacio */
+    width: 250px;
+    /* Aumentamos el ancho para dar más espacio */
     max-width: 300px;
     padding: 10px;
 }
 
 .info-window-img {
     width: 200px;
-    height: 100px; /* Aumentamos la altura de la imagen */
+    height: 100px;
+    /* Aumentamos la altura de la imagen */
     object-fit: cover;
     margin-bottom: 10px;
     border-radius: 4px;
@@ -1717,80 +1766,84 @@ header nav a {
 /* ====================================================== */
 
 @media (max-width: 768px) {
-  /* Oculta la navegación y muestra el botón del menú */
-  .menu {
-    display: none;
-    position: absolute;
-    top: 60px; /* Ajusta según la altura de tu header */
-    right: 0;
-    width: 100%;
-    z-index: 1000;
-  }
 
-  /* Estilo del menú cuando se activa con JS */
-  .menu.menu-activo {
-    display: block;
-    background-color: #003c82;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+    /* Oculta la navegación y muestra el botón del menú */
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        /* Ajusta según la altura de tu header */
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+    }
 
-  .menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+    /* Estilo del menú cuando se activa con JS */
+    .menu.menu-activo {
+        display: block;
+        background-color: #003c82;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-  .menu li a {
-    color: white;
-    padding: 15px;
-    display: block;
-    text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
-  .menu-toggle {
-    display: block; /* Muestra el botón hamburguesa */
-  }
+    .menu li a {
+        color: white;
+        padding: 15px;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
-  /* Ajustes del layout principal de la página de detalle */
-  .detalle-wrapper {
-    flex-direction: column;
-    margin: 10px auto;
-    padding: 0 10px;
-  }
+    .menu-toggle {
+        display: block;
+        /* Muestra el botón hamburguesa */
+    }
 
-  .detalle-main,
-  .detalle-sidebar {
-    width: 100%;
-    flex: none;
-  }
+    /* Ajustes del layout principal de la página de detalle */
+    .detalle-wrapper {
+        flex-direction: column;
+        margin: 10px auto;
+        padding: 0 10px;
+    }
 
-  /* Ajusta las grillas de detalles y dirección para que se apilen */
-  .direccion-grid,
-  .detalle-grid {
-    grid-template-columns: 1fr;
-  }
+    .detalle-main,
+    .detalle-sidebar {
+        width: 100%;
+        flex: none;
+    }
 
-  /* Ajusta los estilos del mapa y el formulario */
-  .contacto-container {
-    flex-direction: column;
-  }
+    /* Ajusta las grillas de detalles y dirección para que se apilen */
+    .direccion-grid,
+    .detalle-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .contacto-info,
-  .contacto-formulario {
-    width: 100%;
-    padding: 10px;
-  }
+    /* Ajusta los estilos del mapa y el formulario */
+    .contacto-container {
+        flex-direction: column;
+    }
+
+    .contacto-info,
+    .contacto-formulario {
+        width: 100%;
+        padding: 10px;
+    }
 }
 
 /* ===== Formulario flotante contacto ===== 06/09 */
 .contacto-flotante {
     position: fixed;
     top: 80px;
-    left: 20px; /* Cambia 'right' por 'left' */
+    left: 20px;
+    /* Cambia 'right' por 'left' */
     width: 280px;
     background-color: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 12px;
     padding: 20px 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -1826,7 +1879,7 @@ header nav a {
 .contacto-flotante textarea:focus {
     outline: none;
     border-color: #2db34a;
-    box-shadow: 0 0 5px rgba(45,179,74,0.4);
+    box-shadow: 0 0 5px rgba(45, 179, 74, 0.4);
 }
 
 .contacto-flotante button {
@@ -1854,7 +1907,7 @@ header nav a {
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1865,24 +1918,30 @@ header nav a {
     width: 32px;
     height: 32px;
 }
+
 @media (max-width: 767px) {
-  .detalle-wrapper {
-    display: flex; /* This is the key line */
-    flex-direction: column;
-  }
-  .detalle-main,
-  .detalle-sidebar {
-    width: 100%;
-  }
+    .detalle-wrapper {
+        display: flex;
+        /* This is the key line */
+        flex-direction: column;
+    }
+
+    .detalle-main,
+    .detalle-sidebar {
+        width: 100%;
+    }
 }
 
 /* ==== SECCIÓN DESTACADA ==== */
 .seccion-destacada {
-    position: relative; /* Contenedor para la imagen destacada */
-    height: 70vh; /* Altura que ocupará en la pantalla */
+    position: relative;
+    /* Contenedor para la imagen destacada */
+    height: 70vh;
+    /* Altura que ocupará en la pantalla */
     width: 100%;
     margin-bottom: 20px;
-    padding: 0; /* Asegura que no haya padding extra */
+    padding: 0;
+    /* Asegura que no haya padding extra */
 }
 
 .propiedad-principal {
@@ -1895,15 +1954,19 @@ header nav a {
 .imagen-destacada {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin deformarse */
-    filter: brightness(0.6); /* Oscurece la imagen para que el texto resalte */
+    object-fit: cover;
+    /* Asegura que la imagen cubra todo el contenedor sin deformarse */
+    filter: brightness(0.6);
+    /* Oscurece la imagen para que el texto resalte */
 }
 
 .info-principal {
-    position: absolute; /* Permite posicionar el texto sobre la imagen */
+    position: absolute;
+    /* Permite posicionar el texto sobre la imagen */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centra el contenido perfectamente */
+    transform: translate(-50%, -50%);
+    /* Centra el contenido perfectamente */
     text-align: center;
     color: white;
     z-index: 10;
@@ -1941,12 +2004,17 @@ header nav a {
     /* ... otros estilos responsivos ... */
 
     .carrusel-propiedades .flecha {
-        display: block; /* Muestra los botones que ocultaste antes */
-        position: absolute; /* Para posicionarlos con respecto al carrusel */
-        top: 50%; /* Los coloca a la mitad de la altura */
-        transform: translateY(-50%); /* Centra verticalmente */
+        display: block;
+        /* Muestra los botones que ocultaste antes */
+        position: absolute;
+        /* Para posicionarlos con respecto al carrusel */
+        top: 50%;
+        /* Los coloca a la mitad de la altura */
+        transform: translateY(-50%);
+        /* Centra verticalmente */
         z-index: 10;
-        background-color: rgba(240, 217, 5, 0.8); /* Fondo semitransparente para que se vean sobre la imagen */
+        background-color: rgba(240, 217, 5, 0.8);
+        /* Fondo semitransparente para que se vean sobre la imagen */
         border: none;
         padding: 10px;
         cursor: pointer;
@@ -1954,11 +2022,13 @@ header nav a {
     }
 
     .carrusel-propiedades .flecha.izquierda {
-        left: 5px; /* Pégalo al borde izquierdo del carrusel */
+        left: 5px;
+        /* Pégalo al borde izquierdo del carrusel */
     }
 
     .carrusel-propiedades .flecha.derecha {
-        right: 5px; /* Pégalo al borde derecho del carrusel */
+        right: 5px;
+        /* Pégalo al borde derecho del carrusel */
     }
 
     /* Oculta las flechas si ya estaban definidas en otro lugar para móvil */
@@ -1969,20 +2039,32 @@ header nav a {
 
 /* ==== Estilo para el botón flotante (Flecha de Navegación) ==== */
 .flecha-flotante {
-    position: fixed; /* Mantiene la flecha en una posición fija en la pantalla */
-    top: 50%; /* La centra verticalmente */
-    transform: translateY(-50%); /* Ajuste fino para el centrado perfecto */
-    font-size: 2.5rem; /* Tamaño del icono */
-    width: 55px; /* Ancho del botón */
-    height: 55px; /* Altura del botón */
-    background-color: #f6d11d; /* Color amarillo de tu paleta */
-    color: #333; /* Color oscuro para el ícono de la flecha */
+    position: fixed;
+    /* Mantiene la flecha en una posición fija en la pantalla */
+    top: 50%;
+    /* La centra verticalmente */
+    transform: translateY(-50%);
+    /* Ajuste fino para el centrado perfecto */
+    font-size: 2.5rem;
+    /* Tamaño del icono */
+    width: 55px;
+    /* Ancho del botón */
+    height: 55px;
+    /* Altura del botón */
+    background-color: #f6d11d;
+    /* Color amarillo de tu paleta */
+    color: #333;
+    /* Color oscuro para el ícono de la flecha */
     border: none;
-    border-radius: 50%; /* La convierte en un círculo */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* Sombra para un efecto de "flotante" */
+    border-radius: 50%;
+    /* La convierte en un círculo */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    /* Sombra para un efecto de "flotante" */
     cursor: pointer;
-    z-index: 1000; /* Asegura que esté siempre encima de otros elementos */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+    z-index: 1000;
+    /* Asegura que esté siempre encima de otros elementos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    /* Transiciones suaves */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1999,14 +2081,18 @@ header nav a {
 
 /* Efecto al pasar el cursor (hover) */
 .flecha-flotante:hover {
-    background-color: #e5b800; /* Un amarillo más oscuro en hover */
-    transform: translateY(-50%) scale(1.1); /* Se agranda ligeramente */
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35); /* La sombra se intensifica */
+    background-color: #e5b800;
+    /* Un amarillo más oscuro en hover */
+    transform: translateY(-50%) scale(1.1);
+    /* Se agranda ligeramente */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    /* La sombra se intensifica */
 }
 
 /* Estilo para el ícono de la flecha */
 .flecha-flotante i {
-    font-size: 1.5rem; /* El ícono es un poco más pequeño para que se vea bien en el círculo */
+    font-size: 1.5rem;
+    /* El ícono es un poco más pequeño para que se vea bien en el círculo */
 }
 
 /* ==== Flechas flotantes de página (globales) ==== */
@@ -2017,7 +2103,8 @@ header nav a {
     font-size: 2.5rem;
     width: 55px;
     height: 55px;
-    background-color: #f6d11d; /* Color amarillo de tu paleta */
+    background-color: #f6d11d;
+    /* Color amarillo de tu paleta */
     color: #333;
     border: none;
     border-radius: 50%;
