@@ -125,7 +125,7 @@ header .menu {
 
 .galeria-detalle .flecha {
   position: absolute;
-  top: 50%;
+  bottom: 50px; /* Ejemplo: 20px desde la parte inferior */
   transform: translateY(-50%);
   font-size: 32px;
   color: #fff;

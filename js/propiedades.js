@@ -132,7 +132,7 @@ function crearContenidoInfoWindow(prop) {
             <p><strong>Barrio:</strong> ${prop.barrio}</p>
             <p><strong>Tipo:</strong> ${prop.tipo}</p>
             <p><strong>Operación:</strong> ${prop.operacion}</p>
-            <p><strong>Precio:</strong> USD ${prop.precio}</p>
+            <p><strong>Precio:</strong> ${prop.precio}</p>
             <a href="detalle.html?id=${prop.id}" class="info-window-link">Ver más detalles</a>
         </div>
     `;

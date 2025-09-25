@@ -111,11 +111,9 @@ img {
 }
 
 .menu ul li a:hover, .menu ul li a:focus {
-    color: #d40000;
+    color: #efdd10;
 }
-.menu ul li a:hover, .menu ul li a:focus {
-    color: #d40000;
-}
+
 
 /* ==== SECCIÓN CON FONDO Y BARRA DE BÚSQUEDA ==== */
 .seccion-fondo {
@@ -318,6 +316,7 @@ img {
 .contacto-formulario form {
     display: flex;
     flex-direction: column;
+    align-items: flex-end; /* Esta es la propiedad clave */
 }
 
 .fila {
@@ -338,7 +337,7 @@ img {
 
 .formulario button {
     padding: 20px 30px;
-    background-color: #003c82;
+    background-color: #3708f2;
     color: white;
     font-weight: bold;
     border: none;
@@ -347,7 +346,7 @@ img {
     font-size: 14px;
     width: 200px;
     max-width: 400px;
-    margin: 20px auto 0;
+    margin:  auto 0;
     display: block;
     text-align: center;
     transition: background-color 0.3s ease;
@@ -567,7 +566,7 @@ img {
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    color: white;
+    color: rgb(238, 234, 9);
     width: calc(100% - 24px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
@@ -584,7 +583,7 @@ img {
 }
 
 .btn-ver-detalle {
-    background: linear-gradient(135deg, #ff9800, #ffc107);
+    background: linear-gradient(135deg, #fcf808, #f1de11);
     color: rgb(15, 14, 14);
     font-size: 14px;
     width: auto;
@@ -655,8 +654,8 @@ img {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 18px;
-    background-color: rgb(0, 7, 204);
-    color: white;
+    background-color: rgb(234, 223, 10);
+    color: rgba(10, 3, 3, 0.935);
     text-decoration: none;
     font-weight: bold;
     border-radius: 4px;
@@ -727,10 +726,10 @@ img {
 
 .btn-enviar {
     display: block;
-    width: 100%;
+    width: 30%;
     padding: 15px;
-    background-color: #2315e0ba;
-    color: white;
+    background-color: #eee711ba;
+    color: rgba(17, 16, 3, 0.927);
     font-size: 1.2em;
     font-weight: bold;
     border: none;
@@ -739,10 +738,11 @@ img {
     transition: background-color 0.3s ease;
     text-transform: uppercase;
     margin-top: 30px;
+    margin: 30px auto 0; /* Propiedad de margen modificada para centrar */
 }
 
 .btn-enviar:hover {
-    background-color: #1a180f;
+    background-color: #eac20e;
 }
 
 /* ==== PÁGINA DE PROPIEDADES DINÁMICO ==== */
@@ -761,6 +761,7 @@ img {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 .lista-propiedades {
     width: 100%;
@@ -820,13 +821,9 @@ img {
     margin-bottom: 20px;
 }
 
-.select-container {
-    flex-grow: 1;
-    margin: 5px;
-}
 
 .form-busqueda select {
-    width: 100%;
+    /* width: 100%; */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -856,9 +853,10 @@ img {
         flex-direction: column;
         gap: 10px;
         text-align: center;
-        padding: 10px 20px;
+        padding: 10px 20px;        
     }
 
+    
     .telefonos, .correo {
         flex-direction: column;
         align-items: center;
@@ -1005,11 +1003,6 @@ img {
         margin: 0 auto 15px;
         width: 100%;
     }
-/* 
-    .btn-ver-detalle {
-        width: 100%;
-        box-sizing: border-box;
-    } */
 
     .form-group-row {
         flex-direction: column;
@@ -1111,8 +1104,8 @@ header nav a {
 }
 
 .detalle-sidebar form button {
-  background-color: #c00;
-  color: #fff;
+  background-color: #f1d208;
+  color: #110101;
   border: none;
   border-radius: 5px;
   font-weight: bold;
@@ -1187,8 +1180,8 @@ header nav a {
 
 .btn-mapa {
   display: inline-block;
-  background-color: #c00;
-  color: white;
+  background-color: rgb(238, 234, 9);
+  color: rgb(12, 2, 2);
   padding: 10px 15px;
   border-radius: 5px;
   margin-top: 10px;
@@ -1300,8 +1293,8 @@ header nav a {
 }
 
 .btn-secundario {
-  border: 2px solid #d80000;
-  color: #d80000;
+  border: 2px solid #eecc0a;
+  color: #110202;
   padding: 10px 20px;
   border-radius: 4px;
   text-decoration: none;
@@ -1343,7 +1336,7 @@ header nav a {
 
 .btn-buscar {
   padding: 10px;
-  background-color: #d80000;
+  background-color: #ece509;
   color: #fff;
   font-weight: bold;
   border: none;
@@ -1352,7 +1345,7 @@ header nav a {
 }
 
 .btn-buscar:hover {
-  background-color: #b00000;
+  background-color: #ead40b;
 }
 
 .ultimas-propiedades {
@@ -1402,7 +1395,7 @@ header nav a {
 
 .lista-ultimas li p.precio {
   font-weight: bold;
-  color: #c0392b;
+  color: #110402;
   font-size: 0.95em;
 }
 
@@ -1414,7 +1407,6 @@ header nav a {
   display: none;
 }
 
-/* =================== Carrusel de la página de inicio =================== */
 
 /* =================== Galería de la página de detalle =================== */
 .galeria-detalle-container {
@@ -1437,27 +1429,6 @@ header nav a {
     flex-shrink: 0;
 }
 
-/* Estilos de las flechas (comunes) */
-.flecha {
-    position: absolute;
-    top: 85%;
-    transform: translateY(-50%);
-    background-color: #f6d11d; 
-    color: black;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-}
 
 .flecha:hover {
     background-color: #e5b800;
@@ -1506,7 +1477,8 @@ header nav a {
 /* Estilos de las flechas (comunes) */
 .flecha {
     position: absolute;
-     bottom: 10px; /* Por ejemplo, 20px desde la parte inferior del carrusel */
+     position: absolute;
+    top: 50%;/* Cambia este valor para mover la flecha más abajo */
     transform: translateY(-50%);
     background-color: #f6d11d; 
     color: black;
@@ -1580,7 +1552,7 @@ header nav a {
   height: 28px;
 }
 
-/* ===== Responsive: ocultar formulario en móvil ===== */
+/* ===== Responsive: ocultar formulario en móvil =====     22/9 */
 @media (max-width: 768px) {
   .contacto-flotante {
     display: none;
@@ -1598,41 +1570,8 @@ header nav a {
     width: 100%;
     height: 400px;
 }
-/* ======================================================= */
-/* Estilos generales para el responsive */
-/* ======================================================= */
 
-/* ======================================================= */
-/* Estilos para el formulario y botones del sidebar */
-/* ======================================================= */
 
-.detalle-sidebar form input,
-.detalle-sidebar form textarea,
-.detalle-sidebar form button,
-.detalle-sidebar .btn-secundario,
-.form-busqueda select,
-.form-busqueda .btn-buscar {
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-}
-
-.contacto-botones {
-    display: flex;
-    flex-direction: column;
-}
-
-.botones-secundarios {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.botones-secundarios .btn-secundario {
-    flex-basis: 48%;
-    margin-bottom: 10px;
-    text-align: center;
-}
     .botones-secundarios .btn-secundario {
         flex-basis: auto;
     }
@@ -1715,8 +1654,8 @@ header nav a {
 }
 
 .info-window-img {
-    width: 100px;
-    height: 10px; /* Aumentamos la altura de la imagen */
+    width: 200px;
+    height: 100px; /* Aumentamos la altura de la imagen */
     object-fit: cover;
     margin-bottom: 10px;
     border-radius: 4px;
@@ -1750,8 +1689,8 @@ header nav a {
 .info-window-link {
     display: block;
     text-align: center;
-    background-color: #28a745;
-    color: white;
+    background-color: #f0bf0d;
+    color: black;
     padding: 8px 10px;
     text-decoration: none;
     border-radius: 4px;
@@ -2107,4 +2046,14 @@ header nav a {
 
 .flecha-flotante i {
     font-size: 1.5rem;
+}
+
+@media (min-width: 769px) {
+    .form-busqueda {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
