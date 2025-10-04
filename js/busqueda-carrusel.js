@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const div = document.createElement("div");
             div.className = "propiedad";
             div.innerHTML = `
-                <img src="${prop.imagen}" alt="${prop.titulo}" />
+                <img src="${prop.imagen}"alt="${prop.titulo}" />
                 <h3>${prop.titulo}</h3>
                 <p>${prop.ambientes} ambientes - ${prop.operacion}</p>
                 <a href="detalle.html?id=${prop.id}" class="btn-ver-detalle">Ver detalle</a>

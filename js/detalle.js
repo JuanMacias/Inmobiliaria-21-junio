@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="info-bloque">
                 <h4>Detalles</h4>
                 <div class="detalle-grid">
-                    <p><strong>Precio:</strong> u$s ${prop.precio || '-'}</p>
+                    <p><strong>Precio:</strong> U$S ${prop.precio || '-'}</p>
                     <p><strong>Metros cuadrados:</strong> ${prop.metrosCuadrados || '-'} m²</p>
                     <p><strong>Ambientes:</strong> ${prop.ambientes || '-'}</p>
                     <p><strong>Baños:</strong> ${prop.baños || '-'}</p>
@@ -207,9 +207,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     <li>
                         <a href="detalle.html?id=${p.id}">
                             <img src="${p.imagen || (p.imagenes && p.imagenes[0]) || 'img/placeholder.jpg'}" alt="${p.titulo}" />
-                            <div>
-                                <p>${p.titulo.length > 40 ? p.titulo.slice(0, 40) + '...' : p.titulo}</p>
-                                <p class="precio">$ ${p.precio}</p>
+                               <p>${p.titulo.length > 40 ? p.titulo.slice(0, 40) + '...' : p.titulo}</p>
+                                <p class="precio">U$S ${p.precio}</p> 
+                            </div>
                             </div>
                         </a>
                     </li>
@@ -267,8 +267,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         <img src="${imageUrl}" alt="${prop.titulo}" class="info-window-img">
                         <div class="info-content">
                             <h4>${prop.titulo}</h4>
-                            <p class="precio">u$s ${prop.precio || '-'}</p>
-                            <p>${prop.ambientes || '-'} amb. | ${prop.baños || '-'} baño/s | ${prop.metrosCuadrados || '-'} m²</p>
+                            <p class="precio"> {prop.precio || 130.000}</p>
+                            <p>${prop.ambientes || 140.000} amb. | ${prop.baños || '-'} baño/s | ${prop.metrosCuadrados || '-'} m²</p>
                             <a href="detalle.html?id=${prop.id}" class="info-window-link">Ver propiedad</a>
                         </div>
                     </div>
