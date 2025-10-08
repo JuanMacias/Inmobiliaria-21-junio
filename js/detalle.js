@@ -262,17 +262,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 const imagenParaGlobo = prop.imagen || (prop.imagenes && prop.imagenes[0]);
                 const imageUrl = imagenParaGlobo || 'img/placeholder.jpg';
                 
-                const contenidoGlobo = `
-                    <div class="info-window-custom">
-                        <img src="${imageUrl}" alt="${prop.titulo}" class="info-window-img">
-                        <div class="info-content">
-                            <h4>${prop.titulo}</h4>
-                            <p class="precio"> {prop.precio || 130.000}</p>
-                            <p>${prop.ambientes || 140.000} amb. | ${prop.baños || '-'} baño/s | ${prop.metrosCuadrados || '-'} m²</p>
-                            <a href="detalle.html?id=${prop.id}" class="info-window-link">Ver propiedad</a>
-                        </div>
-                    </div>
-                `;
+               const contenidoGlobo = `
+    <div class="info-window-custom">
+        <img src="${imageUrl}" alt="${prop.titulo}" class="info-window-img">
+        <div class="info-content">
+            <h4>${prop.titulo}</h4>
+            
+            <p class="precio">U$S ${prop.precio || 'Precio no disponible'}</p> 
+            
+            <p>${prop.ambientes || '-'} amb. | ${prop.baños || '-'} baño/s | ${prop.metrosCuadrados || '-'} m²</p>
+            <a href="detalle.html?id=${prop.id}" class="info-window-link">Ver propiedad</a>
+        </div>
+    </div>
+`;
                 const infoWindow = new google.maps.InfoWindow({
                     content: contenidoGlobo,
                 });
