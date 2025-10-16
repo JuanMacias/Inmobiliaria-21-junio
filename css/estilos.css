@@ -392,10 +392,10 @@ button:hover {
         display: flex; 
         justify-content: center; /* Centra la imagen */
     }
-    
+/*     
     .ley-logo img {
         max-width: 150px; 
-    }
+    } */
 }
 /* ==== SECCIÓN DE LEYENDAS (CORREGIDO PARA .ley-horizontal) ==== */
 .ley-horizontal { /* <--- ¡ESTE ES EL CAMBIO CLAVE! */
@@ -424,10 +424,10 @@ button:hover {
     width: auto;
     margin: 0;
 }
-    
+/*     
 .ley-logo img {
     max-width: 270px;
-}
+} */
 /* ==== ÍCONOS Y REDES SOCIALES ==== */
 .direccion {
     display: flex;
@@ -1003,7 +1003,7 @@ button:hover {
 
     .ley-logo {
         justify-content: flex-start;
-        width: 120%;
+        width: 100%;
         margin-top: 20px;
         margin-right: 0;
     }
