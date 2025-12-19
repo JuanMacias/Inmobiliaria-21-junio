@@ -5,23 +5,35 @@ document.addEventListener("DOMContentLoaded", function () {
     let propiedadesCargadas = [];
 
     // Cargar propiedades
-fetch("./propiedades.json")
-    .then((res) => res.json())
-    .then((data) => {
-        // Ahora, se pasa el array completo 'data' a la función
-        propiedadesCargadas = data;
-        renderizarPropiedades(propiedadesCargadas);
-    })
-    .catch((error) => {
-        console.error("Error al cargar propiedades:", error);
-    });
+    fetch("./propiedades.json")
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            return res.json();
+        })
+        .then((data) => {
+            // *** ¡CAMBIO AQUÍ! ***
+            // Acceder al array dentro del objeto JSON
+            propiedadesCargadas = data.propiedades; // Asumimos que el array está bajo la clave "propiedades"
+            renderizarPropiedades(propiedadesCargadas);
+        })
+        .catch((error) => {
+            console.error("Error al cargar propiedades:", error);
+            // Mostrar un mensaje de error en el contenedor si es necesario
+            if (contenedor) {
+                contenedor.innerHTML = "<p>Error al cargar las propiedades. Intente de nuevo más tarde.</p>";
+            }
+        });
 
-    // Renderizar propiedades en el contenedor del carrusel
+    // ... el resto de tu código es correcto ...
+
     function renderizarPropiedades(lista) {
         if (!contenedor) return;
 
         contenedor.innerHTML = "";
-        if (lista.length === 0) {
+        // Asegúrate de que lista sea un array antes de usar .length
+        if (!Array.isArray(lista) || lista.length === 0) {
             contenedor.innerHTML = "<p>No se encontraron propiedades.</p>";
             return;
         }
@@ -29,31 +41,14 @@ fetch("./propiedades.json")
         lista.forEach((prop) => {
             const div = document.createElement("div");
             div.className = "propiedad";
-           // Este es el código que solucionará el problema
-div.innerHTML = `
-    <h3>${prop.titulo}</h3>
-    <p>${prop.ambientes} ambientes - ${prop.operacion}</p>
-    <img src="${prop.imagen}" alt="${prop.titulo}" />
-    <a href="detalle.html?id=${prop.id}" class="btn-ver-detalle">Ver detalle</a>
-`;
+            div.innerHTML = `
+                <h3>${prop.titulo}</h3>
+                <p>${prop.ambientes} ambientes - ${prop.operacion}</p>
+                <img src="${prop.imagenes[0]}" alt="${prop.titulo}" /> <a href="detalle.html?id=${prop.id}" class="btn-ver-detalle">Ver detalle</a>
+            `;
             contenedor.appendChild(div);
         });
     }
 
-    // Flechas para mover el carrusel
-    if (contenedor && btnPrev && btnNext) {
-        btnNext.addEventListener("click", () => {
-            contenedor.scrollBy({
-                left: 320,
-                behavior: "smooth"
-            });
-        });
-
-        btnPrev.addEventListener("click", () => {
-            contenedor.scrollBy({
-                left: -320,
-                behavior: "smooth"
-            });
-        });
-    }
+    // ... (el código de los botones permanece igual) ...
 });
