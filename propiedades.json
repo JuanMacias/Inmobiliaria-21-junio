@@ -32,17 +32,17 @@
         "lng": -58.44258,
         "ambientes": 1,
         "direccion": "Diaz Velez 5400",
-        "titulo": "Impecable Monoambiente 32m² a estrenar con Balcón",
+        "titulo": "Impecable Monoambiente con Balcón, Amenities. Pileta, Parilla, Sum",
         "operacion": "Venta",
         "precio": 78500,
         "id": "prop1",
-        "metrosCuadrados": 32,
+        "metrosCuadrados": 33,
         "lat": -34.60822
     },
     {
-        "descripcion": "Hermoso PH refaccionado a nuevo con patio y terracita\n\nPH 4 ambientes sup. total 128 m2 y sup. cubierta 105m2. Se ingresa por amplio living-comedor con cocina integrada con una hermosa y funcional isla, artefactos a gas y campana, muebles de bajo mesada, alacena (con cierre hidráulico), espacio para lavavajillas, heladera doble, la grifería es de última tecnología y de la mejor calidad. El living comedor tiene salida a un luminoso patio con orientación norte, con espacio para bacha y parrilla. Lavadero independiente y cubierto en el bajo escalera. Baño completo con ducha y antebaño. En el primer piso tenemos 3 dormitorios con orientación este, dos comparten un baño completo y el dormitorio principal posee vestidor y baño en suite. Salida a una pequeña terraza. El PH fue refaccionado íntegramente, cuenta con losa radiante eléctrica con variación de temperatura por ambiente. Grifería de excelente calidad. Agua caliente por termotanque con muy buena presión de agua. A pesar de ser un PH lateral cuenta con muy buena ventilación cruzada. En el lote se desarrollan 6 unidades en total.\n\nExcelente ubicación, a 4 cuadras de estación Gutenberg del Tren Urquiza, a 8 cuadras de estación Devoto del tren San Martin, a 5 cuadras de Avenida San Martin (Metrobús), ubicado en Devoto, barrio de hermosas casas, con muchas propuestas gastronómicas y mucho espacio verde.\n\n-Los metrajes y las expensas son aproximados y los valores definitivos surgirán del título de propiedad y de la última liquidación de expensas. El departamento cuenta con la accesibilidad para personas con discapacidades físicas.\n\nMatrícula CUCICBA N° 9127",
-        "tipo": "PH",
-        "barrio": "Villa Devoto",
+        "descripcion": "Hermoso Monoambiente Dividido con Parrilla y Pileta\\n\\nDepartamento monoambientes dividido sup. total y cubierta 32m². Ingresamos al Living Comedor cocina integrada, mucho espacio de guardado, cocina a gas, bajo mesada, alacena, espacio para heladera y espacio para lavarropas, calefón. Amplio dormitorio con ventana con persiana, estufa a gas. Baño completo con bañera. Orientación Oeste. Apto profesional.\\n\\nEl edificio tiene 15 años de antigüedad, 3 pisos y 3 departamentos por piso. Expensas $100.000. Cuenta con SUM con parrilla y pileta.\\n\\nMuy buena ubicación, a 2 cuadras de estación Pueyrredón del Tren Mitre, a 2 cuadras de Avenida Mosconi (varias líneas de colectivo), a 3 cuadras de Avenida Constituyentes y a 4 cuadras de Avenida Nazca.\\n\\n-Los metrajes y las expensas son aproximados y los valores definitivos surgirán del titulo de propiedad y de la ultima liquidación de expensas. El departamento cuenta con la accesibilidad para personas con discapacidades físicas.\\n\\nMatrícula CUCICBA N° 9127\\n,",
+        "tipo": "Monoambiente",
+        "barrio": "Villa Pueyrredon",
         "baños": 1,
         "imagenes": [
             "/img/monoambiente/prop2_img_01.jpg",
@@ -69,15 +69,15 @@
             "/img/monoambiente/prop2_img_22.jpg",
             "/img/monoambiente/prop2_img_23.jpg"
         ],
-        "lng": -58.518,
-        "ambientes": 4,
-        "direccion": "Carlos A Lopez 4100",
-        "titulo": "PH 4 amb. 128 m² refaccionado a nuevo",
+        "lng": -58.49909,
+        "ambientes": 3,
+        "direccion": "Griveo 2500",
+        "titulo": "Hermoso Monoambiente Dividido con Parrilla y Pileta. Departamento monoambientes dividido sup. total y cubierta 32m². Ingresamos al Living Comedor cocina integrada, mucho espacio de guardado, cocina a gas, bajo mesada, alacena, espacio para heladera y espacio para lavarropas, calefón. Amplio dormitorio con ventana con persiana, estufa a gas. Baño completo con bañera. Orientación Oeste. Apto profesional. El edificio tiene 15 años de antigüedad, 3 pisos y 3 departamentos por piso. Expensas $100.000. Cuenta con SUM con parrilla y pileta. Muy buena ubicación... (y el resto del texto).",
         "operacion": "Venta",
-        "precio": 238000,
+        "precio": 85000,
         "id": "prop2",
-        "metrosCuadrados": 128,
-        "lat": -34.59462
+        "metrosCuadrados": 32,
+        "lat": -34.58162
     },
     {
         "descripcion": "Casa con jardin en Palermo",
