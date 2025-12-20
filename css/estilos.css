@@ -1506,7 +1506,7 @@ header nav {
 
 .slider .propiedad {
     flex-shrink: 0;
-    width: 309px;
+    width: 300px;
     /*Cambia a un ancho fijo para que no se apilen*/
     scroll-snap-align: start;
 }
