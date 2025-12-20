@@ -2162,3 +2162,17 @@ header nav {
         justify-content: space-between;
     }
 }
+
+/* Esto corrige el ancho en celulares sin romper la PC */
+@media (max-width: 768px) {
+    .slider .propiedad {
+        width: 100vw !important;  /* Obliga a usar todo el ancho del visor del cel */
+        flex: 0 0 100% !important; /* Evita que la tarjeta se encoja */
+        margin: 0 !important;      /* Quita espacios que dejen ver la otra foto */
+    }
+
+    .slider {
+        gap: 0 !important;        /* Elimina el hueco entre propiedades */
+        scroll-snap-type: x mandatory; /* Hace que la foto se "pegue" al borde al deslizar */
+    }
+}
