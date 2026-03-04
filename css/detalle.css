@@ -1,199 +1,313 @@
-/* /* ===========================
-   1️⃣ RESET Y BASE
-=========================== */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* ===========================
-   2️⃣ HEADER Y MENÚ
+   2️⃣ HEADER (Ajustado)
 =========================== */
 header {
-  background-color: #fff;
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: relative;
-  z-index: 1000;
+    display: flex !important;
+    flex-direction: row !important; /* Fuerza a que estén en la misma línea */
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px 40px !important;
+    text-align: left !important; /* Quita el centrado que vimos en el código */
 }
 
-header .logo {
-  text-align: center;
+/* IMPORTANTE: Borra esto si lo encuentras */
+header nav {
+    width: auto !important; /* Antes tenías 100%, por eso se bajaba */
+    text-align: right !important;
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
-header .menu {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  list-style: none;
+.logo {
+    margin: 0 !important; /* Quita márgenes automáticos que lo centran */
+    display: block !important;
 }
 
-.menu-toggle {
-  display: none;
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 1001;
+.menu ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
 }
 
-/* ===========================
-   3️⃣ SECCIONES GENERALES
-=========================== */
-.section {
-  padding: 40px 20px;
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
-.contacto-container,
-.nosotros-container,
-.servicios-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.contacto-info h2,
-.nosotros-container h2,
-.servicios-container h2 {
-  margin-bottom: 20px;
-  font-size: 28px;
+.menu ul li a:hover {
+    color: #e36f10;
 }
 
 /* ===========================
-   4️⃣ PROPIEDADES / CARRUSEL / GALERÍA
-=========================== */
-
-/* Carrusel general de propiedades */
-.carrusel-propiedades {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  scroll-behavior: smooth;
-  padding-bottom: 10px;
-}
-
-.carrusel-propiedades::-webkit-scrollbar {
-  display: none;
-}
-
-.carrusel-propiedades .propiedad-card {
-  flex: 0 0 auto;
-  width: 300px;
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.carrusel-propiedades .propiedad-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Galería en detalle de propiedad */
-.galeria-detalle {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.galeria-detalle img {
-  width: 100%;
-  max-height: 450px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.galeria-detalle .flecha {
-  position: absolute;
-  bottom: 50px; /* Ejemplo: 20px desde la parte inferior */
-  transform: translateY(-50%);
-  font-size: 32px;
-  color: #fff;
-  background-color: rgba(0,0,0,0.3);
-  padding: 8px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.flecha-izq {
-  left: 10px;
-}
-
-.flecha-der {
-  right: 10px;
-}
-
-/* ===========================
-   5️⃣ DETALLE DE PROPIEDAD
+   3️⃣ ESTRUCTURA DETALLE
 =========================== */
 .detalle-wrapper {
     display: flex;
-    gap: 20px;
-    padding: 20px;
+    gap: 30px;
     max-width: 1200px;
-    margin: 0 auto;
-    flex-direction: row-reverse;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
 .detalle-main {
-  flex: 1;
+    flex: 2; /* Más espacio para la galería */
+    min-width: 0;
 }
 
 .detalle-sidebar {
-  width: 300px;
-}
-
-.detalle-sidebar h3 {
-  margin-bottom: 10px;
-}
-
-.detalle-info {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex: 1; /* Menos espacio para el formulario */
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
 }
 
 /* ===========================
-   6️⃣ BOTONES FLOTANTES / WHATSAPP
+   4️⃣ GALERÍA DE FOTOS
 =========================== */
-.btn-whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: #fff;
-  padding: 12px 16px;
-  border-radius: 50%;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1002;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: transform 0.3s;
+.main-img-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+#imagen-activa {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
 
+/* Flechas INTERNAS (de la galería) */
+.flecha-galeria {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.flecha-galeria:hover { background: rgba(227, 230, 34, 0.937); }
+.flecha-galeria.izq { left: 0; border-radius: 0 5px 5px 0; }
+.flecha-galeria.der { right: 0; border-radius: 5px 0 0 5px; }
+
+/* ===========================
+   5️⃣ FLECHAS FLOTANTES (Navegación General)
+=========================== */
+.flecha-navegacion-fija {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ebeb11;
+    color: rgb(9, 9, 9);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.flecha-navegacion-fija:hover {
+    background-color: #ccd300;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.flecha-navegacion-fija.izq { left: 20px; }
+.flecha-navegacion-fija.der { right: 20px; }
+
+/* ===========================
+   6️⃣ RESPONSIVE (Móviles)
+=========================== */
+@media (max-width: 900px) {
+    .detalle-wrapper {
+        flex-direction: column;
+    }
+
+    .main-img-container {
+        height: 350px;
+    }
+
+    .flecha-navegacion-fija {
+        width: 45px;
+        height: 45px;
+        top: 40%; /* Suben para no tapar el contenido inferior */
+    }
+    
+    .flecha-navegacion-fija.izq { left: 10px; }
+    .flecha-navegacion-fija.der { right: 10px; }
+}
+
+/* Botón WhatsApp */
+.btn-whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Agrega solo esto debajo de lo que ya tienes */
+.menu {
+    margin-left: auto;   /* Esto empuja el menú a la derecha */
+    display: flex;       /* Necesario para que el alineado funcione */
+    justify-content: flex-end; /* Alinea los textos al final del bloque */
+}
+
+/* --- FIX PARA LAS IMÁGENES DEL INICIO (SLIDER) --- */
+
+/* Aseguramos que las tarjetas del slider tengan espacio para la foto */
+.slider .propiedad {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: 400px !important; /* Le da cuerpo a la tarjeta */
+}
+
+/* Forzamos a la imagen del slider a 'despertar' */
+.slider .propiedad img {
+    display: block !important;
+    width: 100% !important;
+    height: 200px !important; /* Altura fija para que no sea 0 */
+    min-height: 200px !important;
+    object-fit: cover !important; /* Para que se vea llena y no vacía */
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Centrado del slider (para mantener lo que ya logramos) */
+.slider-container {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
+.info-window-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra la imagen y el texto */
+    width: 250px;
+}
+
+.info-window-img {
+    width: 100% !important; /* Que ocupe todo el ancho del globito */
+    height: 140px !important; /* Altura fija para que no varíe entre props */
+    object-fit: cover; /* Recorta la imagen para que no se deforme */
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+/* Cuadrícula de características (según tu captura) */
+.detalles-iconos-grid {
+    display: grid;
+    /* Crea 4 columnas de igual tamaño */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px 10px; /* Espacio entre filas y columnas */
+    margin: 30px 0;
+    padding: 10px 0;
+}
+
+.icono-item {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio entre el dibujo y el texto */
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Tamaño y color de los iconos de FontAwesome */
+.icono-item i {
+    font-size: 1.4rem;
+    color: #777; /* Color gris suave como el de la captura */
+    width: 30px;
+    text-align: center;
+}
+
+/* Ajuste para celulares: que pasen de 4 columnas a 2 */
+@media (max-width: 768px) {
+    .detalles-iconos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Contenedor principal de los datos (la caja gris) */
+.contenedor-iconos-detalle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas como en tu foto */
+    gap: 15px;
+    background-color: #f8f9fa; /* Gris claro */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid #eee;
+}
+
+/* Cada item individual (icono + texto) */
+.dato-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #666; /* Color gris oscuro profesional */
+}
+
+.dato-item i {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: #888; /* Color del icono */
+}
+
+.dato-item span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}

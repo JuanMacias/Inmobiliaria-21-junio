@@ -1,12 +1,15 @@
 let mapa;
 let marcadores = [];
-let infoWindowActual;
+let infoWindowActual = null;
 let propiedadesCargadas = [];
 
+// ----------------------------------------------------
+// DOM READY
+// ----------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
     const formBusqueda = document.getElementById("form-busqueda");
 
-    if (formBusqueda) { // Asegurarse de que el formulario de búsqueda existe
+    if (formBusqueda) {
         formBusqueda.addEventListener("submit", (e) => {
             e.preventDefault();
             filtrarPropiedades();
@@ -14,200 +17,235 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// ----------------------------------------------------
+// GOOGLE MAPS INIT
+// ----------------------------------------------------
 function initMap() {
-    const ubicacionInicial = {
-        lat: -34.5997,
-        lng: -58.4208
-    }; 
+    const ubicacionInicial = { lat: -34.5997, lng: -58.4208 };
     const mapaDiv = document.getElementById("mapa-propiedades-dinamico");
-    
-    if (mapaDiv) { // Asegurarse de que el div del mapa existe
+
+    if (mapaDiv) {
         mapa = new google.maps.Map(mapaDiv, {
             zoom: 12,
             center: ubicacionInicial,
-            scrollwheel: false, 
+            scrollwheel: false
         });
-        cargarPropiedades();
-    } else {
-        console.error("El elemento 'mapa-propiedades-dinamico' no fue encontrado.");
-        // Si no hay mapa, al menos cargar propiedades en la lista
-        cargarPropiedades(); 
     }
+
+    cargarPropiedades();
 }
 
+// ----------------------------------------------------
+// CARGAR PROPIEDADES (NETBEANS + SQLITE)
+// ----------------------------------------------------
 function cargarPropiedades() {
-    // ----------------------------------------------------
-    //  SOLUCIÓN CONTRA CACHÉ: Añadimos un timestamp
-    // ----------------------------------------------------
-    const timestamp = new Date().getTime(); 
+    const ts = new Date().getTime(); 
     
-    fetch(`./propiedades.json?v=${timestamp}`) 
-        .then((res) => {
-            if (!res.ok) {
-                throw new Error(`Error al cargar el JSON: ${res.statusText}`);
-            }
+    fetch(`propiedades.json?v=${ts}`) 
+        .then(res => {
+            if (!res.ok) throw new Error("Error al obtener propiedades");
             return res.json();
         })
-        .then((data) => {
-            // Acceder al array dentro del objeto JSON (asumiendo que es "propiedades")
-            propiedadesCargadas = data.propiedades; 
-            
+        .then(data => {
+            // ESTA ES LA LÍNEA CLAVE:
+            propiedadesCargadas = data.propiedades || (Array.isArray(data) ? data : []); 
+
             renderizarPropiedades(propiedadesCargadas);
-            if (mapa) { // Solo crear marcadores si el mapa se inicializó correctamente
+
+            if (mapa && propiedadesCargadas.length > 0) {
                 crearMarcadoresEnMapa(propiedadesCargadas);
             }
         })
-        .catch((error) => {
-            console.error("Error al cargar las propiedades:", error);
-            const propiedadesGrid = document.querySelector(".propiedades-grid");
-            if (propiedadesGrid) { // Asegurarse de que el contenedor existe
-                propiedadesGrid.innerHTML =
-                    "<p>Error al cargar las propiedades. Por favor, inténtelo de nuevo más tarde.</p>";
+        .catch(err => {
+            console.error("❌ Error:", err);
+            const contenedor = document.querySelector(".propiedades-grid");
+            if (contenedor) {
+                contenedor.innerHTML = "<p>Error al cargar propiedades.</p>";
             }
         });
 }
 
+// ----------------------------------------------------
+// RENDER LISTADO (TARJETAS DERECHA)
+// ----------------------------------------------------
 function renderizarPropiedades(lista) {
     const contenedor = document.querySelector(".propiedades-grid");
-    if (!contenedor) return; 
+    if (!contenedor) return;
 
     contenedor.innerHTML = "";
 
     if (!Array.isArray(lista) || lista.length === 0) {
-        contenedor.innerHTML = "<p>No se encontraron propiedades que coincidan con los filtros.</p>";
+        contenedor.innerHTML = "<p>No se encontraron propiedades.</p>";
         return;
     }
 
-    lista.forEach((prop) => {
-        const card = crearTarjetaPropiedad(prop);
-        contenedor.appendChild(card);
+    lista.forEach(prop => {
+        contenedor.appendChild(crearTarjetaPropiedad(prop));
     });
 }
 
+// ----------------------------------------------------
+// CREAR TARJETA (CON HOVER HACIA EL MAPA)
+// ----------------------------------------------------
 function crearTarjetaPropiedad(prop) {
     const card = document.createElement("div");
     card.className = "propiedad-card";
-    card.dataset.id = prop.id;
+
+    const foto = (prop.imagenes && prop.imagenes.length > 0) 
+                 ? prop.imagenes[0] 
+                 : (prop.imagen ? prop.imagen : 'img/placeholder.jpg');
+
     card.innerHTML = `
-        <img src="${prop.imagenes && prop.imagenes[0] ? prop.imagenes[0] : 'img/placeholder.jpg'}" alt="${prop.titulo}" />
-        <h3>${prop.titulo}</h3>
-        <p>${prop.barrio} - ${prop.operacion}</p>
-        <p>USD ${prop.precio ? prop.precio.toLocaleString('es-AR') : '-'}</p>
-        <a href="detalle.html?id=${prop.id}" class="btn-ver-detalle">Ver detalle</a>
+        <img src="${foto}" alt="${prop.titulo}">
+        <div class="card-info">
+            <h3>${prop.titulo}</h3>
+            <p>${prop.barrio || ''} - ${prop.operacion}</p>
+            <p class="precio">USD ${prop.precio?.toLocaleString('es-AR') || '-'}</p>
+            <a href="detalle.html?id=${prop.id}" class="btn-ver-detalle">Ver detalle</a>
+        </div>
     `;
 
-    // Abrir el infoWindow al pasar el mouse por encima de la tarjeta
+    // ACTIVAR GLOBO AL PASAR EL MOUSE POR LA TARJETA
     card.addEventListener("mouseenter", () => {
-        abrirInfoWindow(prop.id);
+        abrirInfoWindowEnMapa(prop.id);
     });
 
-    // Cerrar el infoWindow cuando el mouse sale de la tarjeta
+    // CERRAR GLOBO AL QUITAR EL MOUSE
     card.addEventListener("mouseleave", () => {
-        if (infoWindowActual) {
-            infoWindowActual.close();
-        }
+        if (infoWindowActual) infoWindowActual.close();
     });
 
     return card;
 }
 
+// ----------------------------------------------------
+// MAPA MARKERS (Pines Rojos)
+// ----------------------------------------------------
 function crearMarcadoresEnMapa(propiedades) {
-    if (!mapa) return; 
-
-    marcadores.forEach((marcador) => marcador.setMap(null));
+    marcadores.forEach(m => m.setMap(null));
     marcadores = [];
 
-    if (!Array.isArray(propiedades)) return; 
+    propiedades.forEach(prop => {
+        if (!prop.lat || !prop.lng) return;
 
-    propiedades.forEach((prop) => {
         const marcador = new google.maps.Marker({
-            position: {
-                lat: prop.lat,
-                lng: prop.lng
-            },
+            position: { lat: prop.lat, lng: prop.lng },
             map: mapa,
-            id: prop.id,
-            title: prop.titulo,
+            title: prop.titulo
         });
 
-        // Crea el infoWindow
-        const infoWindow = new google.maps.InfoWindow({
-            content: crearContenidoInfoWindow(prop),
+        // Guardamos el ID en el marcador para vincularlo con la lista
+        marcador.idPropiedad = prop.id; 
+
+        // Abrir globo al pasar el mouse por el PIN
+        marcador.addListener("mouseover", () => {
+            abrirInfoWindowEnMapa(prop.id);
         });
 
+        // Cerrar globo al sacar el mouse del PIN
+        marcador.addListener("mouseout", () => {
+            if (infoWindowActual) infoWindowActual.close();
+        });
+
+        // Click para ir directo al detalle
         marcador.addListener("click", () => {
-            if (infoWindowActual) {
-                infoWindowActual.close();
-            }
-            infoWindow.open({
-                anchor: marcador,
-                map: mapa,
-            });
-            infoWindowActual = infoWindow;
+            window.location.href = `detalle.html?id=${prop.id}`;
         });
 
         marcadores.push(marcador);
     });
 }
 
-// Función para generar el contenido del infoWindow de forma dinámica
+// ----------------------------------------------------
+// DISEÑO DEL GLOBO (INFO WINDOW)
+// ----------------------------------------------------
 function crearContenidoInfoWindow(prop) {
+    // 1. Calculamos la foto (Corregido)
+    let foto;
+    if (Array.isArray(prop.imagenes) && prop.imagenes.length > 0) {
+        foto = prop.imagenes[0];
+    } else if (typeof prop.imagenes === 'string' && prop.imagenes.length > 0) {
+        foto = prop.imagenes.split(',')[0].trim(); 
+    } else {
+        foto = prop.imagen || 'img/placeholder.jpg';
+    }
+    
     return `
-        <div class="info-window-contenido">
-            <h4>${prop.titulo}</h4>
-            <img src="${prop.imagenes && prop.imagenes[0] ? prop.imagenes[0] : 'img/placeholder.jpg'}" alt="Imagen de la propiedad" class="info-window-imagen">
-            <p><strong>Barrio:</strong> ${prop.barrio}</p>
-            <p><strong>Tipo:</strong> ${prop.tipo}</p>
-            <p><strong>Operación:</strong> ${prop.operacion}</p>
-            <p><strong>Precio:</strong> U$S ${prop.precio}</p> 
-            <a href="detalle.html?id=${prop.id}" class="info-window-link">Ver más detalles</a> 
+        <div class="info-window-contenido" style="width: 200px; font-family: Arial, sans-serif;">
+            <h4 style="margin: 0 0 8px 0; font-size: 14px;">${prop.titulo}</h4>
+            <div style="text-align:center; border-radius: 5px; overflow: hidden; height: 110px;">
+                <img src="${foto}" 
+                     onerror="this.src='img/placeholder.jpg'" 
+                     style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="margin-top: 8px;">
+                <p style="margin: 0; font-weight: bold; color: #d9534f;">U$S ${prop.precio?.toLocaleString('es-AR')}</p>
+                <p style="margin: 2px 0; font-size: 11px; color: #666;">${prop.barrio || ''}</p>
+                <a href="detalle.html?id=${prop.id}" style="display: block; text-align: center; background: #007bff; color: white; padding: 5px; border-radius: 4px; text-decoration: none; font-size: 11px; margin-top: 5px;">Ver detalles</a>
+            </div>
         </div>
     `;
 }
+// ----------------------------------------------------
+// FUNCIÓN PARA ABRIR GLOBO DESDE CUALQUIER LADO
+// ----------------------------------------------------
+function abrirInfoWindowEnMapa(id) {
+    const marcador = marcadores.find(m => m.idPropiedad === id);
+    const prop = propiedadesCargadas.find(p => p.id === id);
+    
+    if (marcador && prop) {
+        if (infoWindowActual) infoWindowActual.close();
 
-// Función para abrir el infoWindow desde la tarjeta de la propiedad
-function abrirInfoWindow(id) {
-    if (!mapa) return; 
-    const marcador = marcadores.find((m) => m.id === id);
-    if (marcador) {
-        if (infoWindowActual) {
-            infoWindowActual.close();
-        }
-        const prop = propiedadesCargadas.find((p) => p.id === id);
-        if (prop) {
-            const infoWindow = new google.maps.InfoWindow({
-                content: crearContenidoInfoWindow(prop),
-            });
-            infoWindow.open({
-                anchor: marcador,
-                map: mapa,
-            });
-            infoWindowActual = infoWindow;
-        }
+        infoWindowActual = new google.maps.InfoWindow({
+            content: crearContenidoInfoWindow(prop)
+        });
+
+        infoWindowActual.open(mapa, marcador);
+        
+        // El mapa se mueve suavemente hacia la propiedad
+        mapa.panTo(marcador.getPosition());
     }
 }
 
+// ----------------------------------------------------
+// FILTROS
+// ----------------------------------------------------
 function filtrarPropiedades() {
-    const filtroBarrio = document.getElementById("filtro-barrio") ? document.getElementById("filtro-barrio").value.toLowerCase() : '';
-    const filtroTipo = document.getElementById("filtro-tipo") ? document.getElementById("filtro-tipo").value.toLowerCase() : '';
-    const filtroOperacion = document.getElementById("filtro-operacion") ? document.getElementById("filtro-operacion").value.toLowerCase() : '';
-    const filtroAmbientes = document.getElementById("filtro-ambientes") ? document.getElementById("filtro-ambientes").value : '';
+    // 1. Capturamos los valores del formulario
+    const barrioBusqueda = document.getElementById("filtro-barrio")?.value.toLowerCase() || "";
+    const tipoBusqueda = document.getElementById("filtro-tipo")?.value.toLowerCase() || "";
+    const operacionBusqueda = document.getElementById("filtro-operacion")?.value.toLowerCase() || "";
+    const ambientesBusqueda = document.getElementById("filtro-ambientes")?.value || "";
 
-    // Filtra las propiedades cargadas
-    const propiedadesFiltradas = Array.isArray(propiedadesCargadas) ? propiedadesCargadas.filter((p) => {
-        const coincideBarrio = !filtroBarrio || (p.barrio && p.barrio.toLowerCase() === filtroBarrio);
-        const coincideTipo = !filtroTipo || (p.tipo && p.tipo.toLowerCase() === filtroTipo);
-        const coincideOperacion = !filtroOperacion || (p.operacion && p.operacion.toLowerCase() === filtroOperacion);
-        const coincideAmbientes = !filtroAmbientes || String(p.ambientes) === filtroAmbientes;
+    // Función interna para quitar tildes y dejar todo igual (ej: "Nuñez" -> "nunez")
+    const limpiarTexto = (texto) => 
+        texto?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace("_", " ") || "";
+
+    const filtradas = propiedadesCargadas.filter(p => {
+        // Limpiamos los datos del JSON y de la búsqueda para comparar peras con peras
+        const barrioJSON = limpiarTexto(p.barrio);
+        const barrioFiltro = limpiarTexto(barrioBusqueda);
+        
+        const tipoJSON = limpiarTexto(p.tipo);
+        const tipoFiltro = limpiarTexto(tipoBusqueda);
+
+        const operacionJSON = limpiarTexto(p.operacion);
+        const operacionFiltro = limpiarTexto(operacionBusqueda);
+
+        // Lógica de coincidencia
+        const coincideBarrio = !barrioFiltro || barrioJSON.includes(barrioFiltro);
+        const coincideTipo = !tipoFiltro || tipoJSON.includes(tipoFiltro);
+        const coincideOperacion = !operacionFiltro || operacionJSON.includes(operacionFiltro);
+        const coincideAmbientes = !ambientesBusqueda || String(p.ambientes) === ambientesBusqueda;
 
         return coincideBarrio && coincideTipo && coincideOperacion && coincideAmbientes;
-    }) : [];
+    });
 
-    renderizarPropiedades(propiedadesFiltradas);
-    if (mapa) { // Solo crear marcadores si el mapa se inicializó
-        crearMarcadoresEnMapa(propiedadesFiltradas);
-    }
+    renderizarPropiedades(filtradas);
+    if (mapa) crearMarcadoresEnMapa(filtradas);
 }
 
-// Función global requerida por Google Maps API al cargar el script
+// ----------------------------------------------------
+// CALLBACK GLOBAL
+// ----------------------------------------------------
 window.initMap = initMap;

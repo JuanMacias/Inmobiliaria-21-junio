@@ -12,7 +12,7 @@ body {
 }
 
 img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
 }
 
@@ -82,6 +82,7 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
+    width: 100%; /* AGREGA ESTA LÍNEA */
 }
 
 .logo img {
@@ -93,22 +94,22 @@ img {
 .menu {
     display: flex;
     justify-content: flex-end;
-    margin-left: auto;
-    /* <-- ¡Este es el cambio clave! */
-}
-
-.menu-toggle {
-    display: none;
+    margin-left: auto; 
+    flex: 1; /* AGREGA ESTA LÍNEA para que el menú "empuje" al logo */
+    padding-right: 0; /* Asegura que no haya espacio extra a la derecha */
 }
 
 .menu ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 45px;
     margin: 0;
     padding: 0;
 }
 
+.menu-toggle {
+    display: none;
+}
 .menu ul li a {
     text-decoration: none;
     color: #111;
@@ -263,9 +264,11 @@ img {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
+    /* justify-content: space-between asegura que cada parte se vaya a un extremo */
+    justify-content: space-between; 
     align-items: flex-start;
+    gap: 40px;
+    padding: 0 20px;
 }
 
 .contacto-info {
@@ -348,8 +351,8 @@ textarea {
 
 .formulario button {
     padding: 20px 30px;
-    background-color: #3708f2;
-    color: white;
+    background-color: #f2f208;
+    color: rgb(11, 11, 11);
     font-weight: bold;
     border: none;
     border-radius: 8px;
@@ -386,16 +389,7 @@ button:hover {
         margin-bottom: 20px; 
     }
     
-    .ley-logo {
-        width: 100%;
-        margin: 0;
-        display: flex; 
-        justify-content: center; /* Centra la imagen */
-    }
-/*     
-    .ley-logo img {
-        max-width: 150px; 
-    } */
+   
 }
 /* ==== SECCIÓN DE LEYENDAS (CORREGIDO PARA .ley-horizontal) ==== */
 .ley-horizontal { /* <--- ¡ESTE ES EL CAMBIO CLAVE! */
@@ -416,7 +410,8 @@ button:hover {
     padding-right: 20px; 
     margin: 0; 
 }
-
+    
+/* Localiza este bloque en tu archivo */
 .ley-logo {
     flex-shrink: 0; 
     display: flex;
@@ -424,11 +419,15 @@ button:hover {
     width: auto;
     margin: 0;
 }
-/*     
+
+/* AGREGA ESTO JUSTO DEBAJO */
 .ley-logo img {
-    max-width: 270px;
-} */
-/* ==== ÍCONOS Y REDES SOCIALES ==== */
+    max-width: 180px; /* Cambia este número para achicarlo a tu gusto */
+    width: 100%;      /* Esto asegura que respete el max-width */
+    height: auto;
+}
+
+
 .direccion {
     display: flex;
     align-items: center;
@@ -627,20 +626,6 @@ button:hover {
 .btn-ver-detalle:hover {
     background: linear-gradient(135deg, #ffb300, #ffe082);
     transform: scale(1.03);
-}
-
-
-
-.carrusel-propiedades .flecha:hover {
-    background-color: #e5b800;
-}
-
-.carrusel-propiedades .flecha.izquierda {
-    left: 20px;
-}
-
-.carrusel-propiedades .flecha.derecha {
-    right: 20px;
 }
 
 /* ==== SECCIÓN DE SOLUCIONES ==== */
@@ -1038,10 +1023,6 @@ button:hover {
         padding: 10px 16px;
     }
 
-    .carrusel-propiedades .flecha {
-        display: none;
-    }
-
     .servicio img {
         margin: 0 auto 15px;
         width: 100%;
@@ -1107,12 +1088,6 @@ header {
     flex-wrap: wrap;
 }
 
-header nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #003c82;
-    font-weight: bold;
-}
 
 .detalle-wrapper {
     display: flex;
@@ -1153,16 +1128,6 @@ header nav a {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-}
-
-.carrusel-propiedades {
-    position: relative;
-    max-width: 1050px;
-    margin: 40px auto;
-    display: flex;
-    justify-content: center;
-    /* This centers the content horizontally */
-    align-items: center;
 }
 
 .slider {
@@ -1552,15 +1517,6 @@ header nav {
 
 .flecha:hover {
     background-color: #e5b800;
-}
-
-/* Posición de las flechas del carrusel de inicio */
-.carrusel-propiedades .flecha.izquierda {
-    left: 20px;
-}
-
-.carrusel-propiedades .flecha.derecha {
-    right: 20px;
 }
 
 /* Posición de las flechas del carrusel de detalle - ajustadas al borde */
@@ -2049,11 +2005,7 @@ header nav {
         /* Pégalo al borde derecho del carrusel */
     }
 
-    /* Oculta las flechas si ya estaban definidas en otro lugar para móvil */
-    /* .carrusel-propiedades .flecha {
-        display: none;
-    } */
-}
+   }
 
 /* ==== Estilo para el botón flotante (Flecha de Navegación) ==== */
 .flecha-flotante {
@@ -2172,7 +2124,143 @@ header nav {
     }
 
     .slider {
-        gap: 0 !important;        /* Elimina el hueco entre propiedades */
+        gap: 0 !important;         /* Elimina el hueco entre propiedades */
         scroll-snap-type: x mandatory; /* Hace que la foto se "pegue" al borde al deslizar */
-    }
+    } 
+} 
+
+ .carousel-item img { 
+  width: 100%;
+  height: 500px; /* O la altura que desees para el carrusel */
+  object-fit: cover; /* Esto elimina las barras negras */
+  object-position: center; /* Asegura que se vea el centro de la foto */
 }
+
+/* 2. El hueco por donde se ven las fotos */
+.slider-container {
+    flex: 1;                   /* Ocupa todo el espacio entre las flechas */
+    overflow: hidden;          /* Esconde las fotos que sobran a los lados */
+}
+
+/* 3. Las flechas (Limpias, sin 'left' ni 'right' fijos) */
+.flecha {
+    position: relative;        /* Ya no necesitan estar 'sueltas' con absolute */
+    background-color: #f6d11d;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    flex-shrink: 0;            /* Evita que la flecha se aplaste en pantallas chicas */
+    transition: 0.3s;
+}
+
+.flecha:hover {
+    background-color: #e5b800;
+    transform: scale(1.1);
+}
+
+.contenedor-de-tarjetas {
+    display: flex;
+    justify-content: center; /* Esto centra las tarjetas horizontalmente */
+    flex-wrap: wrap;        /* Permite que bajen si no caben en una línea */
+    margin: 0 auto;         /* Centra el bloque completo */
+    max-width: 1200px;      /* Opcional: limita el ancho máximo */
+}
+
+/* ======================================================= */
+/* FIX: CENTRADO ESPECÍFICO PARA EL SLIDER DE INICIO       */
+/* ======================================================= */
+
+/* 1. Centramos el contenedor que envuelve los 300px de cada tarjeta */
+.slider {
+    display: flex !important;
+    justify-content: center !important; /* <--- ESTO centra las tarjetas si sobran espacios */
+    gap: 20px !important;              /* Espacio entre tarjetas */
+    width: 100% !important;
+    max-width: 1200px !important;      /* El mismo ancho que tu contenedor de contacto */
+    margin: 0 auto !important;         /* Centra el bloque gris en la pantalla */
+    overflow-x: auto;                  /* Permite scroll en móviles */
+}
+
+/* 2. Ajuste del contenedor padre (el que tiene el fondo) */
+.slider-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding: 20px 0 !important;
+}
+
+/* 3. Evitamos que las tarjetas se estiren */
+.slider .propiedad {
+    flex-shrink: 0 !important;
+    width: 300px !important; /* Mantenemos tu ancho fijo */
+}
+
+/* 4. PROTECCIÓN PARA PÁGINA DE PROPIEDADES */
+/* Como en Propiedades usas '.propiedades-grid', este código no la afectará */
+.propiedades-grid {
+    display: grid !important;
+    justify-items: stretch !important; 
+}
+
+/* RESET TOTAL DEL CARRUSEL PARA EVITAR CORTES */
+
+.carrusel-propiedades {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 40px 0;
+    overflow: visible; /* Permitimos que las flechas se vean bien */
+}
+
+/* --- AJUSTE DE PRECISIÓN FINAL --- */
+
+.slider-container {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    overflow: hidden !important; 
+    padding: 20px 0 !important;
+}
+
+.slider {
+    display: flex !important;
+    gap: 20px !important;
+    justify-content: flex-start !important;
+    /* 4 tarjetas de 300px + 3 espacios de 20px = 1260px */
+    /* Le damos 1260px exactos para que la 5ta tarjeta quede afuera del "recorte" */
+    width: 1260px !important; 
+    max-width: 1260px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+}
+
+.propiedad {
+    flex: 0 0 300px !important;
+    min-width: 300px !important;
+    /* ... resto de tus estilos (sombras, bordes) se mantienen igual ... */
+}
+
+
+/* Aseguramos que la imagen no se rompa */
+.propiedad img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+#mapa-propiedades-dinamico img {
+    max-width: none !important;
+}
+
