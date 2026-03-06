@@ -91,18 +91,24 @@ function crearTarjetaPropiedad(prop) {
     const card = document.createElement("div");
     card.className = "propiedad-card";
 
-    const foto = (prop.imagenes && prop.imagenes.length > 0) 
-                 ? prop.imagenes[0] 
-                 : (prop.imagen ? prop.imagen : 'img/placeholder.jpg');
+    // Verificamos si hay imágenes válidas
+    let foto = 'img/placeholder.jpg'; // Por defecto
+    if (prop.imagenes && prop.imagenes.length > 0) {
+        foto = prop.imagenes[0];
+    } else if (prop.imagen) {
+        foto = prop.imagen;
+    }
 
     card.innerHTML = `
-        <img src="${foto}" alt="${prop.titulo}">
+        <img src="${foto}" alt="${prop.titulo}" onerror="this.style.display='none'">
         <div class="card-info">
             <h3>${prop.titulo}</h3>
             <p>${prop.barrio || ''} - ${prop.operacion}</p>
             <p class="precio">USD ${prop.precio?.toLocaleString('es-AR') || '-'}</p>
             <a href="detalle.html?id=${prop.id}" class="btn-ver-detalle">Ver detalle</a>
         </div>
+    `;
+    // ... resto del código igual
     `;
 
     // ACTIVAR GLOBO AL PASAR EL MOUSE POR LA TARJETA
