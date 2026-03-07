@@ -288,9 +288,19 @@
             "img/ph/prop6/prop6_img_22.jpg",
             "img/ph/prop6/prop6_img_23.jpg",
             "img/ph/prop6/prop6_img_24.jpg",
-            "img/ph/prop6/prop6_img_25.jpg"
+            "img/ph/prop6/prop6_img_25.jpg",
+            "img/ph/prop6/prop6_img_26.jpg",
+            "img/ph/prop6/prop6_img_27.jpg",
+            "img/ph/prop6/prop6_img_28.jpg",
+            "img/ph/prop6/prop6_img_29.jpg",
+            "img/ph/prop6/prop6_img_30.jpg",
+            "img/ph/prop6/prop6_img_31.jpg",
+            "img/ph/prop6/prop6_img_32.jpg",
+            "img/ph/prop6/prop6_img_33.jpg",
+            "img/ph/prop6/prop6_img_34.jpg",
+            "img/ph/prop6/prop6_img_35.jpg"
         ],
-        "lng": -58.50243,
+        "lng": -58.47045,
         "ambientes": 3,
         "antiguedad": 70,
         "direccion": "12 De Octubre 1800",
@@ -300,7 +310,7 @@
         "cocheras": "No tiene",
         "precio": 155000,
         "id": "prop6",
-        "lat": -34.58472,
+        "lat": -34.60163,
         "metros": 77
     },
     {
