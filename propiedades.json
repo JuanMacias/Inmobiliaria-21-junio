@@ -416,7 +416,7 @@
             "img/departamento/prop9/prop9_img_22.jpg",
             "img/departamento/prop9/prop9_img_23.jpg"
         ],
-        "lng": -58.51,
+        "lng": -58.51308,
         "ambientes": 1,
         "antiguedad": 39,
         "direccion": "Beiro 4400",
@@ -426,7 +426,7 @@
         "cocheras": "1 Cochera",
         "precio": 95000,
         "id": "prop9",
-        "lat": -34.6,
+        "lat": -34.60662,
         "metros": 40
     },
     {
@@ -463,16 +463,16 @@
             "img/departamento/prop10/prop10_img_24.jpg",
             "img/departamento/prop10/prop10_img_25.jpg"
         ],
-        "lng": 0,
+        "lng": -58.51218,
         "ambientes": 2,
         "antiguedad": 16,
-        "direccion": "Franaco 3300",
+        "direccion": "Franco 3300",
         "titulo": "Franco 3340, Piso PB",
         "orientacion": "Contra frente",
         "operacion": "Venta",
         "precio": 78000,
         "id": "prop10",
-        "lat": 0,
+        "lat": -34.58507,
         "metros": 39
     },
     {

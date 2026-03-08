@@ -112,7 +112,7 @@ img {
 }
 .menu ul li a {
     text-decoration: none;
-    color: #111;
+    color:  #efdd10;
     font-weight: bold;
 }
 
@@ -125,7 +125,7 @@ img {
 /* ==== SECCIÓN CON FONDO Y BARRA DE BÚSQUEDA ==== */
 .seccion-fondo {
     position: relative;
-    background-image: url('../img/apartment-1851201_1280.jpg');
+    background-image: url('../img/Edificios.jpg');
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -135,7 +135,7 @@ img {
 }
 
 .contenido-fondo {
-    /*background-color: rgba(0, 0, 0, 0.5);*/
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     padding: 30px 60px;
     display: flex;
@@ -907,7 +907,7 @@ button:hover {
 
     .menu.active {
         display: flex;
-        background-color: rgb(23, 214, 221);
+        background-color: rgb(28, 13, 239);
         /* Agrega esta línea para la trasparenci */
 
     }
