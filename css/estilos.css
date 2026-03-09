@@ -1041,31 +1041,41 @@ button:hover {
 @media (min-width: 900px) {
     .propiedades-container {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        /* Cambiamos el orden: 1fr para el mapa (izq) y 1.5fr para las tarjetas (der) */
+        grid-template-columns: 1fr 1.0fr; 
+        gap: 20px;
         align-items: start;
-        height: 80vh;
-        padding: 40px 20px;
+        height: calc(100vh - 100px); /* Ajusta según el alto de tu header */
+        overflow: hidden; /* Evita que toda la página scrollee */
     }
 
     #mapa-propiedades-dinamico {
         position: sticky;
-        top: 20px;
-        height: 100%;
+        top: 0;
+        height: 100%; /* Ocupa el alto del contenedor */
+        width: 100%;
+        z-index: 10;
+        border-radius: 8px;
     }
 
-    .lista-propiedades {
-        height: 100%;
+    /* ¡CLAVE!: Cambié .lista-propiedades por .lista-y-streetview para que coincida con tu HTML */
+    .lista-y-streetview {
+        height: 100%; 
         overflow-y: scroll;
+        padding-right: 10px;
+        /* Ocultar barra de scroll según tu preferencia */
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
 
-    .lista-propiedades::-webkit-scrollbar {
+    .lista-y-streetview::-webkit-scrollbar {
         display: none;
     }
 
     .propiedades-grid {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
