@@ -422,7 +422,7 @@ button:hover {
 
 /* AGREGA ESTO JUSTO DEBAJO */
 .ley-logo img {
-    max-width: 180px; /* Cambia este número para achicarlo a tu gusto */
+    max-width: 350px; /* Cambia este número para achicarlo a tu gusto */
     width: 100%;      /* Esto asegura que respete el max-width */
     height: auto;
 }
