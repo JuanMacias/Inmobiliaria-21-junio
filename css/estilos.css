@@ -112,7 +112,7 @@ img {
 }
 .menu ul li a {
     text-decoration: none;
-    color:  #efdd10;
+    color:  #12120f;
     font-weight: bold;
 }
 
@@ -1089,7 +1089,7 @@ body {
 }
 
 header {
-    background-color: #ffffff;
+    background-color: #ead10f;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
