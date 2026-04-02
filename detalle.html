@@ -118,26 +118,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div id="contenedor-miniaturas" class="galeria-miniaturas"></div>
         </div>
 
-       <div class="detalles-iconos-grid">
+   <div class="detalles-iconos-grid">
     <div class="icono-item"><i class="fa-solid fa-ruler-combined"></i> <span id="valor-metros"></span></div>
     <div class="icono-item"><i class="fa-solid fa-bed"></i> <span id="valor-dormitorios"></span></div>
     <div class="icono-item"><i class="fa-solid fa-calendar-days"></i> <span id="valor-antiguedad"></span></div>
     <div class="icono-item"><i class="fa-solid fa-bath"></i> <span id="valor-banos"></span></div>
     <div class="icono-item"><i class="fa-solid fa-house"></i> <span id="valor-ambientes"></span></div>
     <div class="icono-item"><i class="fa-solid fa-car"></i> <span id="valor-cochera"></span></div>
-    <div class="icono-item"><i class="fa-solid fa-house-circle-check"></i> <span id="valor-estado"></span></div>
+    
+    <div class="icono-item">
+        <div class="contenedor-icon-excelente">
+            <i class="fa-solid fa-house"></i>
+            <span class="signo-pregunta">?</span>
+        </div>
+        <span id="valor-estado"></span>
+    </div>
+    
     <div class="icono-item"><i class="fa-solid fa-compass"></i> <span id="valor-orientacion"></span></div>
 </div>
 
-        <div class="descripcion-seccion" style="margin-top: 10px;">
-            <h3 style="border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">Descripción</h3>
-            <p id="descripcion-prop" style="white-space: pre-line; color: #555; font-size: 1.1rem;"></p>
-        </div>
-
-        <div class="descripcion-seccion" style="margin-top: 30px;">
-            <h3 style="border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">Descripción</h3>
-            <p id="descripcion-prop" style="white-space: pre-line; color: #555; font-size: 1.1rem;"></p>
-        </div>
+<div class="descripcion-seccion" style="margin-top: 30px;">
+    <h3 style="border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">Descripción</h3>
+    <p id="descripcion-prop" style="white-space: pre-line; color: #555; font-size: 1.1rem; line-height: 1.6;"></p>
+</div>
 
         <div id="mapa-detalle-propiedad" style="height: 400px; width: 100%; margin-top: 30px; border-radius: 12px; background: #eee;"></div>
     </main>
