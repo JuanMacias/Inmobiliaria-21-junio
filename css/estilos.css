@@ -70,6 +70,17 @@ img {
     text-decoration: none;
 }
 
+.telefono a {
+    color: rgb(14, 12, 12) !important;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.telefono a:hover {
+    color: white !important;
+}
+
 .barra-superior .item a:hover {
     color: #e0e0e0;
     text-decoration: underline;
