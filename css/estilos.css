@@ -11,35 +11,64 @@ body {
     color: #333;
 }
 
+
+/* --- NUEVO: ESTO MUEVE EL MAIL A LA DERECHA --- */
+.barra-superior {
+    display: flex;
+    justify-content: space-between; /* El teléfono a la izquierda, el mail a la derecha */
+    align-items: center;
+    padding: 10px 20px; /* Espacio para que no toquen los bordes de la pantalla */
+    background-color: #0f0202; /* Aseguramos que el fondo sea negro */
+}
+
+/* 1. BARRA SUPERIOR (WhatsApp y Mail - TODO BLANCO) */
+.barra-superior a, 
+.barra-superior a span {
+    color: #ffffff !important;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.barra-superior a:hover, 
+.barra-superior a:hover span {
+    color: #e0e0e0 !important;
+    text-decoration: underline;
+}
+
+/* 2. SECCIÓN CONTACTO ABAJO (Texto Gris -> Verde al pasar el mouse) */
+.link-whatsapp .numero-contacto {
+    color: #333 !important;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.link-whatsapp:hover .numero-contacto {
+    color: #36ea16 !important; 
+    text-decoration: none;
+}
+
+/* 3. MAIL DE LA SECCIÓN CONTACTO (Gris oscuro) */
+.contacto-mail a {
+    color: #333 !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 4. AJUSTE ICONITO WHATSAPP */
+.whatsapp-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
 img {
     max-width: 90%;
     height: auto;
 }
 
 /* ==== BARRAS SUPERIOR E INFERIOR ==== */
-.barra-superior,
-.barra-inferior {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    font-size: 14px;
-    flex-wrap: wrap;
-    color: white;
-    /* Color por defecto para ambas barras */
-}
 
-.barra-superior {
-    background-color: #0f0202;
-}
-
-.barra-inferior {
-    background-color: rgb(240, 217, 5);
-}
-
-.barra-inferior .item {
-    margin: 5px 10px;
-}
 
 .telefonos,
 .correo {
@@ -71,14 +100,14 @@ img {
 }
 
 .telefono a {
-    color: rgb(14, 12, 12) !important;
+    color: rgb(10, 11, 10) !important;
     text-decoration: none;
     display: flex;
     align-items: center;
 }
 
 .telefono a:hover {
-    color: white !important;
+    color: rgb(240, 243, 240) !important;
 }
 
 .barra-superior .item a:hover {
@@ -2284,4 +2313,3 @@ header nav {
 #mapa-propiedades-dinamico img {
     max-width: none !important;
 }
-

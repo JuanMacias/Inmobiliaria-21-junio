@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WBMS8SV6');</script>
-<!-- End Google Tag Manager -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WBMS8SV6');</script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVL95WNBW1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-ZVL95WNBW1');
     </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detalle de Propiedad - Inmobiliaria Macias</title>
@@ -24,202 +24,184 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="./css/detalle.css" />
 
     <style>
-        /* --- ESTILOS DE MARCA Y CONTACTO --- */
-        .contacto-nosotros {
-            background-color: #f1d624; 
-            padding: 60px 0;
-            width: 100%;
-            margin-top: 50px;
-            color: #000;
-        }
-
-        .contacto-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            gap: 50px;
-            padding: 0 20px;
-        }
-
-        .contacto-info, .contacto-formulario { flex: 1; }
+        /* Solo estilos de estructura general para no pisar el detalle.css */
+        .detalle-wrapper { margin-top: 20px; }
         
-        .direccion { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; font-weight: 500; }
-        .redes-sociales { display: flex; gap: 15px; margin: 20px 0; }
-        .redes-sociales img { width: 30px; height: 30px; border-radius: 5px; }
-
-        .formulario .fila { display: flex; gap: 10px; margin-bottom: 10px; }
-        .formulario input, .formulario textarea { 
-            width: 100%; padding: 12px; border: none; border-radius: 8px; background: #fff; font-size: 1rem;
+        .contacto-nosotros { 
+            background-color: #f1d624; 
+            padding: 60px 0 0 0; /* Ajustado para que la ley pegue al fondo */
+            color: #000; 
+            width: 100%; 
+            margin-top: 50px; 
         }
-        .formulario button { 
-            background: #ffee00; color: rgb(11, 10, 10); border: none; padding: 15px 30px; 
-            border-radius: 10px; cursor: pointer; font-weight: bold; float: right; margin-top: 10px;
-        }
-
-        /* Mapa de la oficina en el footer */
-        .mapa-contacto-footer {
-            margin-top: 25px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            height: 250px;
+        
+        .contacto-container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            display: flex; 
+            justify-content: space-between; 
+            gap: 50px; 
+            padding: 0 20px; 
         }
 
-        .linea-con-icono { display: flex; align-items: center; justify-content: center; margin: 40px auto; max-width: 1200px; }
+        .linea-con-icono { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin: 40px auto; 
+            max-width: 1200px; 
+        }
+        
         .linea { flex: 1; height: 1.5px; background: #000; }
         .icono-centro { padding: 0 20px; font-size: 24px; }
-
-        .ley-horizontal { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 20px; padding: 20px; font-size: 0.8rem; }
-        .ley-logo img { width: 120px; }
-
-        @media (max-width: 900px) {
-            .contacto-container { flex-direction: column; }
-            .formulario button { float: none; width: 100%; }
+        
+        @media (max-width: 900px) { 
+            .contacto-container { flex-direction: column; } 
         }
     </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBMS8SV6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBMS8SV6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<header class="header">
-    <div class="logo">
-        <img src="./img/Logo.jpg" alt="Logo Inmobiliaria Macias" />
-    </div>
-    <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">☰</button>
-    <nav class="menu" id="main-menu">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="propiedades.html" class="active">Propiedades</a></li>                
-            <li><a href="tasaciones.html">Tasaciones</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
-
-<div class="detalle-wrapper">
-    <main class="detalle-main">
-        <div id="detalle-header">
-            <h2 id="titulo-prop" style="font-size: 2.2rem; margin-bottom: 5px;"></h2>
-            <p id="precio-prop" style="font-size: 1.8rem; color: #070706; font-weight: bold; margin-bottom: 20px;"></p>
-        </div>
-
-        <div class="galeria-contenedor">
-            <div class="main-img-container">
-                <button id="btn-prev-galeria" class="flecha-galeria izq"><i class="fas fa-chevron-left"></i></button>
-                <img id="imagen-activa" src="img/placeholder.jpg" alt="Propiedad" />
-                <button id="btn-next-galeria" class="flecha-galeria der"><i class="fas fa-chevron-right"></i></button>
-            </div>
-            <div id="contenedor-miniaturas" class="galeria-miniaturas"></div>
-        </div>
-
-   <div class="detalles-iconos-grid">
-    <div class="icono-item"><i class="fa-solid fa-ruler-combined"></i> <span id="valor-metros"></span></div>
-    <div class="icono-item"><i class="fa-solid fa-bed"></i> <span id="valor-dormitorios"></span></div>
-    <div class="icono-item"><i class="fa-solid fa-calendar-days"></i> <span id="valor-antiguedad"></span></div>
-    <div class="icono-item"><i class="fa-solid fa-bath"></i> <span id="valor-banos"></span></div>
-    <div class="icono-item"><i class="fa-solid fa-house"></i> <span id="valor-ambientes"></span></div>
-    <div class="icono-item"><i class="fa-solid fa-car"></i> <span id="valor-cochera"></span></div>
-    
-    <div class="icono-item">
-        <div class="contenedor-icon-excelente">
-            <i class="fa-solid fa-house"></i>
-            <span class="signo-pregunta">?</span>
-        </div>
-        <span id="valor-estado"></span>
-    </div>
-    
-    <div class="icono-item"><i class="fa-solid fa-compass"></i> <span id="valor-orientacion"></span></div>
-</div>
-
-<div class="descripcion-seccion" style="margin-top: 30px;">
-    <h3 style="border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">Descripción</h3>
-    <p id="descripcion-prop" style="white-space: pre-line; color: #555; font-size: 1.1rem; line-height: 1.6;"></p>
-</div>
-
-        <div id="mapa-detalle-propiedad" style="height: 400px; width: 100%; margin-top: 30px; border-radius: 12px; background: #eee;"></div>
-    </main>
-
-    <aside class="detalle-sidebar">
-        <h3>Consultar Propiedad</h3>
-        <form action="https://formsubmit.co/mamacias.inmobiliaria@gmail.com" method="POST" style="margin-top:15px;">
-            <input type="text" name="nombre" placeholder="Tu Nombre" required style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;">
-            <textarea name="mensaje" placeholder="Me interesa esta propiedad..." rows="4" style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;"></textarea>
-            <button type="submit" style="width:100%; padding:14px; background:#e6e322; color:rgb(10, 10, 10); border:none; cursor:pointer; font-weight:bold; border-radius:5px;">Enviar Consulta</button>
-        </form>
-    </aside>
-</div>
-
-<section class="contacto-nosotros">
-    <div class="contacto-container">
-        <div class="contacto-info">
-            <h2>Contactanos</h2>
-            <div class="direccion">
-                <img src="./img/logo google.png" alt="Ubicación" style="width:20px;">
-                <span>Manuel Ugarte 3129, CABA</span>
-            </div>
-            <div class="direccion">
-                <img src="./img/whatsapp-873316_1280.png" alt="WhatsApp" style="width:20px;">
+    <div class="barra-superior">
+        <div class="telefono">
+            <a href="https://wa.me/5491165674020" target="_blank" class="enlace-superior">
+                <img src="./img/whatsapp-873316_1280.png" class="whatsapp-icon" alt="WhatsApp">
                 <span>+54 9 11 6567-4020</span>
-            </div>
-            <div class="redes-sociales">
-                <a href="#"><img src="./img/instagram-.jpg" alt="Instagram"></a>
-                <a href="#"><img src="./img/facebook-.png" alt="Facebook"></a>
-                <a href="#"><img src="./img/youtube.png" alt="YouTube"></a>
-            </div>
-            <p>✉️ <a href="mailto:mamacias.inmobiliaria@gmail.com" style="color:#000;">mamacias.inmobiliaria@gmail.com</a></p>
-            
-             <div class="mapa-contacto">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4096.537591975107!2d-58.46864321144214!3d-34.55984580094057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb686d3140387%3A0xf2d1e44f2c2e3ba1!2sMac%C3%ADas%20Servicios%20Inmobiliarios!5e0!3m2!1ses!2sar!4v1750188791180!5m2!1ses!2sar"
-                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-
+            </a>
         </div>
+        <div class="item">
+            <a href="mailto:mamacias.inmobiliaria@gmail.com" class="enlace-superior">
+                mamacias.inmobiliaria@gmail.com
+            </a>
+        </div>
+    </div>
 
-        <div class="contacto-formulario">
-            <h2>Dejanos tu consulta</h2>
-            <form class="formulario">
-                <div class="fila">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="email" placeholder="Email" required>
+    <header class="header">
+        <div class="logo">
+            <img src="./img/Logo.jpg" alt="Logo Inmobiliaria Macias" />
+        </div>
+        <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">☰</button>
+        <nav class="menu" id="main-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="propiedades.html" class="active">Propiedades</a></li>                
+                <li><a href="tasaciones.html">Tasaciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="detalle-wrapper">
+        <main class="detalle-main">
+            <div id="detalle-header">
+                <h2 id="titulo-prop" style="font-size: 2.2rem; margin-bottom: 5px;"></h2>
+                <p id="precio-prop" style="font-size: 1.8rem; color: #070706; font-weight: bold; margin-bottom: 20px;"></p>
+            </div>
+
+            <div class="galeria-contenedor">
+                <div class="main-img-container">
+                    <button id="btn-prev-galeria" class="flecha-galeria izq"><i class="fas fa-chevron-left"></i></button>
+                    <img id="imagen-activa" src="img/placeholder.jpg" alt="Propiedad" />
+                    <button id="btn-next-galeria" class="flecha-galeria der"><i class="fas fa-chevron-right"></i></button>
                 </div>
-                <div class="fila">
-                    <input type="text" placeholder="WhatsApp">
-                    <input type="text" placeholder="Asunto">
+                <div id="contenedor-miniaturas" class="galeria-miniaturas"></div>
+            </div>
+
+            <div class="detalles-iconos-grid">
+                <div class="icono-item"><i class="fa-solid fa-ruler-combined"></i> <span id="valor-metros"></span></div>
+                <div class="icono-item"><i class="fa-solid fa-bed"></i> <span id="valor-dormitorios"></span></div>
+                <div class="icono-item"><i class="fa-solid fa-calendar-days"></i> <span id="valor-antiguedad"></span></div>
+                <div class="icono-item"><i class="fa-solid fa-bath"></i> <span id="valor-banos"></span></div>
+                <div class="icono-item"><i class="fa-solid fa-house"></i> <span id="valor-ambientes"></span></div>
+                <div class="icono-item"><i class="fa-solid fa-car"></i> <span id="valor-cochera"></span></div>
+                <div class="icono-item">
+                    <div class="contenedor-icon-excelente"><i class="fa-solid fa-house"></i><span class="signo-pregunta">?</span></div>
+                    <span id="valor-estado"></span>
                 </div>
-                <textarea placeholder="Su Mensaje" rows="5" required></textarea>
-                <button type="submit">Quiero saber más</button>
+                <div class="icono-item"><i class="fa-solid fa-compass"></i> <span id="valor-orientacion"></span></div>
+            </div>
+
+            <div class="descripcion-seccion" style="margin-top: 30px;">
+                <h3 style="border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">Descripción</h3>
+                <p id="descripcion-prop" style="white-space: pre-line; color: #555; font-size: 1.1rem; line-height: 1.6;"></p>
+            </div>
+
+            <div id="mapa-detalle-propiedad" style="height: 400px; width: 100%; margin-top: 30px; border-radius: 12px; background: #eee;"></div>
+        </main>
+
+        <aside class="detalle-sidebar">
+            <h3>Consultar Propiedad</h3>
+            <form action="https://formsubmit.co/mamacias.inmobiliaria@gmail.com" method="POST" style="margin-top:15px;">
+                <input type="text" name="nombre" placeholder="Tu Nombre" required style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;">
+                <textarea name="mensaje" placeholder="Me interesa esta propiedad..." rows="4" style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;"></textarea>
+                <button type="submit" style="width:100%; padding:14px; background:#000; color:#fff; border:none; cursor:pointer; font-weight:bold; border-radius:5px;">Enviar Consulta</button>
             </form>
+        </aside>
+    </div>
+
+    <section class="contacto-nosotros">
+        <div class="contacto-container">
+            <div class="contacto-info">
+                <h2>Contactanos</h2>
+                <div class="direccion">
+                    <img src="./img/logo google.png" alt="Ubicación" style="width:20px;">
+                    <span>Manuel Ugarte 3129, CABA</span>
+                </div>
+                <div class="telefono-contacto-abajo">
+                    <a href="https://wa.me/5491165674020" target="_blank" class="link-whatsapp">
+                        <img src="./img/whatsapp-873316_1280.png" alt="WhatsApp" style="width:20px;">
+                        <span class="numero-contacto" style="color:#000; font-weight:bold; margin-left: 5px;">+54 9 11 6567-4020</span>
+                    </a>
+                </div>
+                <div class="redes-sociales">
+                    <a href="https://www.instagram.com/inmobiliaria.mmacias" target="_blank"><img src="./img/instagram-.jpg" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/inmobiliaria.mmacias" target="_blank"><img src="./img/facebook-.png" alt="Facebook"></a>
+                    <a href="https://www.youtube.com/@MaciasServiciosInmobiliarios" target="_blank"><img src="./img/youtube.png" alt="YouTube"></a>
+                </div>
+                <p class="contacto-mail">✉️ <a href="mailto:mamacias.inmobiliaria@gmail.com" style="color:#000; font-weight:bold; text-decoration:none;">mamacias.inmobiliaria@gmail.com</a></p>
+            </div>
+
+            <div class="contacto-formulario">
+                <h2>Dejanos tu consulta</h2>
+                <form class="formulario" action="https://formsubmit.co/mamacias.inmobiliaria@gmail.com" method="POST">
+                    <div class="fila">
+                        <input type="text" name="nombre" placeholder="Nombre" required style="margin-right: 5px;">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="fila" style="margin-top: 10px;">
+                        <input type="text" name="whatsapp" placeholder="WhatsApp" style="margin-right: 5px;">
+                        <input type="text" name="asunto" placeholder="Asunto">
+                    </div>
+                    <textarea name="mensaje" placeholder="Su Mensaje" rows="5" required style="margin-top: 10px; width: 100%;"></textarea>
+                    <button type="submit" style="background: #000; color: #fff; padding: 12px 25px; border-radius: 8px; border: none; cursor: pointer; margin-top: 10px; font-weight: bold; float: right;">Quiero saber más</button>
+                </form>
+            </div>
         </div>
-    </div>
 
-    <div class="linea-con-icono">
-        <span class="linea"></span>
-        <span class="icono-centro">🏢</span>
-        <span class="linea"></span>
-    </div>
-
-    <div class="ley-horizontal">
-        <p>Ley 5859 Artículo 4 - Para todos los casos de alquiler de vivienda, el monto máximo de comisión es del 4,15%. Se prohíbe cobrar a los inquilinos comisiones inmobiliarias.</p>
-        <div class="ley-logo">
-            <img src="./img/logo cucicba.png" alt="logo cucicba" />
+        <div class="linea-con-icono">
+            <span class="linea"></span>
+            <span class="icono-centro">🏢</span>
+            <span class="linea"></span>
         </div>
-    </div>
-</section>
 
-<a href="#" id="prop-anterior" class="flecha-navegacion-fija izq" title="Propiedad Anterior"><i class="fas fa-chevron-left"></i></a>
-<a href="#" id="prop-siguiente" class="flecha-navegacion-fija der" title="Siguiente Propiedad"><i class="fas fa-chevron-right"></i></a>
+        <div class="ley-horizontal">
+            <p class="ley-texto">
+                Ley 5859 Artículo 4 Incorporase como inciso 8 del artículo 10 de la Ley 2340 (texto consolidado según Ley N° 5666) el siguiente texto: “Para todos los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4,15%) del valor total del respectivo contrato. Se encuentra prohibido cobrar a los inquilinos que sean personas físicas comisiones inmobiliarias y gastos de gestoría de informes”.
+            </p>
+            <div class="ley-logo">
+                <img src="./img/logo cucicba.png" alt="logo cucicba" />
+            </div>
+        </div>
+    </section>
 
-<script src="js/detalle.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzs1HbVyIw9GOGYGnyXlhUahofE3tdgo4&callback=initMapDetalle" async defer></script>
+    <a href="#" id="prop-anterior" class="flecha-navegacion-fija izq" title="Propiedad Anterior"><i class="fas fa-chevron-left"></i></a>
+    <a href="#" id="prop-siguiente" class="flecha-navegacion-fija der" title="Siguiente Propiedad"><i class="fas fa-chevron-right"></i></a>
 
+    <script src="js/detalle.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzs1HbVyIw9GOGYGnyXlhUahofE3tdgo4&callback=initMapDetalle" async defer></script>
 </body>
 </html>

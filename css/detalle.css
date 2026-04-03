@@ -311,3 +311,77 @@ header nav {
     font-size: 0.9rem;
     font-weight: 500;
 }
+
+.link-whatsapp {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Quita el subrayado */
+    color: white !important; /* Mantiene el color que ya arreglaste */
+    cursor: pointer; /* ESTO asegura que aparezca la manito */
+}
+
+.link-whatsapp:hover {
+    opacity: 0.8; /* Un pequeño efecto visual al pasar el mouse */
+}
+
+
+/* ===========================
+   SECCIÓN LEY Y LOGO (FINAL)
+=========================== */
+.ley-horizontal {
+    background-color: #f1d624; /* Amarillo de la captura */
+    width: 100%;
+    margin: 0;
+    padding: 60px 80px; /* Espaciado generoso como en la imagen */
+    display: flex;
+    justify-content: space-between; /* Texto a la izq, logo a la der */
+    align-items: center; /* Los centra verticalmente entre sí */
+    border: none !important; /* ELIMINA EL RECUADRO ROJO */
+    box-sizing: border-box;
+}
+
+.ley-texto {
+    flex: 1; /* Toma el espacio disponible */
+    max-width: 650px; /* Evita que las líneas de texto sean eternas */
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #000;
+    text-align: left;
+    margin: 0;
+    padding-right: 40px; /* Separación con el logo */
+}
+
+.ley-logo {
+    flex-shrink: 0; /* Evita que el logo se deforme o achique */
+}
+
+.ley-logo img {
+    width: 380px; /* Tamaño del bloque azul según la captura */
+    height: auto;
+    display: block;
+    border: none;
+}
+
+/* Ajuste para tablets y celulares */
+@media (max-width: 1024px) {
+    .ley-horizontal {
+        padding: 40px;
+    }
+    .ley-logo img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ley-horizontal {
+        flex-direction: column; /* Se apila en móviles */
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .ley-texto {
+        max-width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+        padding-right: 0;
+    }
+}
