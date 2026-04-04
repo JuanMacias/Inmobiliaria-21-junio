@@ -213,7 +213,7 @@ Incorporase como inciso 8 del artículo 10 de la Ley 2340 (texto consolidado seg
                         <div class="prop-info">
                             <h3>${prop.titulo}</h3>
                             <p><strong>U$S ${prop.precio ? prop.precio.toLocaleString('es-AR') : 'Consultar'}</strong></p>
-                            <p>${prop.ambientes || '-'} amb. - ${prop.barrio || ''}</p>
+                          <p>${prop.barrio || ''}</p>
                             <a href="detalle.html?id=${prop.id}" class="btn-ver-detalle">Ver detalle</a>
                         </div>`;
                     contenedor.appendChild(div);
