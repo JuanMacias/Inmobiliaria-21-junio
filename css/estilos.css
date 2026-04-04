@@ -2313,3 +2313,17 @@ header nav {
 #mapa-propiedades-dinamico img {
     max-width: none !important;
 }
+
+/* Ajuste para que el texto sea visible en la barra superior móvil */
+@media (max-width: 768px) {
+    .barra-superior {
+        background-color: #000; /* Forzamos fondo negro como se ve en la captura */
+    }
+
+    .barra-superior .enlace-superior, 
+    .barra-superior .telefono span, 
+    .barra-superior .item a {
+        color: #fff !important; /* Texto blanco sobre el fondo negro de la barra */
+        text-decoration: none;
+    }
+}
