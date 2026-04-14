@@ -48,20 +48,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    if (form) {
+   if (form) {
         form.addEventListener("submit", function (e) {
             e.preventDefault();
 
+            // Obtenemos los valores y los pasamos a minúsculas para comparar parejo
             const barrio = selectBarrio.value.toLowerCase().trim();
             const tipo = selectTipo.value.toLowerCase().trim();
             const operacion = selectOperacion.value.toLowerCase().trim();
             const ambientes = selectAmbientes.value;
 
             const filtradas = propiedadesCargadas.filter((p) => {
-                // Filtramos comparando todo en minúsculas para evitar errores
-                return (!barrio || p.barrio.toLowerCase() === barrio) &&
-                       (!tipo || p.tipo.toLowerCase() === tipo) &&
-                       (!operacion || p.operacion.toLowerCase() === operacion) &&
+                // Verificamos que las propiedades existan antes de usar .toLowerCase() para evitar errores
+                const pBarrio = p.barrio ? p.barrio.toLowerCase() : "";
+                const pTipo = p.tipo ? p.tipo.toLowerCase() : "";
+                const pOperacion = p.operacion ? p.operacion.toLowerCase() : "";
+
+                return (!barrio || pBarrio === barrio) &&
+                       (!tipo || pTipo === tipo) &&
+                       (!operacion || pOperacion === operacion) &&
                        (!ambientes || String(p.ambientes) === ambientes);
             });
 
