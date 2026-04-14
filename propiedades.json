@@ -4,7 +4,7 @@
         "dormitorios": 3,
         "banos": 2,
         "tipo": "PH",
-        "barrio": "Juan Pablo Duarte 5100 Villa Pueyrredon",
+        "barrio": "Villa Pueyrredon",
         "estado": "Bueno",
         "imagenes": [
             "img/ph/prop1/prop1_img_01.jpg",
@@ -76,7 +76,7 @@
         "dormitorios": 1,
         "banos": 1,
         "tipo": "Departamento",
-        "barrio": "Terrada 4500 Villa Pueyrredon",
+        "barrio": "Villa Pueyrredon",
         "estado": "Excelente",
         "imagenes": [
             "img/departamento/prop2/prop2_img_01.jpg",
@@ -125,7 +125,7 @@
         "dormitorios": 2,
         "banos": 1,
         "tipo": "Departamento",
-        "barrio": "Moldes 2900 Nuñez",
+        "barrio": " Nuñez",
         "estado": "Muy Bueno",
         "imagenes": [
             "img/departamento/prop3/prop3_img_01.jpg",
@@ -171,7 +171,7 @@
         "dormitorios": 3,
         "banos": 2,
         "tipo": "casa",
-        "barrio": "Agustin Alvarez 5100 Villa Pueyrredon",
+        "barrio": " Villa Pueyrredon",
         "estado": "A Refaccionar",
         "imagenes": [
             "img/casa/prop4/prop4_img_01.jpg",
@@ -219,7 +219,7 @@
         "dormitorios": 1,
         "banos": 1,
         "tipo": "Departamento",
-        "barrio": "Melian 2900 Coghlan",
+        "barrio": "Coghlan",
         "estado": "Excelente",
         "imagenes": [
             "img/departamento/prop5/prop5_img_01.jpg",
@@ -261,7 +261,7 @@
         "dormitorios": 1,
         "banos": 1,
         "tipo": "PH",
-        "barrio": "12 De Octubre 1800 Paternal",
+        "barrio": "La Paternal",
         "estado": "Excelente",
         "imagenes": [
             "img/ph/prop6/prop6_img_01.jpg",
@@ -318,7 +318,7 @@
         "dormitorios": 2,
         "banos": 1,
         "tipo": "Departamento",
-        "barrio": "Doc.Ignacio Rivera 3800 Coghlan ",
+        "barrio": "Coghlan ",
         "estado": "Bueno",
         "imagenes": [
             "img/departamento/prop7/prop7_img_01.jpg",
@@ -357,7 +357,7 @@
         "dormitorios": 1,
         "banos": 1,
         "tipo": "Departamento",
-        "barrio": "Pacheco 2600 Villa Urquiza",
+        "barrio": "Villa Urquiza",
         "estado": "Bueno",
         "imagenes": [
             "img/departamento/prop8/prop8_img_01.jpg",
@@ -389,7 +389,7 @@
         "dormitorios": 2,
         "banos": 1,
         "tipo": "Departamento",
-        "barrio": "Beiro 4400 Villa Devoto",
+        "barrio": "Villa Devoto",
         "estado": "Muy Bueno",
         "imagenes": [
             "img/departamento/prop9/prop9_img_01.jpg",
@@ -430,11 +430,11 @@
         "metros": 40
     },
     {
-        "descripcion": "2 Ambientes en Planta Baja con Pileta, Gimnasio y SUM\n\nDepartamento 2 ambientes en dúplex sup. total 41 m² y sup. cub. 39 m². Ubicado en planta baja, se ingresa por el Living Comedor con cocina integrada con muebles de bajo mesada y alacena, cocina a gas y termotanque. Baño completo con bañera. Dormitorio con gran placard.\n\nComplejo con Pileta, Jacuzzi, Amplio parque con reposeras, Sum, Gimnasio, Lavadero automático y Seguridad. Expensas $170.000.\n\n\nMuy buena ubicación, a 8 cuadras estación Pueyrredón del Tren Mitre, a 6 cuadras de Avenida San Martin (Metrobús), a 5 cuadras de Avenida Mosconi (varias líneas de colectivo) a 3 cuadras de General Paz.\n\n-Los metrajes y las expensas son aproximados y los valores definitivos surgirán del titulo de propiedad y de la ultima liquidación de expensas. La unidad no cuenta con la accesibilidad para personas con discapacidades físicas.\n\nMatrícula CUCICBA N° 9127\n\n",
+        "descripcion": "Departamento 2 Ambientes en Planta Baja con Pileta, Gimnasio y SUM\n\nDepartamento 2 ambientes en dúplex sup. total 41 m² y sup. cub. 39 m². Ubicado en planta baja, se ingresa por el Living Comedor con cocina integrada con muebles de bajo mesada y alacena, cocina a gas y termotanque. Baño completo con bañera. Dormitorio con gran placard.\n\nComplejo con Pileta, Jacuzzi, Amplio parque con reposeras, Sum, Gimnasio, Lavadero automático y Seguridad. Expensas $170.000.\n\n\nMuy buena ubicación, a 8 cuadras estación Pueyrredón del Tren Mitre, a 6 cuadras de Avenida San Martin (Metrobús), a 5 cuadras de Avenida Mosconi (varias líneas de colectivo) a 3 cuadras de General Paz.\n\n-Los metrajes y las expensas son aproximados y los valores definitivos surgirán del titulo de propiedad y de la ultima liquidación de expensas. La unidad no cuenta con la accesibilidad para personas con discapacidades físicas.\n\nMatrícula CUCICBA N° 9127\n\n",
         "dormitorios": 1,
         "banos": 1,
         "tipo": "Departamento",
-        "barrio": "Franco 3300 Villa Devoto",
+        "barrio": " Villa Devoto",
         "estado": "Excelente",
         "imagenes": [
             "img/departamento/prop10/prop10_img_01.jpg",
@@ -480,7 +480,7 @@
         "dormitorios": 3,
         "banos": 2,
         "tipo": "PH",
-        "barrio": "Pasaje Turin 3100 Villa Urquiza",
+        "barrio": " Villa Urquiza",
         "estado": "Excelente",
         "imagenes": [
             "img/ph/prop11/prop11_img_01.jpg",
@@ -539,7 +539,7 @@
         "dormitorios": 1,
         "banos": 1,
         "tipo": "Monoambiente",
-        "barrio": "Fray Justo Santa Maria de Oro 2300 Palermo",
+        "barrio": " Palermo",
         "estado": "Muy Bueno",
         "imagenes": [
             "img/monoambiente/prop12/prop12_img_01.jpg",
@@ -578,7 +578,7 @@
         "dormitorios": 2,
         "banos": 1,
         "tipo": "PH",
-        "barrio": "Valdenegro 3300 Villa Urquiza",
+        "barrio": " Villa Urquiza",
         "estado": "Muy Bueno",
         "imagenes": [
             "img/ph/prop13/prop13_img_01.jpg",
@@ -629,7 +629,7 @@
         "dormitorios": 3,
         "banos": 3,
         "tipo": "Casa",
-        "barrio": "Zelada 6100  Mataderos",
+        "barrio": "  Mataderos",
         "estado": "Excelente",
         "imagenes": [
             "img/casa/prop14/prop14_img_01.jpg",
@@ -701,7 +701,7 @@
         "dormitorios": 3,
         "banos": 3,
         "tipo": "Departamento",
-        "barrio": "Cuba 2600 Belgrano",
+        "barrio": " Belgrano",
         "estado": "Excelente",
         "imagenes": [
             "img/departamento/prop15/prop15_img_01.jpg",
@@ -755,7 +755,7 @@
         "dormitorios": 3,
         "banos": 2,
         "tipo": "Departamento",
-        "barrio": "Gral.Jose Jervacio Artigas 4860 Villa Pueyrredon",
+        "barrio": "Villa Pueyrredon",
         "estado": "Excelente",
         "imagenes": [
             "img/departamento/prop16/prop16_img_01.jpg",
@@ -795,7 +795,7 @@
         "dormitorios": 3,
         "banos": 1,
         "tipo": "Departamento",
-        "barrio": "Correa 3750 Saavedra",
+        "barrio": " Saavedra",
         "estado": "Excelente",
         "imagenes": [
             "img/departamento/prop17/prop17_img_01.jpg",
@@ -841,7 +841,7 @@
         "dormitorios": 1,
         "banos": 1,
         "tipo": "Departamento",
-        "barrio": "Zapata 359 Palermo",
+        "barrio": " Palermo",
         "estado": "Excelente",
         "imagenes": [
             "img/monoambiente/prop18/prop18_img_01.jpg",
@@ -878,7 +878,7 @@
         "dormitorios": 2,
         "banos": 1,
         "tipo": "Departamento",
-        "barrio": "Zapiola 2951 Nuñez",
+        "barrio": " Nuñez",
         "estado": "Excelente",
         "imagenes": [
             "img/departamento/prop19/prop19_img_01.jpg",
@@ -924,7 +924,7 @@
         "dormitorios": 1,
         "banos": 1,
         "tipo": "Monoambiente",
-        "barrio": "Bartolome Mitre 900",
+        "barrio": " San Nicolas",
         "estado": "Excelente",
         "imagenes": [
             "img/monoambiente/prop20/prop20_img_01.jpg",
@@ -955,7 +955,7 @@
         "dormitorios": 1,
         "banos": 1,
         "tipo": "Departamento",
-        "barrio": "Hipolito Yrigoyen 4000",
+        "barrio": " Almagro",
         "estado": "Regular",
         "imagenes": [
             "img/departamento/prop21/prop21_img_01.jpg",
@@ -1002,7 +1002,7 @@
         "dormitorios": 1,
         "banos": 1,
         "tipo": "Departamento",
-        "barrio": "Arenales 2100 Barrio Norte",
+        "barrio": " Barrio Norte",
         "estado": "Excelente",
         "imagenes": [
             "img/departamento/prop22/prop22_img_01.jpg",
@@ -1044,7 +1044,7 @@
         "dormitorios": 3,
         "banos": 1,
         "tipo": "PH",
-        "barrio": "Rocha 1500 Barracas",
+        "barrio": " Barracas",
         "estado": "Muy Bueno",
         "imagenes": [
             "img/PH/prop23/prop23_img_01.jpg",
@@ -1095,7 +1095,7 @@
         "dormitorios": 0,
         "banos": 1,
         "tipo": "Departamento",
-        "barrio": "Av. Independencia 2300 San Cristobal",
+        "barrio": " San Cristobal",
         "estado": "Excelente",
         "imagenes": [
             "img/departamento/prop24/prop24_img_01.jpg",
@@ -1139,7 +1139,7 @@
         "dormitorios": 1,
         "banos": 1,
         "tipo": "Departamento",
-        "barrio": "Teodoro Garcia 3500 Colegiales",
+        "barrio": " Colegiales",
         "estado": "Excelente",
         "imagenes": [
             "img/departamento/prop25/prop25_img_01.jpg",
@@ -1180,7 +1180,7 @@
         "dormitorios": 1,
         "banos": 1,
         "tipo": "Departamento",
-        "barrio": "Nazarre 3858 Villa del Parque",
+        "barrio": "Villa del Parque",
         "estado": "Bueno",
         "imagenes": [
             "img/departamento/prop26/prop26_img_01.jpg",

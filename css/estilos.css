@@ -227,7 +227,8 @@ img {
 .barra-busqueda input {
     flex-grow: 1;
     /* Permite que los inputs se expandan */
-    padding: 8px 10px;
+    padding: 10px 15px;
+    padding-right: 40px;    /* 2. AGREGADO: Esto empuja la flecha hacia la izquierda */
     font-size: 15px;
     margin: 0 5px;
     border-radius: 6px;
@@ -235,6 +236,7 @@ img {
     color: white;
     background-color: #333;
     min-width: 160px;
+    text-align: left;       /* 3. AGREGADO: Asegura que el texto empiece a la izquierda */
 }
 
 .barra-busqueda button {
@@ -1002,24 +1004,42 @@ button:hover {
         font-size: 16px;
         text-align: center;
     }
-
-    .barra-busqueda {
+.barra-busqueda {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        position: static;
+        
+        /* Esto elimina cualquier empuje que venía de la versión de PC */
+        position: relative;
+        margin: 20px auto;
+        top: 0;
+        left: 0;
+        transform: none;
+
+        /* Estética de la solapa */
         width: 90%;
         padding: 15px;
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-        /* ¡Esta es la sombra que necesitas modificar! */
+        background-color: #e3b911; /* El amarillo de tu captura */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        gap: 10px;
     }
 
-    .barra-busqueda select,
-    .barra-busqueda input,
-    .barra-busqueda button {
-        width: 100%;
-        max-width: 300px;
-        margin: 5px 0;
-    }
+   /* 2. Reemplazamos los elementos internos (Selectores y Botón) */
+.barra-busqueda select,
+.barra-busqueda input,
+.barra-busqueda button {
+    width: 92% !important;        /* Achica el botón para que no toque el borde amarillo */
+    max-width: 100%;
+    margin: 10px auto !important; /* Centra el botón y da espacio arriba/abajo */
+    display: block !important;    /* Obliga a que se pongan uno debajo del otro */
+    padding: 12px 40px 12px 15px !important; /* El 40px es el que corre la flecha a la izquierda */
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;       /* Evita que se deforme el ancho */
+    appearance: none;             /* Quita estilos viejos de Android/iPhone */
+    -webkit-appearance: none;
+}
 
     .ley-container {
         flex-direction: column;
