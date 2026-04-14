@@ -241,11 +241,17 @@ img {
 
 .barra-busqueda button {
     padding: 10px 20px;
-    background-color: #b7b715d3;
-    color: rgb(10, 9, 9);
+    background-color: #080807f4;
+    color: rgb(243, 238, 238);
     border: none;
     cursor: pointer;
     font-weight: bold;
+    border-radius: 6px; /* Para que haga juego con los inputs */
+    
+    /* PASOS PARA CENTRAR */
+    display: block;    /* 1. Lo convertimos en bloque */
+    margin: 10px auto; /* 2. Arriba/Abajo 10px y 'auto' a los costados lo centra */
+    min-width: 150px;  /* 3. Opcional: le damos un ancho mínimo para que luzca mejor */
 }
 
 .barra-busqueda button:hover {
