@@ -411,8 +411,8 @@ img {
 .fila input,
 textarea {
     flex: 1;
-    padding: 10px;
-    width: 100%;         /* Asegura que ocupen todo el ancho del formulario */
+    padding: 15px;
+    width: 90%;         /* Asegura que ocupen todo el ancho del formulario */
     border: none;
     border-radius: 5px;
     color: #333;
@@ -2421,3 +2421,4 @@ header nav {
         text-decoration: none;
     }
 }
+
