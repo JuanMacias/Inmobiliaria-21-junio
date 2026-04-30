@@ -176,7 +176,8 @@ img {
     background-image: url("../img/edificios-caba.jpg");
     background-size: cover;
     background-position: center;
-    height: 500px;
+    min-height: 500px;
+    padding-bottom: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,21 +186,20 @@ img {
 .contenido-fondo {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    padding: 30px 60px;
+    padding: 30px 30px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     position: relative;
-    min-height: 350px;
     max-width: 1500px;
     margin: 0 auto;
     z-index: 2;
     text-align: center;
     color: white;
     gap: 20px;
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3)
-        /* Agrega esta línea para subir la sombra */
+    transform: translateY(-80px);
+        
 }
 
 .seccion-fondo h1 {
@@ -209,7 +209,6 @@ img {
 .seccion-fondo p {
     font-size: 20px;
 }
-
 .barra-busqueda {
     display: flex;
     flex-wrap: wrap;
@@ -220,14 +219,9 @@ img {
     background-color: rgba(227, 185, 17, 0.9);
     border: 2px solid #0b0b0f;
     width: 100%;
-    max-width: 1400px;
-    margin-top: 140px;
-    position: absolute;
-    /* Usamos 'absolute' para que se posicione sobre el fondo */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+    max-width: 1000px;   /* un poco más chico queda mejor */
+    margin-top: 10px;    /* ⬅️ controlado */
+    position: relative;  /* ⬅️ clave */
     border-radius: 10px;
 }
 
@@ -1051,6 +1045,7 @@ button:hover {
         /* Esto elimina cualquier empuje que venía de la versión de PC */
         position: relative;
         margin: 20px auto;
+         margin-top: -70px;   /* 👈 AGREGÁ ESTA LÍNEA ACÁ */
         top: 0;
         left: 0;
         transform: none;
@@ -1064,6 +1059,11 @@ button:hover {
         border-radius: 10px;
         gap: 10px;
     }
+
+    .contenido-fondo {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
 
     /* 2. Reemplazamos los elementos internos (Selectores y Botón) */
     .barra-busqueda select,
