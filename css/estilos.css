@@ -1045,7 +1045,7 @@ button:hover {
         /* Esto elimina cualquier empuje que venía de la versión de PC */
         position: relative;
         margin: 20px auto;
-         margin-top: -70px;   /* 👈 AGREGÁ ESTA LÍNEA ACÁ */
+         margin-top: -20px;   /* 👈 AGREGÁ ESTA LÍNEA ACÁ */
         top: 0;
         left: 0;
         transform: none;
