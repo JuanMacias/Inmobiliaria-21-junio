@@ -198,8 +198,8 @@ img {
     text-align: center;
     color: white;
     gap: 20px;
-    transform: translateY(-80px);
-        
+    transform: translateY(-0px);
+
 }
 
 .seccion-fondo h1 {
@@ -209,6 +209,7 @@ img {
 .seccion-fondo p {
     font-size: 20px;
 }
+
 .barra-busqueda {
     display: flex;
     flex-wrap: wrap;
@@ -219,9 +220,12 @@ img {
     background-color: rgba(227, 185, 17, 0.9);
     border: 2px solid #0b0b0f;
     width: 100%;
-    max-width: 1000px;   /* un poco más chico queda mejor */
-    margin-top: 10px;    /* ⬅️ controlado */
-    position: relative;  /* ⬅️ clave */
+    max-width: 1000px;
+    /* un poco más chico queda mejor */
+    margin-top: 80px important;
+    /* ⬅️ controlado */
+    position: relative;
+    /* ⬅️ clave */
     border-radius: 10px;
 }
 
@@ -406,7 +410,8 @@ img {
 textarea {
     flex: 1;
     padding: 15px;
-    width: 90%;         /* Asegura que ocupen todo el ancho del formulario */
+    width: 90%;
+    /* Asegura que ocupen todo el ancho del formulario */
     border: none;
     border-radius: 5px;
     color: #333;
@@ -416,7 +421,8 @@ textarea {
 
 .formulario button {
     padding: 20px 30px;
-    margin: 20px auto;   /* Centra el botón naranja 'Quiero saber más' */
+    margin: 20px auto;
+    /* Centra el botón naranja 'Quiero saber más' */
     background-color: #f2f208;
     color: rgb(11, 11, 11);
     font-weight: bold;
@@ -1045,7 +1051,8 @@ button:hover {
         /* Esto elimina cualquier empuje que venía de la versión de PC */
         position: relative;
         margin: 20px auto;
-         margin-top: -20px;   /* 👈 AGREGÁ ESTA LÍNEA ACÁ */
+        margin-top: 80px !important;
+        /* 👈 AGREGÁ ESTA LÍNEA ACÁ */
         top: 0;
         left: 0;
         transform: none;
@@ -1061,9 +1068,8 @@ button:hover {
     }
 
     .contenido-fondo {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-}
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    }
 
     /* 2. Reemplazamos los elementos internos (Selectores y Botón) */
     .barra-busqueda select,
