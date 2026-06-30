@@ -101,11 +101,11 @@
         "metros": 161
     },
     {
-        "descripcion": "Departamento 3 Ambientes en Planta Baja Al Frente con Patio\n\nDepartamento de tres ambientes, al frente, planta baja, sup. total 53m2, sup. cub. 47m2. Se ingresa al Hall de entrada 1,62 x 1. Living-Comedor de 4,53 x 3. Hall de distribución 0,90 x 0,74. Habitación principal con ventana a la calle 3,40 x 3. Segunda habitación 3,15 x 2 con ventana hacia el patio semicubierto. Baño completo con bañera 2,81 x 1,40. Cocina separada 2,93 x 2 con bajo mesada, alacena, espacio para heladera, cocina a gas y calefón orbis con salida al Patio 3 x 1,90 semicubierto con instalación para lavarropas.\n\nEdificio de 3 pisos, 4 departamentos por piso, tiene ascensor. Expensas $120.000. Antigüedad 48 años. Orientación Oeste. Agua corriente, Electricidad, Gas natural, Desagüe cloacal. Terraza de uso común en 3° piso.\n\nExcelente ubicación, a media cuadra de Av. Congreso, a 3 cuadras de Estación Congreso del Subte D, a 3 cuadras de Av. Cabildo (centro comercial y varias líneas de colectivo), a 2 cuadras de Av. Cramer.\n\n-Los metrajes y las expensas son aproximados y los valores definitivos surgirán del titulo de propiedad y de la ultima liquidación de expensas. El departamento cuenta con la accesibilidad para personas con discapacidades físicas.",
+        "descripcion": "Luminoso Departamento 3 Ambientes + Dependencia de Servicio con Balcón y Baulera.\n\nDepartamento piso completo, 3 ambientes con habitación y baño de Servicio. La unidad cuenta con sup total 79.69 m2 y sup. cubierta 71.31 m2. Dispone de 2 dormitorios, ambos con placard empotrado, 1 baño completo, cocina y lavadero independiente, y habitación y baño de servicio. Su disposición es al frente con orientación este, lo que le otorga una muy buena entrada de luz. Posee baulera propia en el subsuelo.\n\nEdificio de 53 años de antigüedades muy buen estado, 9 pisos, 1 departamento por piso con entrada principal y de servicio. Cuenta con ascensor y encargado. Ultimas expensas $600.000 de lo cual aproximadamente $200.000 son extraordinarias por arreglos comunes.\n\nExcelente ubicación, a una cuadra de Av. Santa Fe, a 4 cuadras de estación Facultad de Medicina del subte D. La zona es reconocida por sus instituciones educativas, centros culturales y opciones gastronómicas, brindando un estilo de vida urbano y completo.\n\n- Los metrajes y expensas son aproximados y los valores definitivos surgirán del título de propiedad y de la última liquidación de expensas. La unidad no cuenta con accesibilidad para personas con discapacidades físicas.\n\nMatrícula CUCBA N9127",
         "dormitorios": 2,
-        "banos": 1,
+        "banos": 2,
         "tipo": "Departamento",
-        "barrio": " Nuñez",
+        "barrio": " Recoleta",
         "estado": "Muy Bueno",
         "imagenes": [
             "img/departamento/prop3/prop3_img_01.jpg",
@@ -121,30 +121,20 @@
             "img/departamento/prop3/prop3_img_11.jpg",
             "img/departamento/prop3/prop3_img_12.jpg",
             "img/departamento/prop3/prop3_img_13.jpg",
-            "img/departamento/prop3/prop3_img_14.jpg",
-            "img/departamento/prop3/prop3_img_15.jpg",
-            "img/departamento/prop3/prop3_img_16.jpg",
-            "img/departamento/prop3/prop3_img_17.jpg",
-            "img/departamento/prop3/prop3_img_18.jpg",
-            "img/departamento/prop3/prop3_img_19.jpg",
-            "img/departamento/prop3/prop3_img_20.jpg",
-            "img/departamento/prop3/prop3.jpg",
-            "img/departamento/prop3/prop3.jpg",
-            "img/departamento/prop3/prop3.jpg",
-            "img/departamento/prop3/prop3.jpg"
+            "img/departamento/prop3/prop3_img_14.jpg"
         ],
         "lng": -58.4239,
         "ambientes": 3,
-        "antiguedad": 48,
-        "direccion": "Moldes 2900",
-        "titulo": "Departamento 3 Ambientes Planta Baja al Frente patio ",
-        "orientacion": "Oeste",
+        "antiguedad": 53,
+        "direccion": "Ayacucho 1100",
+        "titulo": "Luminoso Departamento 3 Ambientes",
+        "orientacion": "Este",
         "operacion": "Venta",
         "cocheras": "No tiene",
         "precio": 109800,
         "id": "prop3",
         "lat": -34.5828,
-        "metros": 47
+        "metros": 71
     },
     {
         "descripcion": "Casa en lote propio con terraza a refaccionar en Villa Pueyrredón\n\nCasa de 4 ambientes al frente en lote propio de 8,70m de frente por 8,62m de largo, siendo la sup. total construida de 130m² y 114m² sup. cubierta. En la planta baja nos encontramos con un amplio hall de distribución el cual nos permite ingresar a dos ambientes amplios con pisos de pinotea que dan hacia al frente, un baño completo y un dormitorio, la cocina con ingreso hacia el patio, el cual nos da acceso al sótano de 8 x 3. Desde el patio se accede a la primera planta donde nos encontramos con una terraza, un ambiente el cual se puede utilizar como quincho, una cocina pequeña, baño y un dormitorio que fue dividido en 2.\n\nLa construcción data de 70 años de antigüedad aproximada, su estado es regular, la orientación por el frente es hacia el oeste y al contrafrente al este. Posee servicios de gas, luz y aysa.\n\nMuy buena ubicación, a 3 cuadras de Avenida Nazca, a 4 cuadras de Avenida Mosconi, a 5 cuadras de Estación Pueyrredón del Tren Mitre y a 6 cuadras de la calle Artigas (centro comercial)\n\n-Los metrajes y las expensas son aproximados y los valores definitivos surgirán del titulo de propiedad y de la ultima liquidación de expensas. El departamento no cuenta con la accesibilidad para personas con discapacidades físicas.\n\nMatrícula CUCICBA N° 9127",
