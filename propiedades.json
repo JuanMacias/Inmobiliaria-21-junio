@@ -7,6 +7,7 @@
         "barrio": "Villa Pueyrredon",
         "estado": "Bueno",
         "imagenes": [
+            "",
             "img/ph/prop1/prop1_img_01.jpg",
             "img/ph/prop1/prop1_img_02.jpg",
             "img/ph/prop1/prop1_img_03.jpg",
@@ -44,7 +45,6 @@
             "img/ph/prop1/prop1_img_35.jpg",
             "img/ph/prop1/prop1_img_36.jpg",
             "img/ph/prop1/prop1_img_37.jpg",
-            "",
             "img/ph/prop1/prop1_img_39.jpg",
             "img/ph/prop1/prop1_img_40.jpg",
             "img/ph/prop1/prop1_img_41.jpg",
@@ -79,13 +79,13 @@
         "barrio": "Parque Avellaneda",
         "estado": "",
         "imagenes": [
-            "img/terreno/prop2/prop2_img_01.jpg",
             "img/departamento/prop2/prop2_img_22.jpg",
             "img/departamento/prop2/prop2_img_23.jpg",
             "img/departamento/prop2/prop2_img_24.jpg",
             "img/departamento/prop2/prop2_img_25.jpg",
             "img/departamento/prop2/prop2_img_26.jpg",
-            "img/departamento/prop2/prop2_img_27.jpg"
+            "img/departamento/prop2/prop2_img_27.jpg",
+            "img/terreno/prop2/prop2_img_01.jpg"
         ],
         "lng": -58.48596,
         "ambientes": 0,
@@ -108,6 +108,7 @@
         "barrio": " Recoleta",
         "estado": "Muy Bueno",
         "imagenes": [
+            "img/departamento/prop3/prop3_img_00.jpg",
             "img/departamento/prop3/prop3_img_01.jpg",
             "img/departamento/prop3/prop3_img_02.jpg",
             "img/departamento/prop3/prop3_img_03.jpg",
@@ -121,8 +122,7 @@
             "img/departamento/prop3/prop3_img_11.jpg",
             "img/departamento/prop3/prop3_img_12.jpg",
             "img/departamento/prop3/prop3_img_13.jpg",
-            "img/departamento/prop3/prop3_img_14.jpg",
-            "img/departamento/prop3/prop3_img_00.jpg"
+            "img/departamento/prop3/prop3_img_14.jpg"
         ],
         "lng": -58.4239,
         "ambientes": 3,
@@ -228,15 +228,13 @@
         "metros": 30
     },
     {
-        "descripcion": "Hermoso PH 3 Amb con hermoso Patio con parrilla y Amplia Terraza\n\nPH de 3 ambientes primer piso por escalera sup total 221 m2 y sup. cubierta 77 m2. Ingreso independiente por escalera, se ingresa al Hall de distribución. Amplio Comedor, Cocina separada con ventilación al exterior, cocina a gas con extractor, espacio para lavarropas. Living muy espacioso con salida a gran patio con parrilla. Baño completo con ducha, Dormitorio principal con placard y salida a balcón corrido que da al frente. Segundo dormitorio también con salida a balcón corrido. Por escalera caracol se accede a una terraza con un cuarto de guardado y luego se accede a una gran terraza que da al frente. Cocina y Baño fueron íntegramente refaccionados hace 15 años. El estado de la propiedad es muy bueno.\n\n2 PH conforman el terreno, cada uno con su entrada independiente. Sin expensas. Orientación Sur Oeste al frente y Este al contrafrente. Antigüedad 70 años Agua corriente, Electricidad, Desagüe cloacal.\n\nMuy buena ubicación, a media cuadra de Av. San Martin (Metrobús), a 1 cuadra de Álvarez Jonte, a 7 cuadras de estación La Paternal del Tren San Martin, a 6 cuadras de Avenida Juan B. Justo, cercanía a comercios y mucha conectividad de transportes.\n\n\n-Los metrajes y las expensas son aproximados y los valores definitivos surgirán del título de propiedad y de la última liquidación de expensas. El departamento no cuenta con la accesibilidad para personas con discapacidades físicas.\n\nMatrícula CUCICBA N° 9127",
-        "dormitorios": 1,
+        "descripcion": "PH 4 ambientes con patio y amplia terraza propia. Sin expensas\n\nPH 4 ambientes al frente entrada independiente, sup total 176 m2 y sup. cubierta 140 m2 . Se ingresa por un porche a un Living (anteriormente era una cochera), por un pasillo ingresamos al dormitorio principal que da al frente con placard. Segundo dormitorio con placard. Baño completo hecho a nuevo hace dos años. Cocina Comedor con mucho espacio de guardado, también renovada recientemente. Patio con lavadero. En primer piso nos encontramos con un espacio de escritorio y tercer dormitorio que ventila a la terraza. Terraza propia muy amplia y con un cuartito de guardado. Termotanque con bomba, techos hechos a nuevo.\n\n2 PH conforman el lote. Sin expensas. Antigüedad de 50 años. Orientación Oeste, zona de casas bajas y buena orientación por lo que el PH recibe mucha luz natural.\n\nMuy buena ubicación, a 3 cuadras de estación Pueyrredón del tren Mitre, a 1 cuadra de Nazca, a 7 cuadras de Avenida Mosconi (varias líneas de colectivos), zona de plazas y residencial.\n\n-Los metrajes y las expensas son aproximados y los valores definitivos surgirán del titulo de propiedad y de la ultima liquidación de expensas. El departamento no cuenta con la accesibilidad para personas con discapacidades físicas.\n\nMatrícula CUCICBA N° 9127\n",
+        "dormitorios": 3,
         "banos": 1,
         "tipo": "PH",
-        "barrio": "La Paternal",
-        "estado": "Excelente",
+        "barrio": "Pueyrredon",
+        "estado": "Muy bueno",
         "imagenes": [
-            "img/ph/prop6/prop6_img_01.jpg",
-            "img/ph/prop6/prop6_img_02.jpg",
             "img/ph/prop6/prop6_img_03.jpg",
             "img/ph/prop6/prop6_img_04.jpg",
             "img/ph/prop6/prop6_img_05.jpg",
@@ -255,6 +253,7 @@
             "img/ph/prop6/prop6_img_18.jpg",
             "img/ph/prop6/prop6_img_19.jpg",
             "img/ph/prop6/prop6_img_20.jpg",
+            "img/ph/prop6/prop6_img_21.jpg",
             "img/ph/prop6/prop6_img_22.jpg",
             "img/ph/prop6/prop6_img_23.jpg",
             "img/ph/prop6/prop6_img_24.jpg",
@@ -268,20 +267,24 @@
             "img/ph/prop6/prop6_img_32.jpg",
             "img/ph/prop6/prop6_img_33.jpg",
             "img/ph/prop6/prop6_img_34.jpg",
-            "img/ph/prop6/prop6_img_35.jpg"
+            "img/ph/prop6/prop6_img_35.jpg",
+            "img/ph/prop6/prop6_img_36.jpg",
+            "img/ph/prop6/prop6_img_37.jpg",
+            "img/ph/prop6/prop6_img_38.jpg",
+            "img/ph/prop6/prop6_img_39.jpg"
         ],
         "lng": -58.47045,
-        "ambientes": 3,
-        "antiguedad": 70,
-        "direccion": "12 De Octubre 1800",
-        "titulo": "PH 3 Amb. Piso 1 Amplia terraza ",
-        "orientacion": "Frente",
+        "ambientes": 4,
+        "antiguedad": 50,
+        "direccion": "Argerich 5300",
+        "titulo": "PH 4 ambientes con patio y amplia terraza propia. Sin expensas",
+        "orientacion": "Oeste",
         "operacion": "Venta",
         "cocheras": "No tiene",
-        "precio": 155000,
+        "precio": 239000,
         "id": "prop6",
         "lat": -34.60163,
-        "metros": 77
+        "metros": 140
     },
     {
         "descripcion": "3 Ambientes Muy Luminoso, Cocina Separada\n\nDepartamento en 5° piso de 3 ambientes, sup. cubierta y total de 61m², luminoso, contrafrente, orientación Norte. Hall de recepción 2 x 1. Living-Comedor 6 x 3,25 con gran ventanal y ventilador de techo. Cocina 3,75 x 2,25 con alacena, bajo mesada, cocina a gas y Lavadero 2,25 x 0,70. 2 Dormitorios 3,40 x 3,20, ambos con placard y ventanales, uno con AA FC y el otro con ventilador de techo. Hall de distribución 1 x 1,65. Baño completo 2,25 x 1,50. Expensas $ 120.000.\n\nEdificio de 7 pisos, 4 departamentos por piso, 1 ascensor. Antigüedad 60 años. Sin amenities.\n\nMuy buena ubicación, a metros de estación Coghlan FFCC Mitre/Retiro, a 2 cuadras de Av. Congreso, a 3 cuadras de Av. Monroe, a 4 cuadras del Hospital Pirovano, a 5 cuadras de estación L. M. Drago FFCC Mitre Suarez/Retiro, a 6 cuadras de Av. Ricardo Balbín, a 14 cuadras de Av. Cabildo (estación Congreso de Tucumán subte D, Centro Comercial), a 15 cuadras Av. Triunvirato (estación J. M. Rosas subte B, Centro Comercial).\n\n-Los metrajes y las expensas son aproximados y los valores definitivos surgirán del título de propiedad y de la última liquidación de expensas. El departamento cuenta con la accesibilidad para personas con discapacidades físicas.\n\nMatrícula CUCICBA N° 9127\n",
