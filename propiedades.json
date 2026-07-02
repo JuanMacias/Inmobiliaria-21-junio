@@ -78,15 +78,7 @@
         "tipo": "Terreno",
         "barrio": "Parque Avellaneda",
         "estado": "",
-        "imagenes": [
-            "img/departamento/prop2/prop2_img_22.jpg",
-            "img/departamento/prop2/prop2_img_23.jpg",
-            "img/departamento/prop2/prop2_img_24.jpg",
-            "img/departamento/prop2/prop2_img_25.jpg",
-            "img/departamento/prop2/prop2_img_26.jpg",
-            "img/departamento/prop2/prop2_img_27.jpg",
-            "img/terreno/prop2/prop2_img_01.jpg"
-        ],
+        "imagenes": ["img/terreno/prop2/prop2_img_01.jpg"],
         "lng": -58.48596,
         "ambientes": 0,
         "antiguedad": 0,
