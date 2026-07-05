@@ -259,12 +259,12 @@
         "metros": 140
     },
     {
-        "descripcion": "3 Ambientes Muy Luminoso, Cocina Separada\n\nDepartamento en 5° piso de 3 ambientes, sup. cubierta y total de 61m², luminoso, contrafrente, orientación Norte. Hall de recepción 2 x 1. Living-Comedor 6 x 3,25 con gran ventanal y ventilador de techo. Cocina 3,75 x 2,25 con alacena, bajo mesada, cocina a gas y Lavadero 2,25 x 0,70. 2 Dormitorios 3,40 x 3,20, ambos con placard y ventanales, uno con AA FC y el otro con ventilador de techo. Hall de distribución 1 x 1,65. Baño completo 2,25 x 1,50. Expensas $ 120.000.\n\nEdificio de 7 pisos, 4 departamentos por piso, 1 ascensor. Antigüedad 60 años. Sin amenities.\n\nMuy buena ubicación, a metros de estación Coghlan FFCC Mitre/Retiro, a 2 cuadras de Av. Congreso, a 3 cuadras de Av. Monroe, a 4 cuadras del Hospital Pirovano, a 5 cuadras de estación L. M. Drago FFCC Mitre Suarez/Retiro, a 6 cuadras de Av. Ricardo Balbín, a 14 cuadras de Av. Cabildo (estación Congreso de Tucumán subte D, Centro Comercial), a 15 cuadras Av. Triunvirato (estación J. M. Rosas subte B, Centro Comercial).\n\n-Los metrajes y las expensas son aproximados y los valores definitivos surgirán del título de propiedad y de la última liquidación de expensas. El departamento cuenta con la accesibilidad para personas con discapacidades físicas.\n\nMatrícula CUCICBA N° 9127\n",
-        "dormitorios": 2,
+        "descripcion": "Departamento 2 ambientes, renovado a nuevo. Piso alto\n\nTODO ELÉCTRICO\nDepartamento 2 ambientes de 33m² sup. total y 31m² sup. cubierta en piso 13. Ingresamos por el living-comedor de 4,43 x 2,73 con salida al balcón francés con orientación noreste. Cocina separada de 2,33 x 1,50 con ingreso al lavadero de 1,50 x 0,80 con termotanque eléctrico e instalación para lavarropas. Baño en suite refaccionado a nuevo de 2,20 x 1,50 y dormitorio de 2,80 x 2,80 con placard y ventana hacia el pulmón del edificio. Pisos de cerámica nuevos.\n\nEdificio 50 años de antiguedad con 15 pisos, 8 departamentos por piso, dos ascensores. Muy buen estado de conservación. Expensas $120.000\n\nMuy buena ubicación, a 1 cuadra de estación Coghlan del tren Mitre, a 3 cuadra de avenida Monroe (varias líneas de colectivo), a 3 cuadras del Hospital Pirovano\n\n-Los metrajes y las expensas son aproximados y los valores definitivos surgirán del titulo de propiedad y de la ultima liquidación de expensas. El departamento cuenta con la accesibilidad para personas con discapacidades físicas.\n\nMatrícula CUCICBA N° 9127",
+        "dormitorios": 1,
         "banos": 1,
         "tipo": "Departamento",
         "barrio": "Coghlan ",
-        "estado": "Bueno",
+        "estado": "Muy Bueno",
         "imagenes": [
             "img/departamento/prop7/prop7_img_01.jpg",
             "img/departamento/prop7/prop7_img_02.jpg",
@@ -284,18 +284,18 @@
             "img/departamento/prop7/prop7_img_16.jpg",
             "img/departamento/prop7/prop7_img_17.jpg"
         ],
-        "lng": -58.47546,
-        "ambientes": 3,
-        "antiguedad": 60,
-        "direccion": "Doctor Pedro Ignacio Rivera 3800",
-        "titulo": "Departamento 3 Amb. cocina separada Piso 5",
+        "lng": -58.475417,
+        "ambientes": 2,
+        "antiguedad": 50,
+        "direccion": "Manuel Ugarte 3800",
+        "titulo": "Departamento 2 ambientes, renovado a nuevo. Piso alto",
         "orientacion": "Norte",
         "operacion": "Venta",
         "cocheras": "No tiene",
-        "precio": 125000,
+        "precio": 80000,
         "id": "prop7",
-        "lat": -34.56447,
-        "metros": 61
+        "lat": -34.564533,
+        "metros": 31
     },
     {
         "descripcion": "APTO CRÉDITO - 2 Ambientes con Patio en Planta baja al frente\n\nDepartamento 2 ambientes en planta baja, sup. cub. 40 m² y sup. total 50 m². Se ingresa por Living-Comedor 4,90 x 4,35 con ventana a la calle, Baño completo 2,10 x 1,47. Dormitorio 3,40 x 2,70 con placard y ventana al Patio. Cocina-Lavadero 3,40 x 1,50 con alacena y bajo mesada de gran capacidad, calefón, espacio para heladera y lavarropas, y salida al Patio 4,31 x 2.45 con cerramiento traslúcido.\n\nEdificio de 2 pisos, 5 departamentos por piso y terraza de uso común con lavadero en el 2° piso. Expensas $ 140.000 (Enero 2026, cuota extraordinaria $80.000) . Antigüedad 80 años, Orientación Noreste. Agua corriente, Electricidad, Piso baldosa y cerámico.\n\nMuy buena ubicación, a 1 cuadra de Av. Álvarez Thomas, a 2 cuadras de Av. Monroe, a 3 cuadras de Av. Triunvirato (estación Juan Manuel de Rosas subte D, estación Urquiza, FFCC Mitre/Suárez y Centro Comercial), a 3 cuadras de Av. Congreso, a 6 cuadras de estación Luis María Drago, FFCC Mitre, CBC UBA.\n\n-Los metrajes y las expensas son aproximados y los valores definitivos surgirán del titulo de propiedad y de la ultima liquidación de expensas. La unidad cuenta con la accesibilidad para personas con discapacidades físicas.\n\nMatrícula CUCICBA N° 9127\nCaracterísticas",
