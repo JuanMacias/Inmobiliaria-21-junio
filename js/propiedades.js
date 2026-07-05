@@ -72,8 +72,13 @@ function crearTarjetaPropiedad(prop) {
                   ? prop.imagenes[0] 
                   : (prop.imagen ? prop.imagen : 'img/placeholder.jpg');
 
+    const carteVendido = prop.vendido ? '<div class="cartel-vendido">VENDIDO</div>' : '';
+
     card.innerHTML = `
-        <img src="${foto}" alt="${prop.titulo}">
+        <div class="imagen-wrapper">
+            <img src="${foto}" alt="${prop.titulo}">
+            ${carteVendido}
+        </div>
         <div class="card-info">
             <h3>${prop.titulo}</h3>
             <p>${prop.barrio || ''} - ${prop.operacion}</p>

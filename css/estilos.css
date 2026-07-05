@@ -880,8 +880,33 @@ button:hover {
     width: 100%;
     height: 200px;
     object-fit: cover;
+}.imagen-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
 }
 
+.imagen-wrapper img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.cartel-vendido {
+    position: absolute;
+    top: 20px;
+    left: -30px;
+    background-color: #c62828;
+    color: white;
+    font-weight: bold;
+    font-size: 0.6rem;
+    padding: 2px 28px;
+    transform: rotate(-45deg);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
+    z-index: 5;
+    text-align: center;
+}
 .propiedad-card .info {
     padding: 15px;
 }

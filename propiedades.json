@@ -66,6 +66,7 @@
         "operacion": "Venta",
         "cocheras": "No tiene",
         "precio": 155000,
+        "vendido": false,
         "id": "prop1",
         "lat": -34.5851,
         "metros": 100
@@ -87,6 +88,7 @@
         "operacion": "Venta",
         "cocheras": "",
         "precio": 120000,
+        "vendido": false,
         "id": "prop2",
         "lat": -34.64969,
         "metros": 161
@@ -124,6 +126,7 @@
         "operacion": "Venta",
         "cocheras": "No tiene",
         "precio": 175000,
+        "vendido": false,
         "id": "prop3",
         "lat": -34.5828,
         "metros": 71
@@ -172,6 +175,7 @@
         "operacion": "Venta",
         "cocheras": "",
         "precio": 139000,
+        "vendido": false,
         "id": "prop4",
         "lat": -34.58408,
         "metros": 114
@@ -214,6 +218,7 @@
         "operacion": "Venta",
         "cocheras": "1 Cochera",
         "precio": 99000,
+        "vendido": false,
         "id": "prop5",
         "lat": -34.56114,
         "metros": 30
@@ -254,6 +259,7 @@
         "operacion": "Venta",
         "cocheras": "No tiene",
         "precio": 239000,
+        "vendido": false,
         "id": "prop6",
         "lat": -34.60163,
         "metros": 140
@@ -293,6 +299,7 @@
         "operacion": "Venta",
         "cocheras": "No tiene",
         "precio": 80000,
+        "vendido": false,
         "id": "prop7",
         "lat": -34.564533,
         "metros": 31
@@ -325,6 +332,7 @@
         "operacion": "Venta",
         "cocheras": "No tiene",
         "precio": 89000,
+        "vendido": false,
         "id": "prop8",
         "lat": -34.5711,
         "metros": 40
@@ -364,6 +372,7 @@
         "operacion": "Venta",
         "cocheras": "No",
         "precio": 49000,
+        "vendido": false,
         "id": "prop9",
         "lat": -34.56515,
         "metros": 27
@@ -410,6 +419,7 @@
         "orientacion": "Contra frente",
         "operacion": "Venta",
         "precio": 78000,
+        "vendido": false,
         "id": "prop10",
         "lat": -34.58507,
         "metros": 39
@@ -469,6 +479,7 @@
         "operacion": "Venta",
         "cocheras": "1 Cochera",
         "precio": 249000,
+        "vendido": false,
         "id": "prop11",
         "lat": -34.58629,
         "metros": 105
@@ -508,6 +519,7 @@
         "orientacion": "Frente",
         "operacion": "Venta",
         "precio": 64500,
+        "vendido": false,
         "id": "prop12",
         "lat": -34.58,
         "metros": 30
@@ -559,6 +571,7 @@
         "operacion": "Venta",
         "cocheras": "No",
         "precio": 218000,
+        "vendido": false,
         "id": "prop13",
         "lat": -34.56393,
         "metros": 121
@@ -631,6 +644,7 @@
         "operacion": "Venta",
         "cocheras": "3",
         "precio": 400000,
+        "vendido": false,
         "id": "prop14",
         "lat": -34.64948,
         "metros": 333
@@ -685,6 +699,7 @@
         "operacion": "Venta",
         "cocheras": "1",
         "precio": 269000,
+        "vendido": false,
         "id": "prop15",
         "lat": -34.55542,
         "metros": 88
@@ -725,6 +740,7 @@
         "operacion": "Venta",
         "cocheras": "No",
         "precio": 107000,
+        "vendido": false,
         "id": "prop16",
         "lat": -34.58199,
         "metros": 58
@@ -771,6 +787,7 @@
         "operacion": "Venta",
         "cocheras": "No",
         "precio": 59500,
+        "vendido": false,
         "id": "prop17",
         "lat": -34.54941,
         "metros": 54
@@ -808,6 +825,7 @@
         "operacion": "Venta",
         "cocheras": "No",
         "precio": 91000,
+        "vendido": false,
         "id": "prop18",
         "lat": -34.57296,
         "metros": 22
@@ -854,6 +872,7 @@
         "operacion": "Venta",
         "cocheras": "No",
         "precio": 162000,
+        "vendido": true,
         "id": "prop19",
         "lat": -34.55812,
         "metros": 50
@@ -885,6 +904,7 @@
         "operacion": "Venta",
         "cocheras": "No",
         "precio": 80000,
+        "vendido": false,
         "id": "prop20",
         "lat": -34.6071018,
         "metros": 48
@@ -932,6 +952,7 @@
         "operacion": "Venta",
         "cocheras": "No",
         "precio": 89000,
+        "vendido": false,
         "id": "prop21",
         "lat": -34.61473,
         "metros": 41
@@ -974,6 +995,7 @@
         "operacion": "Venta",
         "cocheras": "No",
         "precio": 118000,
+        "vendido": false,
         "id": "prop22",
         "lat": -34.59425,
         "metros": 53
@@ -1025,6 +1047,7 @@
         "operacion": "Venta",
         "cocheras": "NO",
         "precio": 220000,
+        "vendido": false,
         "id": "prop23",
         "lat": -34.6419,
         "metros": 140
@@ -1069,6 +1092,7 @@
         "operacion": "Venta",
         "cocheras": "No",
         "precio": 104000,
+        "vendido": false,
         "id": "prop24",
         "lat": -34.61848,
         "metros": 79
@@ -1110,6 +1134,7 @@
         "operacion": "Venta",
         "cocheras": "No",
         "precio": 115000,
+        "vendido": false,
         "id": "prop25",
         "lat": -34.58057,
         "metros": 54
@@ -1157,6 +1182,7 @@
         "operacion": "Venta",
         "cocheras": "NO",
         "precio": 139000,
+        "vendido": false,
         "id": "prop26",
         "lat": -34.60631,
         "metros": 62
@@ -1208,6 +1234,7 @@
         "operacion": "Venta",
         "cocheras": "NO",
         "precio": 119000,
+        "vendido": false,
         "id": "prop27",
         "lat": -34.58525,
         "metros": 50
@@ -1252,6 +1279,7 @@
         "operacion": "Venta",
         "cocheras": "No",
         "precio": 72000,
+        "vendido": false,
         "id": "prop28",
         "lat": -34.603456,
         "metros": 65
@@ -1287,6 +1315,7 @@
         "operacion": "Venta",
         "cocheras": "NO",
         "precio": 79000,
+        "vendido": false,
         "id": "prop29",
         "lat": -34.60113,
         "metros": 34
@@ -1340,6 +1369,7 @@
         "operacion": "Venta",
         "cocheras": "NO",
         "precio": 109000,
+        "vendido": false,
         "id": "prop30",
         "lat": -34.58741,
         "metros": 79
@@ -1376,6 +1406,7 @@
         "operacion": "Venta",
         "cocheras": "NO",
         "precio": 76000,
+        "vendido": false,
         "id": "prop31",
         "lat": 0,
         "metros": 30
