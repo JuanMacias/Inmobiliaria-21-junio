@@ -250,8 +250,12 @@
                     const div = document.createElement("div");
                     div.className = "propiedad";
                     const imgUrl = prop.imagen || (Array.isArray(prop.imagenes) && prop.imagenes.length > 0 ? prop.imagenes[0] : "./img/Logo.jpg");
+                  const carteVendido = prop.vendido ? '<div class="cartel-vendido">VENDIDO</div>' : '';
                     div.innerHTML = `
-                        <img src="${imgUrl}" alt="${prop.titulo}" onerror="this.src='./img/Logo.jpg'">
+                        <div class="imagen-wrapper">
+                            <img src="${imgUrl}" alt="${prop.titulo}" onerror="this.src='./img/Logo.jpg'">
+                            ${carteVendido}
+                        </div>
                         <div class="prop-info">
                             <h3>${prop.titulo}</h3>
                             <p><strong>U$S ${prop.precio ? prop.precio.toLocaleString('es-AR') : 'Consultar'}</strong></p>
