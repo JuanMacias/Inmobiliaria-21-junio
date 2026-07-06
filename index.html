@@ -20,30 +20,30 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <title>Inmobiliaria en CABA | Departamentos y Casas en Venta y Alquiler | Macías Servicios Inmobiliarios</title>
-    
+
+    <title>Inmobiliaria en CABA | Departamentos y Casas en Venta y Alquiler | Macías Servicios Inmobiliarios</title>
+
     <link rel="stylesheet" href="./css/estilos.css" />
 </head>
 
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBMS8SV6" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
-  <div class="barra-superior">
-    <div class="telefono">
-        <a href="https://wa.me/5491165674020" target="_blank" class="enlace-superior">
-            <img src="./img/whatsapp-873316_1280.png" class="whatsapp-icon" alt="WhatsApp">
-            <span>+54 9 11 6567-4020</span>
-        </a>
+    <div class="barra-superior">
+        <div class="telefono">
+            <a href="https://wa.me/5491165674020" target="_blank" class="enlace-superior">
+                <img src="./img/whatsapp-873316_1280.png" class="whatsapp-icon" alt="WhatsApp">
+                <span>+54 9 11 6567-4020</span>
+            </a>
+        </div>
+
+        <div class="item">
+            <a href="mailto:mamacias.inmobiliaria@gmail.com" class="enlace-superior">
+                mamacias.inmobiliaria@gmail.com
+            </a>
+        </div>
     </div>
 
-    <div class="item">
-        <a href="mailto:mamacias.inmobiliaria@gmail.com" class="enlace-superior">
-            mamacias.inmobiliaria@gmail.com
-        </a>
-    </div>
-</div>
-       
     <header class="header">
         <div class="logo">
             <img src="./img/Logo.jpg" alt="Logo Macías Inmobiliaria" />
@@ -197,7 +197,7 @@
                 <button type="submit">Quiero saber más</button>
             </form>
         </div>
-        
+
 
         <div class="linea-con-icono">
             <span class="linea"></span>
@@ -250,12 +250,16 @@
                     const div = document.createElement("div");
                     div.className = "propiedad";
                     const imgUrl = prop.imagen || (Array.isArray(prop.imagenes) && prop.imagenes.length > 0 ? prop.imagenes[0] : "./img/Logo.jpg");
-                  const carteVendido = prop.vendido ? '<div class="cartel-vendido">VENDIDO</div>' : '';
+                    const carteVendido = prop.vendido ? '<div class="cartel-vendido">VENDIDO</div>' : '';
+                                        const carteReservado = (!prop.vendido && prop.reservado) ? '<div class="cartel-reservado">RESERVADO</div>' : '';
                     div.innerHTML = `
+
                         <div class="imagen-wrapper">
-                            <img src="${imgUrl}" alt="${prop.titulo}" onerror="this.src='./img/Logo.jpg'">
-                            ${carteVendido}
+                        <img src="${imgUrl}" alt="${prop.titulo}" onerror="this.src='./img/Logo.jpg'">
+                        ${carteVendido}                        
+                        ${carteReservado}
                         </div>
+                        
                         <div class="prop-info">
                             <h3>${prop.titulo}</h3>
                             <p><strong>U$S ${prop.precio ? prop.precio.toLocaleString('es-AR') : 'Consultar'}</strong></p>
