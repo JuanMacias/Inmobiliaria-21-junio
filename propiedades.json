@@ -1131,7 +1131,7 @@
             "img/ph/prop24/prop24_img_17.jpg",
             "img/ph/prop24/prop24_img_18.jpg"
         ],
-        "lng": -58.39929,
+        "lng": -58.490944,
         "ambientes": 2,
         "antiguedad": 7,
         "direccion": "Pedro Moran 2400",
@@ -1143,7 +1143,7 @@
         "precio": 113000,
         "vendido": false,
         "id": "prop24",
-        "lat": -34.61848,
+        "lat": -34.589431,
         "metros": 40
     },
     {
