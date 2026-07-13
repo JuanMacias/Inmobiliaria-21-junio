@@ -276,7 +276,7 @@
             "img/ph/prop6/prop6_img_38.jpg",
             "img/ph/prop6/prop6_img_39.jpg"
         ],
-        "lng": -58.47045,
+        "lng": -58.50819,
         "ambientes": 4,
         "antiguedad": 50,
         "direccion": "Argerich 5300",
@@ -288,7 +288,7 @@
         "precio": 239000,
         "vendido": false,
         "id": "prop6",
-        "lat": -34.60163,
+        "lat": -34.581522,
         "metros": 140
     },
     {
@@ -317,7 +317,7 @@
             "img/departamento/prop7/prop7_img_16.jpg",
             "img/departamento/prop7/prop7_img_17.jpg"
         ],
-        "lng": -58.475417,
+        "lng": -58.476631,
         "ambientes": 2,
         "antiguedad": 50,
         "direccion": "Manuel Ugarte 3800",
@@ -329,7 +329,7 @@
         "precio": 80000,
         "vendido": false,
         "id": "prop7",
-        "lat": -34.564533,
+        "lat": -34.563634,
         "metros": 31
     },
     {
@@ -862,7 +862,7 @@
             "img/departamento/prop18/prop18_img_22.jpg",
             "img/departamento/prop18/prop18_img_23.jpg"
         ],
-        "lng": -58.4413,
+        "lng": -58.494793,
         "ambientes": 2,
         "antiguedad": 35,
         "direccion": "Caracas 4600",
@@ -874,7 +874,7 @@
         "precio": 99000,
         "vendido": false,
         "id": "prop18",
-        "lat": -34.57296,
+        "lat": -34.58224,
         "metros": 35
     },
     {
@@ -1447,7 +1447,7 @@
             "img/departamento/prop31/prop31_img_13.jpg",
             "img/departamento/prop31/prop31_img_14.jpg"
         ],
-        "lng": 0,
+        "lng": 463308,
         "ambientes": 2,
         "antiguedad": 40,
         "direccion": "Olazabal 2900",
@@ -1459,7 +1459,7 @@
         "precio": 76000,
         "vendido": false,
         "id": "prop31",
-        "lat": 0,
+        "lat": -34.563114,
         "metros": 30
     }
 ]}
