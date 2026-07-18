@@ -175,7 +175,7 @@ img {
     position: relative;
     background-image: url("../img/edificios-caba.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center 55%;
     min-height: 500px;
     padding-bottom: 60px;
     display: flex;
@@ -198,7 +198,7 @@ img {
     text-align: center;
     color: white;
     gap: 20px;
-    transform: translateY(-80px);
+    transform: translateY(-50px);
         
 }
 
