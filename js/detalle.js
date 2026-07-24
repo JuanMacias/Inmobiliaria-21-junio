@@ -85,15 +85,33 @@ document.addEventListener("DOMContentLoaded", function () {
         if(document.getElementById("valor-ambientes")) 
             document.getElementById("valor-ambientes").innerText = (prop.ambientes || "0") + " amb.";
         
-        if(document.getElementById("valor-cochera")) 
-            document.getElementById("valor-cochera").innerText = (prop.cocheras || "No tiene");
-        
-        if(document.getElementById("valor-estado")) 
+    if(document.getElementById("valor-estado")) 
             document.getElementById("valor-estado").innerText = prop.estado || "Bueno";
         
         if(document.getElementById("valor-orientacion")) 
             document.getElementById("valor-orientacion").innerText = prop.orientacion || "N/A";
 
+        // Posición (Frente/Contrafrente) - se oculta si no hay dato
+        const itemPosicion = document.getElementById("item-posicion");
+        if (itemPosicion) {
+            if (prop.posicion) {
+                document.getElementById("valor-posicion").innerText = prop.posicion;
+                itemPosicion.style.display = "";
+            } else {
+                itemPosicion.style.display = "none";
+            }
+        }
+
+        // Metros descubiertos - se oculta si no hay dato
+        const itemDescub = document.getElementById("item-descub");
+        if (itemDescub) {
+            if (prop.metros_descub) {
+                document.getElementById("valor-descub").innerText = prop.metros_descub + " m² descub.";
+                itemDescub.style.display = "";
+            } else {
+                itemDescub.style.display = "none";
+            }
+        }
         // Descripción
         const descElement = document.getElementById("descripcion-prop");
         if(descElement) {
