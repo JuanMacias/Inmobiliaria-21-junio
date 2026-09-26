@@ -2,8 +2,6 @@ let mapa;
 let marcadores = [];
 let infoWindowActual = null;
 let propiedadesCargadas = [];
-let propiedadesVisibles = [];
-let cargaPropiedadesIniciada = false;
 
 document.addEventListener("DOMContentLoaded", () => {
     const formBusqueda = document.getElementById("form-busqueda");
@@ -13,13 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
             filtrarPropiedades();
         });
     }
-
-    const selectorOrdenPrecio = document.getElementById("orden-precio");
-    if (selectorOrdenPrecio) {
-        selectorOrdenPrecio.addEventListener("change", filtrarPropiedades);
-    }
-
-    cargarPropiedades();
 });
 
 function initMap() {
@@ -32,13 +23,11 @@ function initMap() {
             center: ubicacionInicial,
             scrollwheel: false
         });
-        if (propiedadesVisibles.length > 0) crearMarcadoresEnMapa(propiedadesVisibles);
     }
+    cargarPropiedades();
 }
 
 function cargarPropiedades() {
-    if (cargaPropiedadesIniciada) return;
-    cargaPropiedadesIniciada = true;
     const ts = new Date().getTime(); 
     fetch(`propiedades.json?v=${ts}`) 
         .then(res => {
@@ -47,10 +36,16 @@ function cargarPropiedades() {
         })
         .then(data => {
             propiedadesCargadas = data.propiedades || (Array.isArray(data) ? data : []); 
-            filtrarPropiedades();
+            renderizarPropiedades(propiedadesCargadas);
+
+            if (mapa && propiedadesCargadas.length > 0) {
+                crearMarcadoresEnMapa(propiedadesCargadas);
+            }
+            
+            // --- IMPORTANTE: ACTIVAR EL SCROLL ---
+            setTimeout(inicializarSincronizacionScroll, 500);
         })
         .catch(err => {
-            cargaPropiedadesIniciada = false;
             console.error("❌ Error:", err);
         });
 }
@@ -149,7 +144,6 @@ function filtrarPropiedades() {
     const tipoBusqueda = document.getElementById("filtro-tipo")?.value.toLowerCase() || "";
     const operacionBusqueda = document.getElementById("filtro-operacion")?.value.toLowerCase() || "";
     const ambientesBusqueda = document.getElementById("filtro-ambientes")?.value || "";
-    const ordenPrecio = document.getElementById("orden-precio")?.value || "";
 
     const limpiarTexto = (texto) => texto?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace("_", " ") || "";
 
@@ -161,24 +155,7 @@ function filtrarPropiedades() {
         return coincideBarrio && coincideTipo && coincideOperacion && coincideAmbientes;
     });
 
-    propiedadesVisibles = filtradas;
-    const ordenadas = [...filtradas];
-    if (ordenPrecio) {
-        const direccion = ordenPrecio === "menor-mayor" ? 1 : -1;
-        ordenadas.sort((a, b) => {
-            const precioA = a.precio === null || a.precio === undefined || a.precio === "" ? NaN : Number(a.precio);
-            const precioB = b.precio === null || b.precio === undefined || b.precio === "" ? NaN : Number(b.precio);
-            const tienePrecioA = Number.isFinite(precioA);
-            const tienePrecioB = Number.isFinite(precioB);
-
-            if (!tienePrecioA && !tienePrecioB) return 0;
-            if (!tienePrecioA) return 1;
-            if (!tienePrecioB) return -1;
-            return (precioA - precioB) * direccion;
-        });
-    }
-
-    renderizarPropiedades(ordenadas);
+    renderizarPropiedades(filtradas);
     if (mapa) crearMarcadoresEnMapa(filtradas);
     
     // Volver a activar el observador para los nuevos resultados
