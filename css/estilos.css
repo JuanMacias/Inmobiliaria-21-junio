@@ -565,12 +565,6 @@ button:hover {
     text-decoration: underline;
 }
 
-.youtube-icon {
-    width: 40px !important;
-    height: 40px !important;
-    margin-top: -6px;
-}
-
 /* ==== MODAL ==== */
 .modal {
     position: fixed;
