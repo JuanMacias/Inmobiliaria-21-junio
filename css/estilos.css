@@ -98,6 +98,12 @@ img {
     margin-right: 6px;
 }
 
+/* Icono de WhatsApp junto al Contactanos del pie: mismo tamaño que Instagram/Facebook/YouTube */
+.link-whatsapp .whatsapp-icon {
+    width: 24px;
+    height: 24px;
+}
+
 .barra-superior .item a {
     color: #fff;
     text-decoration: none;
@@ -1143,6 +1149,11 @@ button:hover {
     }
 
     .redes-sociales a img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .link-whatsapp .whatsapp-icon {
         width: 20px;
         height: 20px;
     }
