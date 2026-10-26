@@ -172,7 +172,7 @@ img {
 
 .menu ul li a:hover,
 .menu ul li a:focus {
-    color: #efdd10;
+    color: #b6a20c;
 }
 
 
@@ -222,7 +222,7 @@ img {
     align-items: center;
     gap: 10px;
     padding: 20px 15px;
-    background-color: rgba(227, 185, 17, 0.9);
+    background-color: rgba(234, 209, 15, 0.9);
     border: 2px solid #0b0b0f;
     width: 100%;
     max-width: 1000px;   /* un poco más chico queda mejor */
@@ -269,12 +269,12 @@ img {
 }
 
 .barra-busqueda button:hover {
-    background-color: #e7b40cdd;
+    background-color: #b6a20cdd;
 }
 
 /* ==== SECCIÓN NOSOTROS ==== */
 .nosotros {
-    background-color: rgba(213, 180, 17, 0.817);
+    background-color: rgba(234, 209, 15, 0.817);
     color: rgb(205, 197, 197);
     padding: 50px 5px 5px 5px;
     margin: 5px auto;
@@ -317,7 +317,7 @@ img {
 
 /* ==== SECCIÓN CONTACTO ==== */
 .contacto-nosotros {
-    background-color: #ead40a;
+    background-color: #ead10f;
     color: rgb(17, 15, 15);
     padding: 40px 20px;
 }
@@ -423,7 +423,7 @@ textarea {
 .formulario button {
     padding: 20px 30px;
     margin: 20px auto;   /* Centra el botón naranja 'Quiero saber más' */
-    background-color: #f2f208;
+    background-color: #ead10f;
     color: rgb(11, 11, 11);
     font-weight: bold;
     border: none;
@@ -675,22 +675,22 @@ button:hover {
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    color: rgb(238, 234, 9);
+    color: #120e0e;
     width: calc(100% - 24px);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
 }
 
 .propiedad button {
-    background: linear-gradient(135deg, #ffc107, #ff5722);
+    background: #ead10f;
 }
 
 .propiedad button:hover {
     transform: scale(1.05);
-    background: linear-gradient(135deg, #ff9800, #e64a19);
+    background: #b6a20c;
 }
 
 .btn-ver-detalle {
-    background: linear-gradient(135deg, #fcf808, #f1de11);
+    background: #ead10f;
     color: rgb(15, 14, 14);
     font-size: 14px;
     width: auto;
@@ -698,7 +698,7 @@ button:hover {
 }
 
 .btn-ver-detalle:hover {
-    background: linear-gradient(135deg, #ffb300, #ffe082);
+    background: #b6a20c;
     transform: scale(1.03);
 }
 
@@ -746,7 +746,7 @@ button:hover {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 18px;
-    background-color: rgb(234, 223, 10);
+    background-color: rgb(234, 209, 15);
     color: rgba(10, 3, 3, 0.935);
     text-decoration: none;
     font-weight: bold;
@@ -755,7 +755,7 @@ button:hover {
 }
 
 .btn:hover {
-    background-color: rgb(153, 150, 0);
+    background-color: rgb(182, 162, 12);
 }
 
 /* ==== PÁGINA DE TASACIONES ==== */
@@ -820,7 +820,7 @@ button:hover {
     display: block;
     width: 30%;
     padding: 15px;
-    background-color: #eee711ba;
+    background-color: #ead10fba;
     color: rgba(17, 16, 3, 0.927);
     font-size: 1.2em;
     font-weight: bold;
@@ -835,7 +835,7 @@ button:hover {
 }
 
 .btn-enviar:hover {
-    background-color: #eac20e;
+    background-color: #b6a20c;
 }
 
 /* ==== PÁGINA DE PROPIEDADES DINÁMICO ==== */
@@ -897,7 +897,7 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #f9d71c;
+    background-color: #ead10f;
     color: #000;
     font-weight: 800;
     font-size: 1.3rem;
@@ -915,7 +915,7 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #f9d71c;
+    background-color: #ead10f;
     color: #000;
     font-weight: 800;
     font-size: 1.3rem;
@@ -1098,7 +1098,7 @@ button:hover {
         /* Estética de la solapa */
         width: 90%;
         padding: 15px;
-        background-color: #e3b911;
+        background-color: #ead10f;
         /* El amarillo de tu captura */
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
@@ -1291,7 +1291,7 @@ header {
 }
 
 .detalle-sidebar form button {
-    background-color: #f1d208;
+    background-color: #ead10f;
     color: #110101;
     border: none;
     border-radius: 5px;
@@ -1358,7 +1358,7 @@ header {
 
 .btn-mapa {
     display: inline-block;
-    background-color: rgb(238, 234, 9);
+    background-color: rgb(234, 209, 15);
     color: rgb(12, 2, 2);
     padding: 10px 15px;
     border-radius: 5px;
@@ -1408,7 +1408,7 @@ header nav {
     position: absolute;
     top: 10px;
     transform: translateY(-50%);
-    background-color: #f6d11d;
+    background-color: #ead10f;
     color: black;
     border: none;
     padding: 10px;
@@ -1434,7 +1434,7 @@ header nav {
 }
 
 .flecha:hover {
-    background-color: #e5b800;
+    background-color: #b6a20c;
 }
 
 .galeria-miniaturas {
@@ -1472,7 +1472,7 @@ header nav {
 }
 
 .btn-secundario {
-    border: 2px solid #eecc0a;
+    border: 2px solid #ead10f;
     color: #110202;
     padding: 10px 20px;
     border-radius: 4px;
@@ -1515,7 +1515,7 @@ header nav {
 
 .btn-buscar {
     padding: 10px;
-    background-color: #ece509;
+    background-color: #ead10f;
     color: #fff;
     font-weight: bold;
     border: none;
@@ -1524,7 +1524,7 @@ header nav {
 }
 
 .btn-buscar:hover {
-    background-color: #ead40b;
+    background-color: #b6a20c;
 }
 
 .ultimas-propiedades {
@@ -1610,7 +1610,7 @@ header nav {
 
 
 .flecha:hover {
-    background-color: #e5b800;
+    background-color: #b6a20c;
 }
 
 
@@ -1667,7 +1667,7 @@ header nav {
     top: 50%;
     /* Cambia este valor para mover la flecha más abajo */
     transform: translateY(-50%);
-    background-color: #f6d11d;
+    background-color: #ead10f;
     color: black;
     border: none;
     padding: 10px;
@@ -1685,7 +1685,7 @@ header nav {
 }
 
 .flecha:hover {
-    background-color: #e5b800;
+    background-color: #b6a20c;
 }
 
 /* Posición de las flechas del carrusel de detalle - ajustadas al borde */
@@ -1881,7 +1881,7 @@ header nav {
 .info-window-link {
     display: block;
     text-align: center;
-    background-color: #f0bf0d;
+    background-color: #ead10f;
     color: black;
     padding: 8px 10px;
     text-decoration: none;
@@ -2131,7 +2131,7 @@ header nav {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 24px;
-    background-color: #f6d11d;
+    background-color: #ead10f;
     color: #1a1a1a;
     text-decoration: none;
     font-weight: bold;
@@ -2140,7 +2140,7 @@ header nav {
 }
 
 .info-principal a:hover {
-    background-color: #e5b800;
+    background-color: #b6a20c;
 }
 
 @media (max-width: 768px) {
@@ -2156,7 +2156,7 @@ header nav {
         transform: translateY(-50%);
         /* Centra verticalmente */
         z-index: 10;
-        background-color: rgba(240, 217, 5, 0.8);
+        background-color: rgba(234, 209, 15, 0.8);
         /* Fondo semitransparente para que se vean sobre la imagen */
         border: none;
         padding: 10px;
@@ -2190,7 +2190,7 @@ header nav {
     /* Ancho del botón */
     height: 55px;
     /* Altura del botón */
-    background-color: #f6d11d;
+    background-color: #ead10f;
     /* Color amarillo de tu paleta */
     color: #333;
     /* Color oscuro para el ícono de la flecha */
@@ -2220,7 +2220,7 @@ header nav {
 
 /* Efecto al pasar el cursor (hover) */
 .flecha-flotante:hover {
-    background-color: #e5b800;
+    background-color: #b6a20c;
     /* Un amarillo más oscuro en hover */
     transform: translateY(-50%) scale(1.1);
     /* Se agranda ligeramente */
@@ -2242,7 +2242,7 @@ header nav {
     font-size: 2.5rem;
     width: 55px;
     height: 55px;
-    background-color: #f6d11d;
+    background-color: #ead10f;
     /* Color amarillo de tu paleta */
     color: #333;
     border: none;
@@ -2265,7 +2265,7 @@ header nav {
 }
 
 .flecha-flotante:hover {
-    background-color: #e5b800;
+    background-color: #b6a20c;
     transform: translateY(-50%) scale(1.1);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
@@ -2325,7 +2325,7 @@ header nav {
 .flecha {
     position: relative;
     /* Ya no necesitan estar 'sueltas' con absolute */
-    background-color: #f6d11d;
+    background-color: #ead10f;
     color: black;
     border: none;
     border-radius: 50%;
@@ -2343,7 +2343,7 @@ header nav {
 }
 
 .flecha:hover {
-    background-color: #e5b800;
+    background-color: #b6a20c;
     transform: scale(1.1);
 }
 
@@ -2483,7 +2483,7 @@ header nav {
 
 .hp-eyebrow {
     display: inline-block;
-    color: #c99a00;
+    color: #b6a20c;
     font-weight: 800;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -2510,12 +2510,12 @@ header nav {
 }
 
 .hp-btn-primary {
-    background-color: #f7d914;
+    background-color: #ead10f;
     color: #120e0e;
 }
 
 .hp-btn-primary:hover {
-    background-color: #e8c900;
+    background-color: #b6a20c;
 }
 
 .hp-btn-secondary {
@@ -2550,7 +2550,7 @@ header nav {
 .hp-hero-badge {
     display: inline-block;
     background-color: #120e0e;
-    color: #f7d914;
+    color: #ead10f;
     font-weight: bold;
     font-size: 0.8rem;
     letter-spacing: 1px;
@@ -2722,7 +2722,7 @@ header nav {
 }
 
 .hp-badge-alquiler {
-    background-color: #c99a00;
+    background-color: #b6a20c;
 }
 
 .hp-card-body {
@@ -2757,7 +2757,7 @@ header nav {
 
 .hp-card-link {
     display: inline-block;
-    background-color: #f7d914;
+    background-color: #ead10f;
     color: #120e0e;
     font-weight: bold;
     text-decoration: none;
@@ -2767,7 +2767,7 @@ header nav {
 }
 
 .hp-card-link:hover {
-    background-color: #e8c900;
+    background-color: #b6a20c;
 }
 
 /* ---- BANNER TASACIÓN ---- */
@@ -2787,7 +2787,7 @@ header nav {
 }
 
 .hp-cta-inner .hp-eyebrow {
-    color: #f7d914;
+    color: #ead10f;
 }
 
 .hp-cta-inner h2 {
@@ -2926,7 +2926,7 @@ header nav {
 .hp-servicio-link {
     font-size: 0.85rem;
     font-weight: bold;
-    color: #c99a00;
+    color: #b6a20c;
     text-decoration: none;
 }
 
