@@ -137,9 +137,9 @@ img {
 }
 
 .logo img {
-    max-height: 100px;
-    width: 200px;
-    height: auto;
+    height: 90px;
+    width: 90px;
+    object-fit: contain;
 }
 
 .menu {
