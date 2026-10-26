@@ -46,7 +46,7 @@
 
     <header class="header">
         <div class="logo">
-            <img src="./img/Logo.jpg" alt="Logo Macías Inmobiliaria" />
+            <img src="./img/logo-nuevo.jpg" alt="Logo Macías Inmobiliaria" />
         </div>
         <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">☰</button>
         <nav class="menu" id="main-menu">
@@ -382,7 +382,7 @@
                 aMostrar.forEach((prop) => {
                     const div = document.createElement("div");
                     div.className = "hp-card";
-                    const imgUrl = prop.imagen || (Array.isArray(prop.imagenes) && prop.imagenes.length > 0 ? prop.imagenes[0] : "./img/Logo.jpg");
+                    const imgUrl = prop.imagen || (Array.isArray(prop.imagenes) && prop.imagenes.length > 0 ? prop.imagenes[0] : "./img/logo-nuevo.jpg");
                     const carteVendido = prop.vendido ? '<div class="cartel-vendido">VENDIDO</div>' : '';
                     const carteReservado = (!prop.vendido && prop.reservado) ? '<div class="cartel-reservado">RESERVADO</div>' : '';
                     const claseBadge = (prop.operacion || '').toLowerCase() === 'alquiler' ? 'hp-badge-alquiler' : 'hp-badge-venta';
@@ -392,7 +392,7 @@
                     if (prop.metros) metaPartes.push(`📐 ${prop.metros} m²`);
                     div.innerHTML = `
                         <div class="hp-card-img">
-                            <img src="${imgUrl}" alt="${prop.titulo}" onerror="this.src='./img/Logo.jpg'">
+                            <img src="${imgUrl}" alt="${prop.titulo}" onerror="this.src='./img/logo-nuevo.jpg'">
                             <span class="hp-card-badge ${claseBadge}">${(prop.operacion || '').toUpperCase()}</span>
                             ${carteVendido}
                             ${carteReservado}
