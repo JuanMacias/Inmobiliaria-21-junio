@@ -2476,3 +2476,564 @@ header nav {
     position: absolute;
     left: -9999px;
 }
+
+/* ======================================================================
+   NUEVA PORTADA (INICIO) - bloque agregado, no modifica reglas de arriba
+   ====================================================================== */
+
+.hp-eyebrow {
+    display: inline-block;
+    color: #c99a00;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+
+.hp-center {
+    display: block;
+    text-align: center;
+}
+
+.hp-btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.hp-btn:hover {
+    transform: translateY(-2px);
+}
+
+.hp-btn-primary {
+    background-color: #f7d914;
+    color: #120e0e;
+}
+
+.hp-btn-primary:hover {
+    background-color: #e8c900;
+}
+
+.hp-btn-secondary {
+    background-color: transparent;
+    color: #120e0e;
+    border: 2px solid #120e0e;
+}
+
+.hp-btn-secondary:hover {
+    background-color: #120e0e;
+    color: #fff;
+}
+
+/* ---- HERO ---- */
+.hp-hero {
+    background-color: #fdf6d8;
+    padding: 50px 40px 0;
+}
+
+.hp-hero-inner {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hp-hero-text {
+    flex: 1 1 480px;
+}
+
+.hp-hero-badge {
+    display: inline-block;
+    background-color: #120e0e;
+    color: #f7d914;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
+
+.hp-hero-title {
+    font-size: 2.6rem;
+    line-height: 1.15;
+    color: #120e0e;
+    margin-bottom: 16px;
+}
+
+.hp-hero-desc {
+    font-size: 1.05rem;
+    color: #3a3a3a;
+    margin-bottom: 26px;
+    max-width: 480px;
+}
+
+.hp-hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hp-hero-media {
+    flex: 1 1 420px;
+}
+
+.hp-hero-media img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hp-search-card {
+    max-width: 1100px;
+    margin: -35px auto 0;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    position: relative;
+}
+
+.hp-search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+}
+
+.hp-select-wrap {
+    flex: 1 1 180px;
+}
+
+.hp-search-form select {
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    font-size: 0.95rem;
+}
+
+.hp-btn-buscar {
+    flex: 0 0 auto;
+    padding: 12px 26px;
+    background-color: #120e0e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hp-btn-buscar:hover {
+    background-color: #2a2424;
+}
+
+/* ---- SECCIÓN GENÉRICA ---- */
+.hp-destacadas,
+.hp-stats,
+.hp-nosotros,
+.hp-servicios,
+.hp-ubicacion-opiniones {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 40px;
+}
+
+.hp-section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.hp-section-head h2 {
+    font-size: 1.8rem;
+    color: #120e0e;
+}
+
+.hp-link-ver-todas {
+    color: #120e0e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.hp-link-ver-todas:hover {
+    text-decoration: underline;
+}
+
+/* ---- TARJETAS DE PROPIEDADES DESTACADAS ---- */
+.hp-destacadas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.hp-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hp-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.14);
+}
+
+.hp-card-img {
+    position: relative;
+    width: 100%;
+    height: 190px;
+}
+
+.hp-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hp-card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.hp-badge-venta {
+    background-color: #120e0e;
+}
+
+.hp-badge-alquiler {
+    background-color: #c99a00;
+}
+
+.hp-card-body {
+    padding: 16px;
+}
+
+.hp-card-precio {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #120e0e;
+    margin-bottom: 2px;
+}
+
+.hp-card-barrio {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.hp-card-meta {
+    display: flex;
+    gap: 14px;
+    font-size: 0.85rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.hp-card-desc {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 14px;
+}
+
+.hp-card-link {
+    display: inline-block;
+    background-color: #f7d914;
+    color: #120e0e;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.hp-card-link:hover {
+    background-color: #e8c900;
+}
+
+/* ---- BANNER TASACIÓN ---- */
+.hp-cta-tasacion {
+    background-color: #120e0e;
+    padding: 50px 40px;
+}
+
+.hp-cta-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.hp-cta-inner .hp-eyebrow {
+    color: #f7d914;
+}
+
+.hp-cta-inner h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.hp-cta-inner p {
+    color: #ddd;
+    max-width: 480px;
+}
+
+/* ---- POR QUÉ ELEGIRNOS ---- */
+.hp-stats h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: #120e0e;
+}
+
+.hp-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.hp-stat {
+    background-color: #fdf6d8;
+    border-radius: 10px;
+    padding: 26px 20px;
+    text-align: center;
+}
+
+.hp-stat-icon {
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.hp-stat strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #120e0e;
+}
+
+.hp-stat p {
+    font-weight: bold;
+    color: #120e0e;
+    margin-bottom: 8px;
+}
+
+.hp-stat-desc {
+    font-size: 0.82rem;
+    color: #666;
+}
+
+/* ---- NOSOTROS (resumen) ---- */
+.hp-nosotros {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hp-nosotros-text {
+    flex: 1 1 480px;
+}
+
+.hp-nosotros-text h2 {
+    font-size: 1.8rem;
+    color: #120e0e;
+    margin-bottom: 16px;
+}
+
+.hp-nosotros-text p {
+    color: #444;
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+
+.hp-nosotros-text .hp-btn {
+    margin-top: 10px;
+}
+
+.hp-nosotros-img {
+    flex: 1 1 420px;
+}
+
+.hp-nosotros-img img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ---- SERVICIOS ---- */
+.hp-servicios h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: #120e0e;
+}
+
+.hp-servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.hp-servicio-card {
+    background-color: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 24px 18px;
+    text-align: center;
+}
+
+.hp-servicio-icon {
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.hp-servicio-card h3 {
+    font-size: 1rem;
+    color: #120e0e;
+    margin-bottom: 8px;
+}
+
+.hp-servicio-card p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.hp-servicio-link {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #c99a00;
+    text-decoration: none;
+}
+
+.hp-servicio-link:hover {
+    text-decoration: underline;
+}
+
+/* ---- DÓNDE ESTAMOS + OPINIONES ---- */
+.hp-ubicacion-opiniones {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hp-ubicacion,
+.hp-opiniones {
+    flex: 1 1 400px;
+}
+
+.hp-ubicacion h2,
+.hp-opiniones h2 {
+    font-size: 1.4rem;
+    color: #120e0e;
+    margin-bottom: 16px;
+}
+
+.hp-mapa {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.hp-direccion {
+    color: #444;
+}
+
+.hp-opiniones-placeholder {
+    background-color: #fdf6d8;
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.hp-opiniones-placeholder p {
+    color: #444;
+    margin-bottom: 14px;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+
+    .hp-hero-inner,
+    .hp-nosotros {
+        flex-direction: column;
+    }
+
+    .hp-nosotros-img {
+        order: -1;
+        width: 100%;
+    }
+
+    .hp-destacadas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hp-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hp-servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .hp-hero {
+        padding: 30px 16px 0;
+    }
+
+    .hp-hero-title {
+        font-size: 2rem;
+    }
+
+    .hp-search-card {
+        margin-top: -20px;
+        padding: 14px;
+    }
+
+    .hp-destacadas,
+    .hp-stats,
+    .hp-nosotros,
+    .hp-servicios,
+    .hp-ubicacion-opiniones {
+        padding: 40px 18px;
+    }
+
+    .hp-destacadas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hp-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hp-servicios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hp-cta-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -23,7 +23,7 @@
 
     <title>Inmobiliaria en CABA | Departamentos y Casas en Venta y Alquiler | Macías Servicios Inmobiliarios</title>
 
-    <link rel="stylesheet" href="./css/estilos.css?v=20260928" />
+    <link rel="stylesheet" href="./css/estilos.css?v=20261016" />
 </head>
 
 <body>
@@ -61,25 +61,35 @@
         </nav>
     </header>
 
-    <div class="seccion-fondo">
-        <div class="contenido-fondo">
+    <!-- ===== HERO NUEVA PORTADA ===== -->
+    <section class="hp-hero">
+        <div class="hp-hero-inner">
+            <div class="hp-hero-text">
+                <span class="hp-hero-badge">Bienvenido a Macías</span>
 
-            <!-- H1 SEO (oculto) -->
-            <h1 class="seo-h1">
-                Inmobiliaria en CABA: Departamentos y Casas en Venta y Alquiler
-            </h1>
-            <h2>Propiedades en Palermo, Belgrano, Recoleta, Villa Urquiza y más barrios de Buenos Aires</h2>
+                <!-- H1 SEO (oculto) -->
+                <h1 class="seo-h1">
+                    Inmobiliaria en CABA: Departamentos y Casas en Venta y Alquiler
+                </h1>
 
-            <!-- Texto visible -->
-            <h2 class="titulo-principal">
-                Tenemos tu hogar soñado en CABA
-            </h2>
+                <h2 class="hp-hero-title">Encontrá tu próximo lugar en CABA</h2>
+                <p class="hp-hero-desc">
+                    Ventas, alquileres, tasaciones e inversiones con atención personalizada. Más de 9 años
+                    conectando hogares y oportunidades en la Ciudad de Buenos Aires.
+                </p>
+                <div class="hp-hero-actions">
+                    <a href="propiedades.html" class="hp-btn hp-btn-primary">Ver propiedades →</a>
+                    <a href="tasaciones.html" class="hp-btn hp-btn-secondary">Tasá tu propiedad</a>
+                </div>
+            </div>
+            <div class="hp-hero-media">
+                <img src="./img/inmo.frente.jpeg" alt="Oficina Macías Servicios Inmobiliarios" />
+            </div>
+        </div>
 
-            <p class="descripcion">
-                Más de 9 años conectando hogares y oportunidades en la Ciudad de Buenos Aires
-            </p>
-            <form id="form-busqueda">
-                <div class="barra-busqueda">
+        <div class="hp-search-card">
+            <form id="form-busqueda" class="hp-search-form">
+                <div class="hp-select-wrap">
                     <select id="filtro-barrio">
                         <option value="">Barrio (todos)</option>
                         <option value="Belgrano">Belgrano</option>
@@ -100,9 +110,10 @@
                         <option value="Barracas">Barracas</option>
                         <option value="Colegiales">Colegiales</option>
                         <option value="Villa del Parque">Villa del Parque</option>
-
                     </select>
+                </div>
 
+                <div class="hp-select-wrap">
                     <select id="filtro-tipo">
                         <option value="">Tipo</option>
                         <option value="departamento">Departamento</option>
@@ -113,15 +124,18 @@
                         <option value="Galpon">Galpon</option>
                         <option value="Oficina">Oficina</option>
                         <option value="Terreno">Terreno</option>
-
                     </select>
+                </div>
 
+                <div class="hp-select-wrap">
                     <select id="filtro-operacion">
                         <option value="">Operación</option>
                         <option value="Venta">Venta</option>
                         <option value="Alquiler">Alquiler</option>
                     </select>
+                </div>
 
+                <div class="hp-select-wrap">
                     <select id="filtro-ambientes">
                         <option value="">Ambientes</option>
                         <option value="1">1</option>
@@ -129,20 +143,141 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                     </select>
-
-                    <button type="submit">Buscar</button>
                 </div>
+
+                <button type="submit" class="hp-btn-buscar">🔍 Buscar</button>
             </form>
         </div>
-    </div>
+    </section>
 
-    <div class="carrusel-propiedades">
-        <button class="flecha izquierda" id="btn-prev">❮</button>
-        <div class="slider-container">
-            <div class="slider" id="contenedor-propiedades"></div>
+    <!-- ===== PROPIEDADES DESTACADAS ===== -->
+    <section class="hp-destacadas">
+        <div class="hp-section-head">
+            <div>
+                <span class="hp-eyebrow">Oportunidades reales</span>
+                <h2>Propiedades destacadas</h2>
+            </div>
+            <a href="propiedades.html" class="hp-link-ver-todas">Ver todas las propiedades →</a>
         </div>
-        <button class="flecha derecha" id="btn-next">❯</button>
-    </div>
+        <div class="hp-destacadas-grid" id="contenedor-propiedades"></div>
+    </section>
+
+    <!-- ===== BANNER TASACIÓN ===== -->
+    <section class="hp-cta-tasacion">
+        <div class="hp-cta-inner">
+            <div class="hp-cta-text">
+                <span class="hp-eyebrow">¿Cuánto vale tu propiedad?</span>
+                <h2>Tasá tu propiedad</h2>
+                <p>Conocé el valor real de tu inmueble con una tasación profesional, rápida y sin compromiso.</p>
+            </div>
+            <a href="tasaciones.html" class="hp-btn hp-btn-primary">Solicitá tu tasación →</a>
+        </div>
+    </section>
+
+    <!-- ===== POR QUÉ ELEGIRNOS ===== -->
+    <section class="hp-stats">
+        <span class="hp-eyebrow hp-center">Por qué elegirnos</span>
+        <h2 class="hp-center">Por qué elegir Macías</h2>
+        <div class="hp-stats-grid">
+            <div class="hp-stat">
+                <span class="hp-stat-icon">🏆</span>
+                <strong>+9 años</strong>
+                <p>de experiencia</p>
+                <span class="hp-stat-desc">Conocemos los barrios y oportunidades de la Ciudad de Buenos Aires.</span>
+            </div>
+            <div class="hp-stat">
+                <span class="hp-stat-icon">🏠</span>
+                <strong>+40</strong>
+                <p>propiedades en cartera</p>
+                <span class="hp-stat-desc">Una oferta variada y actualizada en los mejores barrios de CABA.</span>
+            </div>
+            <div class="hp-stat">
+                <span class="hp-stat-icon">🤝</span>
+                <strong>Atención</strong>
+                <p>personalizada</p>
+                <span class="hp-stat-desc">Un trato directo, cercano y transparente.</span>
+            </div>
+            <div class="hp-stat">
+                <span class="hp-stat-icon">🤝</span>
+                <strong>Acompañamiento</strong>
+                <p>integral</p>
+                <span class="hp-stat-desc">Desde la búsqueda hasta la firma, en todo el proceso.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NOSOTROS (resumen) ===== -->
+    <section class="hp-nosotros">
+        <div class="hp-nosotros-text">
+            <span class="hp-eyebrow">Nosotros</span>
+            <h2>Una inmobiliaria familiar con valores</h2>
+            <p>
+                Somos Macías Servicios Inmobiliarios, una empresa familiar con más de 9 años de experiencia en el
+                mercado inmobiliario de la Ciudad de Buenos Aires. Nos caracteriza el trato cercano, la honestidad
+                y el compromiso en cada operación.
+            </p>
+            <p>
+                Creemos en las relaciones a largo plazo y en acompañar a cada cliente como si fuera parte de
+                nuestra familia.
+            </p>
+            <a href="nosotros.html" class="hp-btn hp-btn-primary">Conocé más sobre nosotros →</a>
+        </div>
+        <div class="hp-nosotros-img">
+            <img src="./img/inmo.frente.jpeg" alt="Macías Servicios Inmobiliarios" />
+        </div>
+    </section>
+
+    <!-- ===== NUESTROS SERVICIOS ===== -->
+    <section class="hp-servicios">
+        <span class="hp-eyebrow hp-center">Nuestros servicios</span>
+        <h2 class="hp-center">Soluciones para cada etapa</h2>
+        <div class="hp-servicios-grid">
+            <div class="hp-servicio-card">
+                <span class="hp-servicio-icon">🏠</span>
+                <h3>Venta y Alquiler</h3>
+                <p>Te ayudamos a vender o alquilar tu propiedad al mejor valor.</p>
+            </div>
+            <div class="hp-servicio-card">
+                <span class="hp-servicio-icon">📋</span>
+                <h3>Tasaciones</h3>
+                <p>Tasación profesional, rápida y sin compromiso.</p>
+                <a href="tasaciones.html" class="hp-servicio-link">Quiero tasar mi propiedad →</a>
+            </div>
+            <div class="hp-servicio-card">
+                <span class="hp-servicio-icon">📊</span>
+                <h3>Administración</h3>
+                <p>Gestión integral de propiedades para tu tranquilidad.</p>
+            </div>
+            <div class="hp-servicio-card">
+                <span class="hp-servicio-icon">⚖️</span>
+                <h3>Asesoramiento Jurídico</h3>
+                <p>Asesoramiento notarial, jurídico y de sucesiones.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DÓNDE ESTAMOS + OPINIONES ===== -->
+    <section class="hp-ubicacion-opiniones">
+        <div class="hp-ubicacion">
+            <span class="hp-eyebrow">Dónde estamos</span>
+            <h2>Nuestra oficina</h2>
+            <div class="hp-mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4096.537591975107!2d-58.46864321144214!3d-34.55984580094057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb686d3140387%3A0xf2d1e44f2c2e3ba1!2sMac%C3%ADas%20Servicios%20Inmobiliarios!5e0!3m2!1ses!2sar!4v1750188791180!5m2!1ses!2sar"
+                    width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <p class="hp-direccion">📍 Manuel Ugarte 3129, Coghlan, CABA</p>
+        </div>
+        <div class="hp-opiniones">
+            <span class="hp-eyebrow">Opiniones</span>
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="hp-opiniones-placeholder">
+                <p>Muy pronto vamos a mostrar acá las reseñas reales de nuestros clientes en Google.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mac%C3%ADas%20Servicios%20Inmobiliarios%20Manuel%20Ugarte%203129%20CABA"
+                    target="_blank" class="hp-link-ver-todas">Ver nuestra ficha en Google →</a>
+            </div>
+        </div>
+    </section>
 
     <section class="contacto-nosotros">
         <div class="contacto-container">
@@ -225,9 +360,6 @@
         document.addEventListener("DOMContentLoaded", function () {
             const contenedor = document.getElementById("contenedor-propiedades");
             const form = document.getElementById("form-busqueda");
-            const slider = document.getElementById("contenedor-propiedades");
-            const btnPrev = document.getElementById("btn-prev");
-            const btnNext = document.getElementById("btn-next");
 
             let propiedadesCargadas = [];
 
@@ -235,44 +367,45 @@
                 .then((res) => res.json())
                 .then((data) => {
                     propiedadesCargadas = (data.propiedades || []).filter(p => p.titulo && p.titulo.trim() !== "");
-                    renderizarPropiedades(propiedadesCargadas);
+                    renderizarPropiedades(propiedadesCargadas, 3);
                 })
                 .catch((error) => console.error("Error al cargar propiedades:", error));
 
-            function renderizarPropiedades(lista) {
+            function renderizarPropiedades(lista, limite) {
                 if (!contenedor) return;
                 contenedor.innerHTML = "";
-                if (lista.length === 0) {
+                const aMostrar = limite ? lista.slice(0, limite) : lista;
+                if (aMostrar.length === 0) {
                     contenedor.innerHTML = "<p class='no-results'>No se encontraron propiedades.</p>";
                     return;
                 }
-                lista.forEach((prop) => {
+                aMostrar.forEach((prop) => {
                     const div = document.createElement("div");
-                    div.className = "propiedad";
+                    div.className = "hp-card";
                     const imgUrl = prop.imagen || (Array.isArray(prop.imagenes) && prop.imagenes.length > 0 ? prop.imagenes[0] : "./img/Logo.jpg");
                     const carteVendido = prop.vendido ? '<div class="cartel-vendido">VENDIDO</div>' : '';
-                                        const carteReservado = (!prop.vendido && prop.reservado) ? '<div class="cartel-reservado">RESERVADO</div>' : '';
+                    const carteReservado = (!prop.vendido && prop.reservado) ? '<div class="cartel-reservado">RESERVADO</div>' : '';
+                    const claseBadge = (prop.operacion || '').toLowerCase() === 'alquiler' ? 'hp-badge-alquiler' : 'hp-badge-venta';
+                    const metaPartes = [];
+                    if (prop.dormitorios) metaPartes.push(`🛏 ${prop.dormitorios}`);
+                    if (prop.banos) metaPartes.push(`🛁 ${prop.banos}`);
+                    if (prop.metros) metaPartes.push(`📐 ${prop.metros} m²`);
                     div.innerHTML = `
-
-                        <div class="imagen-wrapper">
-                        <img src="${imgUrl}" alt="${prop.titulo}" onerror="this.src='./img/Logo.jpg'">
-                        ${carteVendido}                        
-                        ${carteReservado}
+                        <div class="hp-card-img">
+                            <img src="${imgUrl}" alt="${prop.titulo}" onerror="this.src='./img/Logo.jpg'">
+                            <span class="hp-card-badge ${claseBadge}">${(prop.operacion || '').toUpperCase()}</span>
+                            ${carteVendido}
+                            ${carteReservado}
                         </div>
-                        
-                        <div class="prop-info">
-                            <h3>${prop.titulo}</h3>
-                            <p><strong>U$S ${prop.precio ? prop.precio.toLocaleString('es-AR') : 'Consultar'}</strong></p>
-                          <p>${prop.barrio || ''}</p>
-                            <a href="detalle.html?id=${prop.id}" class="btn-ver-detalle">Ver detalle</a>
+                        <div class="hp-card-body">
+                            <p class="hp-card-precio">USD ${prop.precio ? prop.precio.toLocaleString('es-AR') : 'Consultar'}</p>
+                            <p class="hp-card-barrio">${prop.barrio || ''}</p>
+                            <div class="hp-card-meta">${metaPartes.map(m => `<span>${m}</span>`).join('')}</div>
+                            <p class="hp-card-desc">${(prop.titulo || '').slice(0, 90)}</p>
+                            <a href="detalle.html?id=${prop.id}" class="hp-card-link">Ver detalle</a>
                         </div>`;
                     contenedor.appendChild(div);
                 });
-            }
-
-            if (btnPrev && btnNext && slider) {
-                btnPrev.addEventListener("click", () => slider.scrollBy({ left: -320, behavior: "smooth" }));
-                btnNext.addEventListener("click", () => slider.scrollBy({ left: 320, behavior: "smooth" }));
             }
 
             if (form) {
@@ -291,6 +424,7 @@
                         return matchBarrio && matchTipo && matchOperacion && matchAmbientes;
                     });
                     renderizarPropiedades(filtradas);
+                    contenedor.scrollIntoView({ behavior: "smooth", block: "start" });
                 });
             }
         });
